@@ -9,7 +9,8 @@ export const EVENT = {
   city: "São Paulo, SP",
   format: "Presencial e online (híbrido)",
   capacity: "300 pessoas",
-  rsvpUrl: "https://ai.eco.br",
+  rsvpUrl:
+    "https://ai.eco.br/plans/1979445?bundle_token=aea96ac88a1205364ce25700e36d44d7&utm_source=manual",
 } as const;
 
 export type SessionKind = "palestra" | "painel" | "keynote" | "intervalo" | "momento";
@@ -233,11 +234,20 @@ export const AGENDA: Session[] = [
   { time: "21h00", period: "noite", kind: "momento", title: "Finalização" },
 ];
 
+import alineFoto from "@/assets/aline-bocardo.png.asset.json";
+import alessandroFoto from "@/assets/alessandro-milagres.jpg.asset.json";
+import jairoFoto from "@/assets/jairo-segre.jpg.asset.json";
+import roanFoto from "@/assets/roan.png.asset.json";
+import logoAbria from "@/assets/apoio-abria.png.asset.json";
+import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
+import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
+
 export type Speaker = {
   name: string;
   role: string;
   bio: string;
   topic?: string;
+  photo?: string;
 };
 
 export const SPEAKERS: Speaker[] = [
