@@ -29,7 +29,7 @@ export function SiteFooter() {
             rel="noreferrer noopener"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            Comunidade AI Brasil em ai.eco.br
+            Comunidade AI Brasil · fale com a organização
           </a>
         </div>
       </div>
