@@ -234,13 +234,7 @@ export const AGENDA: Session[] = [
   { time: "21h00", period: "noite", kind: "momento", title: "Finalização" },
 ];
 
-import alineFoto from "@/assets/aline-bocardo.png.asset.json";
-import alessandroFoto from "@/assets/alessandro-milagres.jpg.asset.json";
-import jairoFoto from "@/assets/jairo-segre.jpg.asset.json";
-import roanFoto from "@/assets/roan.png.asset.json";
-import logoAbria from "@/assets/apoio-abria.png.asset.json";
-import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
-import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
+
 
 export type Speaker = {
   name: string;
