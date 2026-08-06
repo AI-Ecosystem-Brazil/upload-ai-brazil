@@ -312,7 +312,7 @@ export type Supporter = { name: string; logo: string };
 export const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
-  { name: "Apoiador institucional", logo: logoInstitucional.url },
+  { name: "Abradi", logo: logoInstitucional.url },
 ];
 
 

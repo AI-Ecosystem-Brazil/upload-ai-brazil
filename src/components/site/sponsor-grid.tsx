@@ -24,7 +24,7 @@ export function SponsorGrid() {
                   alt={`Logotipo ${s.name}`}
                   loading="lazy"
                   decoding="async"
-                  className="max-h-14 w-auto max-w-full object-contain"
+                  className="max-h-12 w-auto max-w-full object-contain"
                 />
               </a>
             ))}
