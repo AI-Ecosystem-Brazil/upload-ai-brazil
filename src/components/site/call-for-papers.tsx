@@ -47,6 +47,11 @@ export function CallForPapers() {
               </div>
             ))}
           </dl>
+          <RsvpButton
+            className="mt-7"
+            variant="outline"
+            label="Quero colaborar com a curadoria"
+          />
           <p className="mt-6 text-xs uppercase tracking-wider text-muted-foreground">
             Cadastro obrigatório em {new URL(EVENT.rsvpUrl).host}
           </p>
