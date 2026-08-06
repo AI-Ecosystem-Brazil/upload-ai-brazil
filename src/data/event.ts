@@ -270,6 +270,7 @@ export const SPEAKERS: Speaker[] = [
     role: "CEO da AINOV Solutions · advisor e palestrante de IA",
     bio: "Arquiteta de agentes de IA e advisory em IA Organizacional, com formação executiva pelo MIT e por Harvard e mais de 20 anos de experiência em gestão pública, privada e terceiro setor. Foi Secretária de Desenvolvimento Econômico e Inovação. Mais de 80 empresas impactadas, 600 líderes preparados e 3.000 profissionais capacitados.",
     topic: "Keynote: Evolução Inteligente para Negócios",
+    photo: alineFoto.url,
   },
   {
     name: "Luis Rodeguero",
@@ -282,6 +283,21 @@ export const SPEAKERS: Speaker[] = [
     role: "Palestrante",
     bio: "Traz um raio-x direto de onde a maioria das organizações trava na jornada do piloto à produção em IA, e do que separa quem fala de IA de quem vive de IA.",
     topic: "Maturidade em IA",
+    photo: alessandroFoto.url,
+  },
+  {
+    name: "Roan",
+    role: "BeCulture",
+    bio: "Trabalha a cultura de dados na gestão de pessoas, transformando percepções sobre cultura e liderança em decisões mais inteligentes com apoio de dados e inteligência artificial.",
+    topic: "A cultura de dados na gestão de pessoas",
+    photo: roanFoto.url,
+  },
+  {
+    name: "Jairo Segre",
+    role: "Ecossistema AI Brasil",
+    bio: "Um dos nomes à frente da construção do maior ecossistema de inteligência artificial do Brasil, participando do painel sobre a formação e a expansão da comunidade.",
+    topic: "Painel: construindo o maior ecossistema de IA do Brasil",
+    photo: jairoFoto.url,
   },
   {
     name: "Bruno Mello",
@@ -290,6 +306,15 @@ export const SPEAKERS: Speaker[] = [
     topic: "Palestra especial",
   },
 ];
+
+export type Supporter = { name: string; logo: string };
+
+export const SUPPORTERS: Supporter[] = [
+  { name: "Abria", logo: logoAbria.url },
+  { name: "AI Safety Brazil", logo: logoAiSafety.url },
+  { name: "Apoiador institucional", logo: logoInstitucional.url },
+];
+
 
 export const CFP = {
   requirement:
