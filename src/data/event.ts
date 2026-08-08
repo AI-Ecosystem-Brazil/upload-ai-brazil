@@ -553,6 +553,16 @@ export const PHOTOS: Record<string, string> = {
   "Juliana Lopes": julianaFoto.url,
   "Juliano Kimura": julianoFoto.url,
   "Leandro Mastellini": leandroFoto.url,
+  "Leila Navarro": leilaFoto.url,
+  "Leonardo Santos": leonardoFoto.url,
+  "Lucas Garcia": lucasFoto.url,
+  "Luis Rodeguero": luisFoto.url,
+  "Maurício Conte": mauricioFoto.url,
+  "Michael Silva": michaelFoto.url,
+  "Muzy Jorge": muzyFoto.url,
+  "Nelson Borges": nelsonFoto.url,
+  "Rodrigo Neves": rodrigoNevesFoto.url,
+  "Rodrigo Righetti": righettiFoto.url,
 };
 
 export function photoOf(name: string): string | undefined {
