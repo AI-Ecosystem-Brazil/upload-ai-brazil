@@ -524,7 +524,7 @@ export type Speaker = {
 export const PHOTOS: Record<string, string> = {
   "Aline Bocardo": alineFoto.url,
   "Alessandro Milagres": alessandroFoto.url,
-  "Jairo Segre": jairoFoto.url,
+  "Jairo Segre": jairoFoto2.url,
   "Roan Santos": roanFoto.url,
   "Adriano Rufino": adrianoFoto.url,
   "Alessandro Cabelo": cabeloFoto.url,
@@ -535,6 +535,15 @@ export const PHOTOS: Record<string, string> = {
   "Cristiano Christianini": christianiniFoto.url,
   Linuxmen: linuxmenFoto.url,
   "Daniel Ramos": danielFoto.url,
+  "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
+  "Eduardo Piedade": eduardoPiedadeFoto.url,
+  "Elaine Coimbra": elaineFoto.url,
+  "Eva Lazarini": evaFoto.url,
+  "Gabriel Virissimo": gabrielFoto.url,
+  "Gerson Viergutz": gersonFoto.url,
+  "Juliana Lopes": julianaFoto.url,
+  "Juliano Kimura": julianoFoto.url,
+  "Leandro Mastellini": leandroFoto.url,
 };
 
 export function photoOf(name: string): string | undefined {
