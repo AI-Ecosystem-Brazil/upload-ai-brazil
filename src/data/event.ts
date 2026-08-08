@@ -511,12 +511,37 @@ export type Speaker = {
   featured?: boolean;
 };
 
-const PHOTOS: Record<string, string> = {
+export const PHOTOS: Record<string, string> = {
   "Aline Bocardo": alineFoto.url,
   "Alessandro Milagres": alessandroFoto.url,
   "Jairo Segre": jairoFoto.url,
   "Roan Santos": roanFoto.url,
+  "Adriano Rufino": adrianoFoto.url,
+  "Alessandro Cabelo": cabeloFoto.url,
+  "André Almeida": andreFoto.url,
+  "Bruno Mello": brunoFoto.url,
+  "Carolina da Luz": carolFoto.url,
+  "Cilene Danta": cileneFoto.url,
+  "Cristiano Christianini": christianiniFoto.url,
+  Linuxmen: linuxmenFoto.url,
+  "Daniel Ramos": danielFoto.url,
 };
+
+export function photoOf(name: string): string | undefined {
+  return PHOTOS[name];
+}
+
+export function initialsOf(name: string): string {
+  return name
+    .replace(/\(.*?\)/g, "")
+    .split(" ")
+    .filter((w) => w.length > 2)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
 
 function buildSpeakers(): Speaker[] {
   const map = new Map<string, Speaker>();
