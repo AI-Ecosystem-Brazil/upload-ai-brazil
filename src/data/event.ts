@@ -34,6 +34,7 @@ import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
+import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital.png.asset.json";
 
 export const EVENT = {
   name: "Upload AI Brasil Experience 2026",
