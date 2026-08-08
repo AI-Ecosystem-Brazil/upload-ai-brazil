@@ -30,6 +30,7 @@ import muzyFoto from "@/assets/muzy-jorge.png.asset.json";
 import nelsonFoto from "@/assets/nelson-borges.png.asset.json";
 import rodrigoNevesFoto from "@/assets/rodrigo-neves.png.asset.json";
 import righettiFoto from "@/assets/rodrigo-righetti.png.asset.json";
+import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
