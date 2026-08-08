@@ -62,7 +62,14 @@ export function AgendaTimeline() {
               )}
             />
             <Reveal>
-              <article className="rounded-2xl border border-border bg-surface/60 p-5 transition-colors duration-200 hover:border-primary/40 sm:p-6">
+              <article
+                className={cn(
+                  "rounded-2xl border p-5 transition-colors duration-200 sm:p-6",
+                  s.highlight
+                    ? "border-primary/60 bg-primary/5"
+                    : "border-border bg-surface/60 hover:border-primary/40",
+                )}
+              >
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="font-display text-lg font-bold tabular-nums text-primary">
                     {s.time}
@@ -75,17 +82,44 @@ export function AgendaTimeline() {
                   >
                     {KIND_LABEL[s.kind]}
                   </span>
-                  {s.tentative ? (
-                    <span className="rounded-full border border-dashed border-border px-3 py-1 text-[11px] uppercase tracking-wider text-muted-foreground">
-                      A confirmar
+                  {s.badge ? (
+                    <span className="rounded-full border border-accent/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-accent">
+                      {s.badge}
                     </span>
                   ) : null}
                 </div>
                 <h3 className="mt-3 text-lg font-semibold leading-snug sm:text-xl">
                   {s.title}
                 </h3>
-                {s.people ? (
-                  <p className="mt-1.5 text-sm text-accent">{s.people}</p>
+                {s.people?.length ? (
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {s.people.map((p) => {
+                      const content = (
+                        <>
+                          <span className="font-semibold text-foreground">{p.name}</span>
+                          <span className="text-muted-foreground"> · {p.role}</span>
+                        </>
+                      );
+                      return (
+                        <li key={`${s.time}-${p.name}`}>
+                          {p.profileUrl ? (
+                            <a
+                              href={p.profileUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex rounded-full border border-border bg-background/40 px-3 py-1.5 text-xs transition-colors hover:border-primary/50 hover:text-primary"
+                            >
+                              {content}
+                            </a>
+                          ) : (
+                            <span className="inline-flex rounded-full border border-border bg-background/40 px-3 py-1.5 text-xs">
+                              {content}
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 ) : null}
                 {s.description ? (
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
