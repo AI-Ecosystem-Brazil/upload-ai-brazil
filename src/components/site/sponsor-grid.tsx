@@ -17,14 +17,16 @@ export function SponsorGrid() {
                 href={EVENT.rsvpUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex h-28 items-center justify-center rounded-xl border border-border bg-surface/40 p-6 transition-colors duration-200 hover:border-primary/40"
+                className={`flex h-28 items-center justify-center rounded-xl border border-border p-6 transition-colors duration-200 hover:border-primary/40 ${
+                  s.light ? "bg-white" : "bg-surface/40"
+                }`}
               >
                 <img
                   src={s.logo}
                   alt={`Logotipo ${s.name}`}
                   loading="lazy"
                   decoding="async"
-                  className="h-12 w-full object-contain"
+                  className="h-16 w-full object-contain"
                 />
               </a>
             ))}
