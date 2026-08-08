@@ -1,15 +1,7 @@
-import { SPEAKERS } from "@/data/event";
+import { SPEAKERS, initialsOf } from "@/data/event";
 import { Reveal } from "@/components/site/section";
 
-function initials(name: string) {
-  return name
-    .split(" ")
-    .filter((w) => w.length > 2)
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
-}
+const initials = initialsOf;
 
 export function SpeakerGrid() {
   return (

@@ -2,6 +2,15 @@ import alineFoto from "@/assets/aline-bocardo.png.asset.json";
 import alessandroFoto from "@/assets/alessandro-milagres.jpg.asset.json";
 import jairoFoto from "@/assets/jairo-segre.jpg.asset.json";
 import roanFoto from "@/assets/roan.png.asset.json";
+import adrianoFoto from "@/assets/adriano-rufino.png.asset.json";
+import cabeloFoto from "@/assets/alessandro-cabelo.png.asset.json";
+import andreFoto from "@/assets/andre-almeida.png.asset.json";
+import brunoFoto from "@/assets/bruno-mello.png.asset.json";
+import carolFoto from "@/assets/carol-luz.png.asset.json";
+import cileneFoto from "@/assets/cilene-danta.png.asset.json";
+import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
+import linuxmenFoto from "@/assets/cristiano-linuxmen.png.asset.json";
+import danielFoto from "@/assets/daniel-ramos.png.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
@@ -502,12 +511,37 @@ export type Speaker = {
   featured?: boolean;
 };
 
-const PHOTOS: Record<string, string> = {
+export const PHOTOS: Record<string, string> = {
   "Aline Bocardo": alineFoto.url,
   "Alessandro Milagres": alessandroFoto.url,
   "Jairo Segre": jairoFoto.url,
   "Roan Santos": roanFoto.url,
+  "Adriano Rufino": adrianoFoto.url,
+  "Alessandro Cabelo": cabeloFoto.url,
+  "André Almeida": andreFoto.url,
+  "Bruno Mello": brunoFoto.url,
+  "Carolina da Luz": carolFoto.url,
+  "Cilene Danta": cileneFoto.url,
+  "Cristiano Christianini": christianiniFoto.url,
+  Linuxmen: linuxmenFoto.url,
+  "Daniel Ramos": danielFoto.url,
 };
+
+export function photoOf(name: string): string | undefined {
+  return PHOTOS[name];
+}
+
+export function initialsOf(name: string): string {
+  return name
+    .replace(/\(.*?\)/g, "")
+    .split(" ")
+    .filter((w) => w.length > 2)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
 
 function buildSpeakers(): Speaker[] {
   const map = new Map<string, Speaker>();
