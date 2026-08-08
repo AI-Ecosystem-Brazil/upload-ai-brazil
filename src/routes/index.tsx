@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { EVENT } from "@/data/event";
+import { EVENT, SPEAKERS, TALK_COUNT } from "@/data/event";
 import { Hero } from "@/components/site/hero";
 import { Section, Reveal } from "@/components/site/section";
 import { AgendaTimeline } from "@/components/site/agenda-timeline";
