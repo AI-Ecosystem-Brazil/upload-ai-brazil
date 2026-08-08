@@ -137,49 +137,51 @@ function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey
 
 function KeynoteCard({ session }: { session: Session }) {
   const lead = session.people?.[0];
+  const photo = lead ? photoOf(lead.name) : undefined;
 
   return (
     <article className="overflow-hidden rounded-3xl border border-primary/50 bg-surface/80">
-      <div className="grid gap-0 sm:grid-cols-[minmax(0,240px)_1fr]">
-        <div className="relative flex items-end justify-center overflow-hidden bg-brand-gradient/10 px-6 pt-6 sm:px-4 sm:pt-8">
+      <div className="grid gap-0 sm:grid-cols-[minmax(0,320px)_1fr] sm:min-h-[26rem]">
+        <div className="relative min-h-[15rem] overflow-hidden bg-brand-gradient/10 sm:min-h-full">
           <span
             aria-hidden
-            className="absolute inset-x-4 bottom-0 top-6 rounded-full bg-brand-gradient opacity-20 blur-2xl"
+            className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-25 blur-3xl"
           />
           {lead ? (
-            photoOf(lead.name) ? (
+            photo ? (
               <img
-                src={photoOf(lead.name)}
-                alt={`Retrato de ${lead.name}`}
+                src={photo}
+                alt={`Retrato de ${lead.name}, palestrante keynote`}
                 loading="lazy"
                 decoding="async"
-                width={480}
-                height={600}
-                className="relative h-56 w-auto max-w-full object-contain object-bottom drop-shadow-2xl sm:h-72"
+                width={640}
+                height={800}
+                className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-top drop-shadow-2xl transition-transform duration-700 ease-out will-change-transform motion-safe:hover:scale-105 sm:object-[center_top] [mask-image:linear-gradient(to_bottom,black_78%,transparent)] sm:[mask-image:linear-gradient(to_right,black_82%,transparent),linear-gradient(to_bottom,black_88%,transparent)] sm:[mask-composite:intersect]"
               />
             ) : (
-              <Avatar name={lead.name} size="md" className="relative mb-8 h-28 w-28 text-xl" />
+              <div className="absolute inset-0 grid place-items-center">
+                <Avatar name={lead.name} size="md" className="relative h-28 w-28 text-xl" />
+              </div>
             )
           ) : null}
+
+          <span
+            className={cn(
+              "absolute bottom-4 left-4 rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider backdrop-blur-sm",
+              KIND_STYLE.keynote,
+            )}
+          >
+            {session.badge ?? KIND_LABEL.keynote}
+          </span>
         </div>
 
         <div className="p-6 sm:p-8">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="font-display text-lg font-bold tabular-nums text-primary">
-              {session.time}
-            </span>
-            <span
-              className={cn(
-                "rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider",
-                KIND_STYLE.keynote,
-              )}
-            >
-              {session.badge ?? KIND_LABEL.keynote}
-            </span>
-          </div>
+          <span className="font-display text-lg font-bold tabular-nums text-primary">
+            {session.time}
+          </span>
 
           {lead ? (
-            <p className="mt-4 font-display text-2xl font-bold leading-tight text-brand-gradient sm:text-3xl">
+            <p className="mt-3 font-display text-2xl font-bold leading-tight text-brand-gradient sm:text-3xl">
               {lead.name}
             </p>
           ) : null}
@@ -207,6 +209,7 @@ function KeynoteCard({ session }: { session: Session }) {
     </article>
   );
 }
+
 
 function StandardCard({ session }: { session: Session }) {
   const people = session.people ?? [];
