@@ -1,6 +1,5 @@
 import alineFoto from "@/assets/aline-bocardo.png.asset.json";
 import alessandroFoto from "@/assets/alessandro-milagres.jpg.asset.json";
-import jairoFoto from "@/assets/jairo-segre.jpg.asset.json";
 import roanFoto from "@/assets/roan.png.asset.json";
 import adrianoFoto from "@/assets/adriano-rufino.png.asset.json";
 import cabeloFoto from "@/assets/alessandro-cabelo.png.asset.json";
