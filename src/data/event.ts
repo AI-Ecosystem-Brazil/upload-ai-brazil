@@ -564,6 +564,7 @@ export const PHOTOS: Record<string, string> = {
   "Nelson Borges": nelsonFoto.url,
   "Rodrigo Neves": rodrigoNevesFoto.url,
   "Rodrigo Righetti": righettiFoto.url,
+  "Vagner Campos": vagnerFoto.url,
 };
 
 export function photoOf(name: string): string | undefined {
