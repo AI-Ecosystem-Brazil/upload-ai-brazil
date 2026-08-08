@@ -34,6 +34,7 @@ import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
+import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital.png.asset.json";
 
 export const EVENT = {
   name: "Upload AI Brasil Experience 2026",
@@ -628,12 +629,17 @@ export const SPEAKERS: Speaker[] = buildSpeakers();
 
 export const TALK_COUNT = AGENDA.filter((s) => s.kind !== "intervalo").length;
 
-export type Supporter = { name: string; logo: string };
+export type Supporter = { name: string; logo: string; light?: boolean };
 
 export const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
   { name: "Abradi", logo: logoInstitucional.url },
+  {
+    name: "Instituto da Maturidade Digital",
+    logo: logoInstitutoMaturidade.url,
+    light: true,
+  },
 ];
 
 export const SUPPORTER_MENTIONS = ["ABRIA", "AI Safety Brazil", "ABRADI", "ABIACOM", "ANAMID"];
