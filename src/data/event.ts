@@ -20,6 +20,16 @@ import jairoFoto2 from "@/assets/jairo-segre-2.png.asset.json";
 import julianaFoto from "@/assets/juliana-lopes.png.asset.json";
 import julianoFoto from "@/assets/juliano-kimura.png.asset.json";
 import leandroFoto from "@/assets/leandro-mastellini.png.asset.json";
+import leilaFoto from "@/assets/leila-navarro.png.asset.json";
+import leonardoFoto from "@/assets/leonardo-santos.png.asset.json";
+import lucasFoto from "@/assets/lucas-garcia.png.asset.json";
+import luisFoto from "@/assets/luis-rodeguero.png.asset.json";
+import mauricioFoto from "@/assets/mauricio-conte.png.asset.json";
+import michaelFoto from "@/assets/michael-silva.png.asset.json";
+import muzyFoto from "@/assets/muzy-jorge.png.asset.json";
+import nelsonFoto from "@/assets/nelson-borges.png.asset.json";
+import rodrigoNevesFoto from "@/assets/rodrigo-neves.png.asset.json";
+import righettiFoto from "@/assets/rodrigo-righetti.png.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
@@ -543,6 +553,16 @@ export const PHOTOS: Record<string, string> = {
   "Juliana Lopes": julianaFoto.url,
   "Juliano Kimura": julianoFoto.url,
   "Leandro Mastellini": leandroFoto.url,
+  "Leila Navarro": leilaFoto.url,
+  "Leonardo Santos": leonardoFoto.url,
+  "Lucas Garcia": lucasFoto.url,
+  "Luis Rodeguero": luisFoto.url,
+  "Maurício Conte": mauricioFoto.url,
+  "Michael Silva": michaelFoto.url,
+  "Muzy Jorge": muzyFoto.url,
+  "Nelson Borges": nelsonFoto.url,
+  "Rodrigo Neves": rodrigoNevesFoto.url,
+  "Rodrigo Righetti": righettiFoto.url,
 };
 
 export function photoOf(name: string): string | undefined {
