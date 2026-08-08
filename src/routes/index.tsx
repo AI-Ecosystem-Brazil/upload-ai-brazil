@@ -31,8 +31,8 @@ export const Route = createFileRoute("/")({
 
 const HIGHLIGHTS = [
   { value: "300", label: "vagas presenciais" },
-  { value: "12h", label: "de programação" },
-  { value: "2", label: "auditórios simultâneos" },
+  { value: `${TALK_COUNT}`, label: "palestras, painéis e keynotes" },
+  { value: `${SPEAKERS.length}+`, label: "palestrantes e painelistas" },
   { value: "Híbrido", label: "presencial e online" },
 ];
 
