@@ -128,7 +128,7 @@ function Index() {
         id="programacao"
         eyebrow="Programação"
         title="Das 08h30 às 21h, sem intervalo de conteúdo"
-        intro="Palestras, painéis e keynotes ao longo do dia inteiro. Itens marcados como “a confirmar” ainda estão em fechamento com os participantes."
+        intro="Palestras, painéis e keynotes ao longo do dia inteiro, das lideranças das associações de IA do Brasil aos casos práticos de quem já colocou agentes em produção."
       >
         <AgendaTimeline />
       </Section>
@@ -137,7 +137,7 @@ function Index() {
         id="palestrantes"
         eyebrow="Quem sobe ao palco"
         title="Palestrantes e painelistas"
-        intro="Nomes já confirmados na curadoria. A lista segue crescendo conforme o Call for Papers avança."
+        intro="Todos os nomes confirmados na programação oficial. Clique em um card para ver o perfil no ecossistema AI Brasil."
       >
         <SpeakerGrid />
       </Section>
