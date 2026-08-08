@@ -628,12 +628,17 @@ export const SPEAKERS: Speaker[] = buildSpeakers();
 
 export const TALK_COUNT = AGENDA.filter((s) => s.kind !== "intervalo").length;
 
-export type Supporter = { name: string; logo: string };
+export type Supporter = { name: string; logo: string; light?: boolean };
 
 export const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
   { name: "Abradi", logo: logoInstitucional.url },
+  {
+    name: "Instituto da Maturidade Digital",
+    logo: logoInstitutoMaturidade.url,
+    light: true,
+  },
 ];
 
 export const SUPPORTER_MENTIONS = ["ABRIA", "AI Safety Brazil", "ABRADI", "ABIACOM", "ANAMID"];
