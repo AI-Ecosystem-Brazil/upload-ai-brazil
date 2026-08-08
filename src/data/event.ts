@@ -530,14 +530,16 @@ function buildSpeakers(): Speaker[] {
         continue;
       }
 
-      map.set(person.name, {
+      const speaker: Speaker = {
         name: person.name,
         role: person.org ? `${person.role} · ${person.org}` : person.role,
         activity: session.title,
-        profileUrl: person.profileUrl,
-        photo: PHOTOS[person.name],
         featured,
-      });
+      };
+      if (person.profileUrl) speaker.profileUrl = person.profileUrl;
+      const photo = PHOTOS[person.name];
+      if (photo) speaker.photo = photo;
+      map.set(person.name, speaker);
     }
   }
 
