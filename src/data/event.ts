@@ -286,7 +286,7 @@ export const AGENDA: Session[] = [
     kind: "painel",
     title: "Juntos somos mais fortes: movimento de Inteligência Artificial",
     description:
-      "A força da colaboração no ecossistema brasileiro de IA: Marcos Oliveira (AI Festival) e Marco Riveiros (Instituto Amigu) mostram como comunidades, eventos e instituições estão unindo forças para acelerar a Inteligência Artificial no Brasil.",
+      "A força da colaboração no ecossistema brasileiro de IA: comunidades, eventos e instituições mostram como estão unindo forças para acelerar a Inteligência Artificial no Brasil.",
     people: [
       {
         name: "Marcos Oliveira",
@@ -300,6 +300,8 @@ export const AGENDA: Session[] = [
         org: "Instituto Amigu",
         profileUrl: "https://ai.eco.br/members/40122900",
       },
+      { name: "Tiene Colins", role: "Painelista" },
+      { name: "Luiz Tibiriçá", role: "Painelista" },
     ],
   },
   {
