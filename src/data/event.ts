@@ -35,6 +35,8 @@ import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
 import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital.png.asset.json";
+import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
+import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
 
 export const EVENT = {
   name: "Upload AI Brasil Experience 2026",
@@ -635,7 +637,10 @@ export const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
   { name: "Abradi", logo: logoInstitucional.url },
+  { name: "ABIACOM", logo: logoAbiacom.url },
+  { name: "ANAMID", logo: logoAnamid.url },
   {
+
     name: "Instituto da Maturidade Digital",
     logo: logoInstitutoMaturidade.url,
     light: true,
