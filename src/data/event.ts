@@ -637,7 +637,10 @@ export const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
   { name: "Abradi", logo: logoInstitucional.url },
+  { name: "ABIACOM", logo: logoAbiacom.url },
+  { name: "ANAMID", logo: logoAnamid.url },
   {
+
     name: "Instituto da Maturidade Digital",
     logo: logoInstitutoMaturidade.url,
     light: true,
