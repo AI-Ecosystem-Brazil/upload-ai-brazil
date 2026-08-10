@@ -9,7 +9,7 @@ import carolFoto from "@/assets/carol-luz.png.asset.json";
 import cileneFoto from "@/assets/cilene-danta.png.asset.json";
 import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
 import linuxmenFoto from "@/assets/cristiano-linuxmen.png.asset.json";
-import danielFoto from "@/assets/daniel-ramos.png.asset.json";
+
 import eduardoNevesFoto from "@/assets/eduardo-neves.png.asset.json";
 import eduardoPiedadeFoto from "@/assets/eduardo-piedade.png.asset.json";
 import elaineFoto from "@/assets/elaine-coimbra.png.asset.json";
