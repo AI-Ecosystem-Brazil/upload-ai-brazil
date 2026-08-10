@@ -554,7 +554,7 @@ export const PHOTOS: Record<string, string> = {
   "Cilene Danta": cileneFoto.url,
   "Cristiano Christianini": christianiniFoto.url,
   Linuxmen: linuxmenFoto.url,
-  "Daniel Ramos": danielFoto.url,
+  "Daniel Ramos": danielFoto2.url,
   "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
   "Eduardo Piedade": eduardoPiedadeFoto.url,
   "Elaine Coimbra": elaineFoto.url,
