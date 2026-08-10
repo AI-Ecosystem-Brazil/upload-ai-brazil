@@ -9,7 +9,7 @@ import carolFoto from "@/assets/carol-luz.png.asset.json";
 import cileneFoto from "@/assets/cilene-danta.png.asset.json";
 import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
 import linuxmenFoto from "@/assets/cristiano-linuxmen.png.asset.json";
-import danielFoto from "@/assets/daniel-ramos.png.asset.json";
+
 import eduardoNevesFoto from "@/assets/eduardo-neves.png.asset.json";
 import eduardoPiedadeFoto from "@/assets/eduardo-piedade.png.asset.json";
 import elaineFoto from "@/assets/elaine-coimbra.png.asset.json";
@@ -31,6 +31,13 @@ import nelsonFoto from "@/assets/nelson-borges.png.asset.json";
 import rodrigoNevesFoto from "@/assets/rodrigo-neves.png.asset.json";
 import righettiFoto from "@/assets/rodrigo-righetti.png.asset.json";
 import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
+import danielFoto2 from "@/assets/daniel-ramos-2.avif.asset.json";
+import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
+import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
+import marcoRiveirosFoto from "@/assets/marco-riveiros.png.asset.json";
+import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
+import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
+import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
@@ -279,7 +286,7 @@ export const AGENDA: Session[] = [
     kind: "painel",
     title: "Juntos somos mais fortes: movimento de Inteligência Artificial",
     description:
-      "A força da colaboração no ecossistema brasileiro de IA: Marcos Oliveira (AI Festival) e Marco Riveiros (Instituto Amigu) mostram como comunidades, eventos e instituições estão unindo forças para acelerar a Inteligência Artificial no Brasil.",
+      "A força da colaboração no ecossistema brasileiro de IA: comunidades, eventos e instituições mostram como estão unindo forças para acelerar a Inteligência Artificial no Brasil.",
     people: [
       {
         name: "Marcos Oliveira",
@@ -293,6 +300,8 @@ export const AGENDA: Session[] = [
         org: "Instituto Amigu",
         profileUrl: "https://ai.eco.br/members/40122900",
       },
+      { name: "Tiene Colins", role: "Painelista" },
+      { name: "Luiz Tibiriçá", role: "Painelista" },
     ],
   },
   {
@@ -547,7 +556,7 @@ export const PHOTOS: Record<string, string> = {
   "Cilene Danta": cileneFoto.url,
   "Cristiano Christianini": christianiniFoto.url,
   Linuxmen: linuxmenFoto.url,
-  "Daniel Ramos": danielFoto.url,
+  "Daniel Ramos": danielFoto2.url,
   "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
   "Eduardo Piedade": eduardoPiedadeFoto.url,
   "Elaine Coimbra": elaineFoto.url,
@@ -568,6 +577,12 @@ export const PHOTOS: Record<string, string> = {
   "Rodrigo Neves": rodrigoNevesFoto.url,
   "Rodrigo Righetti": righettiFoto.url,
   "Vagner Campos": vagnerFoto.url,
+  "Rafael Soares": rafaelSoaresFoto.url,
+  "Marcos Oliveira": marcosOliveiraFoto.url,
+  "Marco Riveiros": marcoRiveirosFoto.url,
+  "Luiz Tibiriçá": tibiricaFoto.url,
+  "Tiene Colins": tieneFoto.url,
+  "Marcio Chleba": chlebaFoto.url,
 };
 
 export function photoOf(name: string): string | undefined {
