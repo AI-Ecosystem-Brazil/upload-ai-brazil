@@ -1,18 +1,21 @@
-import { EVENT } from "@/data/event";
+import { useEdition } from "@/data/edition-context";
 import { cn } from "@/lib/utils";
 
 export function RsvpButton({
   className,
   label = "Confirmar RSVP",
   variant = "solid",
+  href,
 }: {
   className?: string;
   label?: string;
   variant?: "solid" | "outline";
+  href?: string | undefined;
 }) {
+  const edition = useEdition();
   return (
     <a
-      href={EVENT.rsvpUrl}
+      href={href ?? edition.rsvpUrl}
       target="_blank"
       rel="noreferrer noopener"
       className={cn(

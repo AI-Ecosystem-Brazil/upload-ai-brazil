@@ -1,14 +1,13 @@
 import { useState } from "react";
 import {
-  AGENDA,
   KIND_LABEL,
-  initialsOf,
-  photoOf,
   type Participant,
   type Period,
   type Session,
   type SessionKind,
-} from "@/data/event";
+} from "@/data/types";
+import { initialsOf, photoOf } from "@/data/people";
+import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +24,7 @@ const KIND_STYLE: Record<SessionKind, string> = {
   keynote: "bg-brand-gradient text-primary-foreground border-transparent",
   intervalo: "border-border text-muted-foreground",
   momento: "border-accent/40 text-accent",
+  handson: "border-primary/40 text-primary",
 };
 
 const AVATAR_SIZE = {
@@ -135,6 +135,36 @@ function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey
   );
 }
 
+function TbdCard({ session }: { session: Session }) {
+  return (
+    <article className="rounded-2xl border border-dashed border-border/70 bg-surface/30 p-5 sm:p-6">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="font-display text-lg font-bold tabular-nums text-muted-foreground">
+          {session.time}
+        </span>
+        <span className="rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          {KIND_LABEL[session.kind]}
+        </span>
+        <span className="rounded-full border border-accent/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-accent">
+          A definir
+        </span>
+      </div>
+      <h3 className="mt-3 text-lg font-semibold leading-snug text-muted-foreground sm:text-xl">
+        {session.title}
+      </h3>
+      {session.description ? (
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {session.description}
+        </p>
+      ) : (
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Conteúdo e participantes em definição pela curadoria.
+        </p>
+      )}
+    </article>
+  );
+}
+
 function KeynoteCard({ session }: { session: Session }) {
   const lead = session.people?.[0];
   const photo = lead ? photoOf(lead.name) : undefined;
@@ -210,7 +240,6 @@ function KeynoteCard({ session }: { session: Session }) {
   );
 }
 
-
 function StandardCard({ session }: { session: Session }) {
   const people = session.people ?? [];
   const isPanel = people.length > 1;
@@ -228,7 +257,7 @@ function StandardCard({ session }: { session: Session }) {
             KIND_STYLE[session.kind],
           )}
         >
-          {KIND_LABEL[session.kind]}
+          {session.badge ?? KIND_LABEL[session.kind]}
         </span>
       </div>
 
@@ -272,55 +301,126 @@ function StandardCard({ session }: { session: Session }) {
   );
 }
 
+function SessionList({ sessions }: { sessions: Session[] }) {
+  return (
+    <ol className="mt-10 space-y-3 border-l border-border pl-5 sm:pl-8">
+      {sessions.map((s) => (
+        <li key={`${s.time}-${s.title}`} className="relative">
+          <span
+            aria-hidden
+            className={cn(
+              "absolute -left-[25px] top-7 h-2.5 w-2.5 rounded-full sm:-left-[37px]",
+              s.kind === "intervalo" || s.tbd ? "bg-muted" : "bg-primary",
+            )}
+          />
+          <Reveal>
+            {s.tbd ? (
+              <TbdCard session={s} />
+            ) : s.kind === "keynote" ? (
+              <KeynoteCard session={s} />
+            ) : (
+              <StandardCard session={s} />
+            )}
+          </Reveal>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function PeriodFilters({
+  filter,
+  onChange,
+}: {
+  filter: Period | "todos";
+  onChange: (id: Period | "todos") => void;
+}) {
+  return (
+    <div
+      className="flex flex-wrap gap-2"
+      role="tablist"
+      aria-label="Filtrar programação por período"
+    >
+      {FILTERS.map((f) => {
+        const active = filter === f.id;
+        return (
+          <button
+            key={f.id}
+            type="button"
+            role="tab"
+            aria-selected={active}
+            onClick={() => onChange(f.id)}
+            className={cn(
+              "rounded-full border px-5 py-2 font-display text-xs font-semibold uppercase tracking-wider transition-colors",
+              active
+                ? "border-transparent bg-primary text-primary-foreground"
+                : "border-border text-muted-foreground hover:text-foreground",
+            )}
+          >
+            {f.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export function AgendaTimeline() {
+  const edition = useEdition();
+  const tracks = edition.tracks;
   const [filter, setFilter] = useState<Period | "todos">("todos");
-  const sessions = AGENDA.filter((s) => filter === "todos" || s.period === filter);
+  const [trackId, setTrackId] = useState<string>(tracks?.[0]?.id ?? "");
+
+  const activeTrack = tracks?.find((t) => t.id === trackId) ?? tracks?.[0];
+  const source = activeTrack ? activeTrack.sessions : (edition.agenda ?? []);
+  const sessions = source.filter((s) => filter === "todos" || s.period === filter);
 
   return (
     <div>
-      <div
-        className="flex flex-wrap gap-2"
-        role="tablist"
-        aria-label="Filtrar programação por período"
-      >
-        {FILTERS.map((f) => {
-          const active = filter === f.id;
-          return (
-            <button
-              key={f.id}
-              type="button"
-              role="tab"
-              aria-selected={active}
-              onClick={() => setFilter(f.id)}
-              className={cn(
-                "rounded-full border px-5 py-2 font-display text-xs font-semibold uppercase tracking-wider transition-colors",
-                active
-                  ? "border-transparent bg-primary text-primary-foreground"
-                  : "border-border text-muted-foreground hover:text-foreground",
-              )}
-            >
-              {f.label}
-            </button>
-          );
-        })}
-      </div>
+      {tracks ? (
+        <div
+          className="mb-6 flex flex-wrap gap-2"
+          role="tablist"
+          aria-label="Escolher trilha da programação"
+        >
+          {tracks.map((t) => {
+            const active = t.id === activeTrack?.id;
+            return (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => setTrackId(t.id)}
+                className={cn(
+                  "rounded-2xl border px-5 py-3 text-left font-display text-sm font-semibold transition-colors",
+                  active
+                    ? "border-primary/60 bg-primary/10 text-primary"
+                    : "border-border text-muted-foreground hover:text-foreground",
+                )}
+              >
+                {t.name}
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
 
-      <ol className="mt-10 space-y-3 border-l border-border pl-5 sm:pl-8">
-        {sessions.map((s) => (
-          <li key={`${s.time}-${s.title}`} className="relative">
-            <span
-              aria-hidden
-              className={cn(
-                "absolute -left-[25px] top-7 h-2.5 w-2.5 rounded-full sm:-left-[37px]",
-                s.kind === "intervalo" ? "bg-muted" : "bg-primary",
-              )}
-            />
-            <Reveal>
-              {s.kind === "keynote" ? <KeynoteCard session={s} /> : <StandardCard session={s} />}
-            </Reveal>
-          </li>
-        ))}
-      </ol>
+      {activeTrack?.description ? (
+        <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          {activeTrack.description}
+        </p>
+      ) : null}
+
+      <PeriodFilters filter={filter} onChange={setFilter} />
+
+      {sessions.length ? (
+        <SessionList sessions={sessions} />
+      ) : (
+        <p className="mt-10 rounded-2xl border border-dashed border-border/70 bg-surface/30 p-6 text-sm text-muted-foreground">
+          Nenhuma atividade neste período nesta trilha.
+        </p>
+      )}
     </div>
   );
 }

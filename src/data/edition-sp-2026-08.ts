@@ -1,43 +1,5 @@
-import alineFoto from "@/assets/aline-bocardo.png.asset.json";
-import alessandroFoto from "@/assets/alessandro-milagres.jpg.asset.json";
-import roanFoto from "@/assets/roan.png.asset.json";
-import adrianoFoto from "@/assets/adriano-rufino.png.asset.json";
-import cabeloFoto from "@/assets/alessandro-cabelo.png.asset.json";
-import andreFoto from "@/assets/andre-almeida.png.asset.json";
-import brunoFoto from "@/assets/bruno-mello.png.asset.json";
-import carolFoto from "@/assets/carol-luz.png.asset.json";
-import cileneFoto from "@/assets/cilene-danta.png.asset.json";
-import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
-import linuxmenFoto from "@/assets/cristiano-linuxmen.png.asset.json";
-
-import eduardoNevesFoto from "@/assets/eduardo-neves.png.asset.json";
-import eduardoPiedadeFoto from "@/assets/eduardo-piedade.png.asset.json";
-import elaineFoto from "@/assets/elaine-coimbra.png.asset.json";
-import evaFoto from "@/assets/eva-lazarini.png.asset.json";
-import gabrielFoto from "@/assets/gabriel-virissimo.png.asset.json";
-import gersonFoto from "@/assets/gerson-viergutz.png.asset.json";
-import jairoFoto2 from "@/assets/jairo-segre-2.png.asset.json";
-import julianaFoto from "@/assets/juliana-lopes.png.asset.json";
-import julianoFoto from "@/assets/juliano-kimura.png.asset.json";
-import leandroFoto from "@/assets/leandro-mastellini.png.asset.json";
-import leilaFoto from "@/assets/leila-navarro.png.asset.json";
-import leonardoFoto from "@/assets/leonardo-santos.png.asset.json";
-import lucasFoto from "@/assets/lucas-garcia.png.asset.json";
-import luisFoto from "@/assets/luis-rodeguero.png.asset.json";
-import mauricioFoto from "@/assets/mauricio-conte.png.asset.json";
-import michaelFoto from "@/assets/michael-silva.png.asset.json";
-import muzyFoto from "@/assets/muzy-jorge.png.asset.json";
-import nelsonFoto from "@/assets/nelson-borges.png.asset.json";
-import rodrigoNevesFoto from "@/assets/rodrigo-neves.png.asset.json";
-import righettiFoto from "@/assets/rodrigo-righetti.png.asset.json";
-import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
-import danielFoto2 from "@/assets/daniel-ramos-2.avif.asset.json";
-import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
-import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
-import marcoRiveirosFoto from "@/assets/marco-riveiros.png.asset.json";
-import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
-import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
-import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
+import type { Edition, Session, Supporter } from "@/data/types";
+import { buildSpeakers } from "@/data/people";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
@@ -45,51 +7,7 @@ import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital
 import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
 import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
 
-export const EVENT = {
-  name: "Upload AI Brasil Experience 2026",
-  tagline: "O esquenta do maior evento de IA da América Latina",
-  dateISO: "2026-08-14T08:30:00-03:00",
-  endISO: "2026-08-14T21:00:00-03:00",
-  dateLabel: "14 de agosto de 2026 · sexta-feira",
-  timeLabel: "08h30 às 21h00",
-  venue: "InovaBRA Habitat — 10º andar",
-  city: "São Paulo, SP",
-  format: "Presencial e online (híbrido)",
-  capacity: "300 pessoas",
-  rsvpUrl:
-    "https://ai.eco.br/plans/1979445?bundle_token=aea96ac88a1205364ce25700e36d44d7&utm_source=manual",
-} as const;
-
-export type SessionKind = "palestra" | "painel" | "keynote" | "intervalo" | "momento";
-export type Period = "manha" | "tarde" | "noite";
-
-export type Participant = {
-  name: string;
-  role: string;
-  profileUrl?: string;
-  org?: string;
-};
-
-export type Session = {
-  time: string;
-  period: Period;
-  kind: SessionKind;
-  title: string;
-  description?: string;
-  people?: Participant[];
-  highlight?: boolean;
-  badge?: string;
-};
-
-export const KIND_LABEL: Record<SessionKind, string> = {
-  palestra: "Palestra",
-  painel: "Painel",
-  keynote: "Keynote",
-  intervalo: "Intervalo",
-  momento: "Momento AI Brasil",
-};
-
-export const AGENDA: Session[] = [
+const AGENDA: Session[] = [
   {
     time: "08h30",
     period: "manha",
@@ -534,121 +452,7 @@ export const AGENDA: Session[] = [
   },
 ];
 
-export type Speaker = {
-  name: string;
-  role: string;
-  activity: string;
-  profileUrl?: string;
-  photo?: string;
-  featured?: boolean;
-};
-
-export const PHOTOS: Record<string, string> = {
-  "Aline Bocardo": alineFoto.url,
-  "Alessandro Milagres": alessandroFoto.url,
-  "Jairo Segre": jairoFoto2.url,
-  "Roan Santos": roanFoto.url,
-  "Adriano Rufino": adrianoFoto.url,
-  "Alessandro Cabelo": cabeloFoto.url,
-  "André Almeida": andreFoto.url,
-  "Bruno Mello": brunoFoto.url,
-  "Carolina da Luz": carolFoto.url,
-  "Cilene Danta": cileneFoto.url,
-  "Cristiano Christianini": christianiniFoto.url,
-  Linuxmen: linuxmenFoto.url,
-  "Daniel Ramos": danielFoto2.url,
-  "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
-  "Eduardo Piedade": eduardoPiedadeFoto.url,
-  "Elaine Coimbra": elaineFoto.url,
-  "Eva Lazarini": evaFoto.url,
-  "Gabriel Virissimo": gabrielFoto.url,
-  "Gerson Viergutz": gersonFoto.url,
-  "Juliana Lopes": julianaFoto.url,
-  "Juliano Kimura": julianoFoto.url,
-  "Leandro Mastellini": leandroFoto.url,
-  "Leila Navarro": leilaFoto.url,
-  "Leonardo Santos": leonardoFoto.url,
-  "Lucas Garcia": lucasFoto.url,
-  "Luis Rodeguero": luisFoto.url,
-  "Maurício Conte": mauricioFoto.url,
-  "Michael Silva": michaelFoto.url,
-  "Muzy Jorge": muzyFoto.url,
-  "Nelson Borges": nelsonFoto.url,
-  "Rodrigo Neves": rodrigoNevesFoto.url,
-  "Rodrigo Righetti": righettiFoto.url,
-  "Vagner Campos": vagnerFoto.url,
-  "Rafael Soares": rafaelSoaresFoto.url,
-  "Marcos Oliveira": marcosOliveiraFoto.url,
-  "Marco Riveiros": marcoRiveirosFoto.url,
-  "Luiz Tibiriçá": tibiricaFoto.url,
-  "Tiene Colins": tieneFoto.url,
-  "Marcio Chleba": chlebaFoto.url,
-};
-
-export function photoOf(name: string): string | undefined {
-  return PHOTOS[name];
-}
-
-export function initialsOf(name: string): string {
-  return name
-    .replace(/\(.*?\)/g, "")
-    .split(" ")
-    .filter((w) => w.length > 2)
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
-}
-
-
-function buildSpeakers(): Speaker[] {
-  const map = new Map<string, Speaker>();
-
-  for (const session of AGENDA) {
-    if (!session.people) continue;
-    const featured = session.kind === "keynote";
-
-    for (const person of session.people) {
-      const existing = map.get(person.name);
-      if (existing) {
-        if (!existing.profileUrl && person.profileUrl) {
-          existing.profileUrl = person.profileUrl;
-        }
-        if (featured && !existing.featured) {
-          existing.featured = true;
-          existing.role = person.role;
-          existing.activity = session.title;
-        }
-        continue;
-      }
-
-      const speaker: Speaker = {
-        name: person.name,
-        role: person.org ? `${person.role} · ${person.org}` : person.role,
-        activity: session.title,
-        featured,
-      };
-      if (person.profileUrl) speaker.profileUrl = person.profileUrl;
-      const photo = PHOTOS[person.name];
-      if (photo) speaker.photo = photo;
-      map.set(person.name, speaker);
-    }
-  }
-
-  const list = [...map.values()];
-  return [
-    ...list.filter((s) => s.featured),
-    ...list.filter((s) => !s.featured),
-  ];
-}
-
-export const SPEAKERS: Speaker[] = buildSpeakers();
-
-export const TALK_COUNT = AGENDA.filter((s) => s.kind !== "intervalo").length;
-
-export type Supporter = { name: string; logo: string; light?: boolean };
-
-export const SUPPORTERS: Supporter[] = [
+const SUPPORTERS: Supporter[] = [
   { name: "Abria", logo: logoAbria.url },
   { name: "AI Safety Brazil", logo: logoAiSafety.url },
   { name: "Abradi", logo: logoInstitucional.url },
@@ -662,9 +466,9 @@ export const SUPPORTERS: Supporter[] = [
   },
 ];
 
-export const SUPPORTER_MENTIONS = ["ABRIA", "AI Safety Brazil", "ABRADI", "ABIACOM", "ANAMID"];
+const SUPPORTER_MENTIONS = ["ABRIA", "AI Safety Brazil", "ABRADI", "ABIACOM", "ANAMID"];
 
-export const CFP = {
+const CFP = {
   requirement:
     "Para palestrar ou participar como painelista, todos devem estar cadastrados na plataforma e com o perfil preenchido em ai.eco.br.",
   formats: [
@@ -680,8 +484,45 @@ export const CFP = {
   ],
 } as const;
 
-export const SPONSOR_TIERS = [
+const SPONSOR_TIERS = [
   { tier: "Ouro", slots: 4 },
   { tier: "Prata", slots: 5 },
   { tier: "Apoio", slots: 6 },
 ] as const;
+
+const VENUE_INFO = [
+  { label: "Endereço", value: "InovaBRA Habitat · Av. Angélica, 2529 — Bela Vista, São Paulo/SP" },
+  { label: "Andar", value: "10º andar inteiro, com os dois maiores auditórios" },
+  { label: "Credenciamento", value: "A partir das 08h30, na recepção do prédio" },
+  { label: "Formato", value: "Presencial e online (híbrido) · capacidade máxima de 300 pessoas" },
+];
+
+export const SP_EDITION: Edition = {
+  slug: "sp-agosto-2026",
+  path: "/sp-agosto-2026",
+  status: "past",
+  name: "Upload AI Brasil Experience 2026",
+  shortName: "São Paulo · Agosto 2026",
+  tagline: "O esquenta do maior evento de IA da América Latina",
+  dateISO: "2026-08-14T08:30:00-03:00",
+  endISO: "2026-08-14T21:00:00-03:00",
+  dateLabel: "14 de agosto de 2026 · sexta-feira",
+  timeLabel: "08h30 às 21h00",
+  venue: "InovaBRA Habitat — 10º andar",
+  city: "São Paulo, SP",
+  format: "Presencial e online (híbrido)",
+  capacity: "300 pessoas",
+  rsvpUrl:
+    "https://ai.eco.br/plans/1979445?bundle_token=aea96ac88a1205364ce25700e36d44d7&utm_source=manual",
+  downloadUrl: "https://ai.eco.br/spaces/23317728/page",
+  agenda: AGENDA,
+  speakers: buildSpeakers(AGENDA),
+  supporters: SUPPORTERS,
+  supporterMentions: SUPPORTER_MENTIONS,
+  cfp: CFP,
+  sponsorTiers: SPONSOR_TIERS,
+  venueInfo: VENUE_INFO,
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4338.391338107302!2d-46.6621038!3d-23.554339700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582dbe278b15%3A0xd08729fb039d6441!2sAv.%20Ang%C3%A9lica%2C%202529%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001227-200!5e1!3m2!1spt-BR!2sbr!4v1786377288497!5m2!1spt-BR!2sbr",
+  mapAddress: "Av. Angélica, 2529 — Bela Vista, São Paulo/SP",
+};

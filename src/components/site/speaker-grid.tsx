@@ -1,12 +1,21 @@
-import { SPEAKERS, initialsOf } from "@/data/event";
+import { initialsOf } from "@/data/people";
+import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
 
-const initials = initialsOf;
-
 export function SpeakerGrid() {
+  const { speakers } = useEdition();
+
+  if (!speakers.length) {
+    return (
+      <p className="rounded-2xl border border-dashed border-border/70 bg-surface/30 p-6 text-sm text-muted-foreground">
+        Palestrantes em confirmação. A grade completa será divulgada em breve.
+      </p>
+    );
+  }
+
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {SPEAKERS.map((s, i) => {
+      {speakers.map((s, i) => {
         const Card = s.profileUrl ? "a" : "article";
         return (
           <Reveal key={s.name} delay={(i % 3) * 80}>
@@ -32,7 +41,7 @@ export function SpeakerGrid() {
                     aria-hidden
                     className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-gradient font-display text-2xl font-bold text-primary-foreground"
                   >
-                    {initials(s.name)}
+                    {initialsOf(s.name)}
                   </span>
                 </div>
               )}

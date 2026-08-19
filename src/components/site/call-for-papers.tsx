@@ -1,8 +1,11 @@
-import { CFP, EVENT } from "@/data/event";
+import { useEdition } from "@/data/edition-context";
 import { RsvpButton } from "@/components/site/rsvp-button";
 import { Reveal } from "@/components/site/section";
 
 export function CallForPapers() {
+  const edition = useEdition();
+  const CFP = edition.cfp;
+
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <Reveal>
@@ -19,11 +22,7 @@ export function CallForPapers() {
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
             {CFP.requirement}
           </p>
-          <RsvpButton
-            className="mt-7"
-            variant="outline"
-            label="Quero palestrar"
-          />
+          <RsvpButton className="mt-7" variant="outline" label="Quero palestrar" />
         </div>
       </Reveal>
 
@@ -53,7 +52,7 @@ export function CallForPapers() {
             label="Quero colaborar com a curadoria"
           />
           <p className="mt-6 text-xs uppercase tracking-wider text-muted-foreground">
-            Cadastro obrigatório em {new URL(EVENT.rsvpUrl).host}
+            Cadastro obrigatório em {new URL(edition.rsvpUrl).host}
           </p>
         </div>
       </Reveal>
