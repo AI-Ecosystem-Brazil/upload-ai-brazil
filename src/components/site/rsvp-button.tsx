@@ -10,7 +10,7 @@ export function RsvpButton({
   className?: string;
   label?: string;
   variant?: "solid" | "outline";
-  href?: string;
+  href?: string | undefined;
 }) {
   const edition = useEdition();
   return (
