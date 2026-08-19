@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EVENT } from "@/data/event";
+import { useEdition } from "@/data/edition-context";
 
 type Parts = { dias: number; horas: number; min: number };
 
@@ -15,7 +15,8 @@ function diff(target: number): Parts | null {
 }
 
 export function Countdown() {
-  const target = new Date(EVENT.dateISO).getTime();
+  const edition = useEdition();
+  const target = new Date(edition.dateISO).getTime();
   const [parts, setParts] = useState<Parts | null>(null);
 
   useEffect(() => {
