@@ -170,10 +170,10 @@ export const ARARAS_EDITION: Edition = {
     { name: "Abradi", logo: logoInstitucional.url },
     { name: "ABIACOM", logo: logoAbiacom.url },
     { name: "ANAMID", logo: logoAnamid.url },
-    { name: "Prime Insurance", logo: logoPrimeInsurance.url, light: true },
-    { name: "AINOV", logo: logoAinov.url, light: true },
+    { name: "Prime Insurance", logo: logoPrimeInsurance.url },
+    { name: "AINOV", logo: logoAinov.url },
     { name: "Da Minha Vó", logo: logoDaMinhaVo.url, light: true },
-    { name: "Loqq'y", logo: logoLoqqy.url, light: true },
+    { name: "Loqq'y", logo: logoLoqqy.url },
     {
       name: "Instituto da Maturidade Digital",
       logo: logoInstitutoMaturidade.url,
