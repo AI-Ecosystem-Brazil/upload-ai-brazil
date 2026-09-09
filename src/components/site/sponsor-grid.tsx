@@ -45,7 +45,26 @@ export function SponsorGrid() {
                   {t.tier}
                 </h3>
                 <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                  {Array.from({ length: t.slots }).map((_, i) => (
+                  {t.sponsors?.map((s) => (
+                    <a
+                      key={s.name}
+                      href={edition.rsvpUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className={`flex h-24 items-center justify-center rounded-xl border border-border p-5 transition-colors duration-200 hover:border-primary/40 ${
+                        s.light ? "bg-white" : "bg-surface/40"
+                      }`}
+                    >
+                      <img
+                        src={s.logo}
+                        alt={`Logotipo ${s.name}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-14 w-full object-contain"
+                      />
+                    </a>
+                  ))}
+                  {Array.from({ length: Math.max(0, t.slots - (t.sponsors?.length ?? 0)) }).map((_, i) => (
                     <a
                       key={i}
                       href={edition.rsvpUrl}
