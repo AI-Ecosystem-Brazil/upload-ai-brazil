@@ -6,10 +6,10 @@ import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
 import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital.png.asset.json";
 import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
 import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
-import logoPrimeInsurance from "@/assets/apoio-prime-insurance.jpeg.asset.json";
-import logoAinov from "@/assets/apoio-ainov.jpeg.asset.json";
+import logoPrimeInsurance from "@/assets/apoio-prime-insurance-white.png.asset.json";
+import logoAinov from "@/assets/apoio-ainov-dark.jpeg.asset.json";
 import logoDaMinhaVo from "@/assets/apoio-da-minha-vo.jpeg.asset.json";
-import logoLoqqy from "@/assets/apoio-loqqy.jpeg.asset.json";
+import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
 
 const TBD = (time: string, period: Session["period"], kind: Session["kind"], title: string): Session => ({
