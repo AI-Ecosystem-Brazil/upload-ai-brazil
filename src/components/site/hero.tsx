@@ -146,8 +146,8 @@ export function Hero({
 
           <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
             <img
-              src={seloAsset.url}
-              alt="Selo AI Brasil: árvore de circuitos com abelha, símbolo do ecossistema"
+              src={edition.sealImage ?? seloAsset.url}
+              alt={`Selo do ${edition.name}`}
               width={1000}
               height={1000}
               className="w-full rounded-full border border-primary/20 shadow-lime-glow"

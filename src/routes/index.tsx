@@ -10,6 +10,7 @@ import { CallForPapers } from "@/components/site/call-for-papers";
 import { SponsorGrid } from "@/components/site/sponsor-grid";
 import { RsvpButton } from "@/components/site/rsvp-button";
 import { SiteFooter } from "@/components/site/site-footer";
+import { WhatsAppFab } from "@/components/site/whatsapp-fab";
 
 const TITLE = "Upload AI Brasil Araras 2026 — 23 de setembro, FHO";
 const DESCRIPTION =
@@ -195,6 +196,8 @@ function Index() {
         </section>
 
         <SiteFooter crossLink={CROSS_LINK} />
+
+        <WhatsAppFab />
 
         {/* CTA fixo no mobile */}
         <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden">
