@@ -51,7 +51,11 @@ export type Cfp = {
   criteria?: readonly { label: string; score: string }[];
 };
 
-export type SponsorTier = { tier: string; slots: number };
+export type SponsorTier = {
+  tier: string;
+  slots: number;
+  sponsors?: readonly Supporter[];
+};
 
 export type Edition = {
   slug: string;
