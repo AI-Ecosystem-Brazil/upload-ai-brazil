@@ -173,16 +173,9 @@ export const ARARAS_EDITION: Edition = {
     requirement:
       "Para palestrar ou participar como painelista, todos devem estar cadastrados na plataforma e com o perfil preenchido em ai.eco.br.",
     formats: [
-      "Slot básico de 30 minutos",
-      "Slot mínimo de 20 minutos",
-      "Painéis de 40 a 60 minutos, com 3 a 4 participantes",
-      "Sessões mão na massa de 60 minutos nos laboratórios",
-    ],
-    criteria: [
-      { label: "Conteúdo + participação + engajamento + ouro", score: "100%" },
-      { label: "Conteúdo + alta participação (perfil completo e ativo)", score: "80%" },
-      { label: "Conteúdo + baixa participação (perfil incompleto)", score: "60%" },
-      { label: "Conteúdo e zero participação (sem perfil)", score: "50%" },
+      "Palestra de 30 minutos",
+      "Painel de 60 minutos com 4 participantes",
+      "Oficinas práticas de 90 a 120 minutos",
     ],
   },
   sponsorTiers: [

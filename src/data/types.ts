@@ -48,7 +48,7 @@ export type Supporter = { name: string; logo: string; light?: boolean };
 export type Cfp = {
   requirement: string;
   formats: readonly string[];
-  criteria: readonly { label: string; score: string }[];
+  criteria?: readonly { label: string; score: string }[];
 };
 
 export type SponsorTier = { tier: string; slots: number };
@@ -69,6 +69,8 @@ export type Edition = {
   format: string;
   capacity?: string;
   organizer?: string;
+  sealImage?: string;
+  whatsappUrl?: string;
   rsvpUrl: string;
   downloadUrl?: string;
   agenda?: Session[];
