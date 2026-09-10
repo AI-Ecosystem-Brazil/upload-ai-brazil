@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo-aibrasil.png.asset.json";
 import seloAsset from "@/assets/selo-aibrasil.png.asset.json";
 import { useEdition } from "@/data/edition-context";
 import { Countdown } from "@/components/site/countdown";
 import { RsvpButton } from "@/components/site/rsvp-button";
+import { SiteNavigation } from "@/components/site/site-navigation";
 
 export function Hero({
   titleLead,
@@ -23,65 +23,17 @@ export function Hero({
 
   return (
     <header className="relative overflow-hidden">
+      <SiteNavigation crossLink={crossLink} />
       <div aria-hidden className="circuit-grid absolute inset-0 opacity-60" />
       <div
         aria-hidden
         className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-10 sm:px-8 sm:pb-28 sm:pt-14">
-        <nav className="flex items-center justify-between gap-4">
-          <Link to="/" className="shrink-0">
-            <img
-              src={logoAsset.url}
-              alt="AIBrasil.AI"
-              width={1120}
-              height={210}
-              className="h-7 w-auto sm:h-8"
-            />
-          </Link>
-          <div className="hidden items-center gap-7 md:flex">
-            <a
-              href="#programacao"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Programação
-            </a>
-            <a
-              href="#palestrantes"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Palestrantes
-            </a>
-            <a
-              href="#local"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Local
-            </a>
-            {crossLink ? (
-              <Link
-                to={crossLink.to}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {crossLink.label}
-              </Link>
-            ) : null}
-            {isPast ? (
-              <RsvpButton
-                className="px-5 py-2.5 text-xs"
-                label="Fotos e vídeos"
-                href={edition.downloadUrl}
-              />
-            ) : (
-              <RsvpButton className="px-5 py-2.5 text-xs" />
-            )}
-          </div>
-        </nav>
-
-        <div className="mt-16 grid items-center gap-12 sm:mt-24 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative mx-auto w-full max-w-6xl px-5 pb-16 pt-28 sm:px-8 sm:pb-24 sm:pt-36">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
           <div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap">
               <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-primary">
                 {edition.dateLabel}
               </p>
@@ -90,8 +42,16 @@ export function Hero({
                   Edição realizada
                 </span>
               ) : null}
+              <img
+                src={edition.sealImage ?? seloAsset.url}
+                alt=""
+                aria-hidden="true"
+                width={1000}
+                height={1000}
+                className="h-20 w-20 shrink-0 rounded-full border border-primary/20 shadow-lime-glow lg:hidden"
+              />
             </div>
-            <h1 className="mt-5 text-4xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 text-4xl font-bold leading-[1.04] sm:text-6xl lg:text-7xl">
               {titleLead} <span className="text-brand-gradient">{titleHighlight}</span>{" "}
               {titleTail}
             </h1>
@@ -99,7 +59,7 @@ export function Hero({
               {intro}
             </p>
 
-            <dl className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            <dl className="mt-8 grid grid-cols-2 gap-x-5 gap-y-4 border-y border-border/70 py-5 text-sm sm:flex sm:flex-wrap sm:gap-x-8">
               <div>
                 <dt className="text-muted-foreground">Horário</dt>
                 <dd className="font-display font-semibold">{edition.timeLabel}</dd>
@@ -120,7 +80,7 @@ export function Hero({
               ) : null}
             </dl>
 
-            <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
               {isPast ? (
                 <RsvpButton
                   label="Download de fotos e vídeos"
@@ -144,7 +104,7 @@ export function Hero({
             ) : null}
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+          <div className="relative mx-auto hidden w-full max-w-sm lg:block lg:max-w-none">
             <img
               src={edition.sealImage ?? seloAsset.url}
               alt={`Selo do ${edition.name}`}

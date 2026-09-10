@@ -20,7 +20,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.05 },
+      { rootMargin: "160px 0px 80px 0px", threshold: 0.01 },
     );
 
     observer.observe(el);

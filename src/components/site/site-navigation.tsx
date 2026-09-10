@@ -85,11 +85,15 @@ export function SiteNavigation({ crossLink }: { crossLink?: CrossLink }) {
               {crossLink.label}
             </Link>
           ) : null}
-          <RsvpButton
-            className="ml-2 px-5 py-2.5 text-xs"
-            label={isPast ? "Fotos e vídeos" : undefined}
-            href={isPast ? edition.downloadUrl : undefined}
-          />
+          {isPast ? (
+            <RsvpButton
+              className="ml-2 px-5 py-2.5 text-xs"
+              label="Fotos e vídeos"
+              href={edition.downloadUrl}
+            />
+          ) : (
+            <RsvpButton className="ml-2 px-5 py-2.5 text-xs" />
+          )}
         </div>
 
         <Button
@@ -128,11 +132,11 @@ export function SiteNavigation({ crossLink }: { crossLink?: CrossLink }) {
                 {crossLink.label}
               </Link>
             ) : null}
-            <RsvpButton
-              className="mt-3 w-full"
-              label={isPast ? "Fotos e vídeos" : undefined}
-              href={isPast ? edition.downloadUrl : undefined}
-            />
+            {isPast ? (
+              <RsvpButton className="mt-3 w-full" label="Fotos e vídeos" href={edition.downloadUrl} />
+            ) : (
+              <RsvpButton className="mt-3 w-full" />
+            )}
           </div>
         </div>
       ) : null}
