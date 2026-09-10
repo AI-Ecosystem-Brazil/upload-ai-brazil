@@ -22,7 +22,7 @@ import julianoFoto from "@/assets/juliano-kimura.png.asset.json";
 import leandroFoto from "@/assets/leandro-mastellini.png.asset.json";
 import leilaFoto from "@/assets/leila-navarro.png.asset.json";
 import leonardoFoto from "@/assets/leonardo-santos.png.asset.json";
-import lucasFoto from "@/assets/lucas-garcia.png.asset.json";
+
 import luisFoto from "@/assets/luis-rodeguero.png.asset.json";
 import mauricioFoto from "@/assets/mauricio-conte.png.asset.json";
 import michaelFoto from "@/assets/michael-silva.png.asset.json";
@@ -36,13 +36,19 @@ import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
 import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
 import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
 import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
-import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
+
 import pedroFoto from "@/assets/pedro-chiamulera.jpg.asset.json";
 import anaBarrosFoto from "@/assets/ana-barros.jpeg.asset.json";
 import elenFoto from "@/assets/elen-melo.png.asset.json";
 import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asset.json";
 import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
 import deizeFoto from "@/assets/deize-andrade.jpg.asset.json";
+import azariteFoto from "@/assets/azarite.jpeg.asset.json";
+import chlebaFoto2 from "@/assets/marcio-chleba-2.png.asset.json";
+import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
+import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
+import gutaFoto from "@/assets/guta-raeder.png.asset.json";
+import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -75,7 +81,7 @@ export const PHOTOS: Record<string, string> = {
   "Leandro Mastellini": leandroFoto.url,
   "Leila Navarro": leilaFoto.url,
   "Leonardo Santos": leonardoFoto.url,
-  "Lucas Garcia": lucasFoto.url,
+  
   "Luis Rodeguero": luisFoto.url,
   "Maurício Conte": mauricioFoto.url,
   "Michael Silva": michaelFoto.url,
@@ -91,7 +97,12 @@ export const PHOTOS: Record<string, string> = {
   "Luiz Tibiriçá": tibiricaFoto.url,
   "Tiene Colins": tieneFoto.url,
   "Tiene Collins": tieneFoto.url,
-  "Marcio Chleba": chlebaFoto.url,
+  "Marcio Chleba": chlebaFoto2.url,
+  Azarite: azariteFoto.url,
+  "Tiago Zouk": tiagoZoukFoto.url,
+  "Elisangela Rosa": elisangelaFoto.url,
+  "Guta Raeder": gutaFoto.url,
+  "André Magno": andreMagnoFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([
