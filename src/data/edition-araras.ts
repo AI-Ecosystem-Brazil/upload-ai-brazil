@@ -26,9 +26,9 @@ const PALCO: Session[] = [
   {
     time: "09h00",
     period: "manha",
-    kind: "momento",
+    kind: "keynote",
     highlight: true,
-    badge: "Abertura oficial",
+    badge: "Abertura + Keynote",
     title: "Abertura e palestra · Como construí uma empresa de R$ 2,5 bilhões",
     people: [
       {
@@ -42,7 +42,8 @@ const PALCO: Session[] = [
   {
     time: "09h30",
     period: "manha",
-    kind: "palestra",
+    kind: "keynote",
+    badge: "Keynote Speaker",
     title: "IA para empreendedores",
     people: [
       { name: "Tiene Collins", role: "Palestrante" },
@@ -124,7 +125,8 @@ const PALCO: Session[] = [
   {
     time: "13h30",
     period: "tarde",
-    kind: "palestra",
+    kind: "keynote",
+    badge: "Keynote Speaker",
     title: "Inteligência Artificial deve ser um privilégio de todos, nascida para exponenciar",
     people: [
       {
@@ -207,7 +209,8 @@ const PALCO: Session[] = [
   {
     time: "17h00",
     period: "tarde",
-    kind: "palestra",
+    kind: "keynote",
+    badge: "Keynote Speaker",
     title: "O maior desafio da era da IA",
     people: [
       {

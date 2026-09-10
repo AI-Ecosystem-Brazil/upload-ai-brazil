@@ -6,7 +6,7 @@ import {
   type Session,
   type SessionKind,
 } from "@/data/types";
-import { initialsOf, isRecognizedPerson, photoOf } from "@/data/people";
+import { initialsOf, isKeynoteSpeaker, isRecognizedPerson, photoOf } from "@/data/people";
 import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
 import { Button } from "@/components/ui/button";
@@ -165,16 +165,17 @@ function TbdCard({ session }: { session: Session }) {
 }
 
 function KeynoteCard({ session }: { session: Session }) {
-  const lead = session.people?.[0];
+  const lead = session.people?.find((person) => isKeynoteSpeaker(person.name)) ?? session.people?.[0];
   const photo = lead ? photoOf(lead.name) : undefined;
+  const additionalPeople = session.people?.filter((person) => person.name !== lead?.name) ?? [];
 
   return (
-    <article className="overflow-hidden rounded-3xl border border-primary/50 bg-surface/80">
+    <article className="overflow-hidden rounded-lg border border-gold/60 bg-surface/80 shadow-gold-soft">
       <div className="grid gap-0 sm:grid-cols-[minmax(0,320px)_1fr] sm:min-h-[26rem]">
         <div className="relative min-h-[15rem] overflow-hidden bg-brand-gradient/10 sm:min-h-full">
           <span
             aria-hidden
-            className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-25 blur-3xl"
+            className="absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/20 blur-3xl"
           />
           {lead ? (
             photo ? (
@@ -210,12 +211,25 @@ function KeynoteCard({ session }: { session: Session }) {
           </span>
 
           {lead ? (
-            <p className="mt-3 font-display text-2xl font-bold leading-tight text-brand-gradient sm:text-3xl">
+              className="mt-3 font-display text-2xl font-bold leading-tight text-gold sm:text-3xl"
               {lead.name}
             </p>
           ) : null}
           <h3 className="mt-2 text-lg font-semibold leading-snug sm:text-xl">{session.title}</h3>
           {lead ? <p className="mt-2 text-sm text-accent">{lead.role}</p> : null}
+
+          {additionalPeople.length ? (
+            <div className="mt-4 border-t border-border pt-4">
+              <p className="font-display text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Participação na atividade
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {additionalPeople.map((person) => (
+                  <PersonChip key={person.name} person={person} />
+                ))}
+              </div>
+            </div>
+          ) : null}
 
           {session.description ? (
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

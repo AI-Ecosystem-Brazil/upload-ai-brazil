@@ -8,18 +8,30 @@ type Person = {
   photoName?: string;
 };
 
-const FEATURED: Person[] = [
-  { name: "André Almeida", recognition: "Destaque nacional" },
-  { name: "Marco Riveiros", recognition: "Destaque nacional" },
-  { name: "Aline Bocardo", recognition: "Destaque nacional" },
-  { name: "Elen Melo", recognition: "Destaque nacional" },
-  { name: "Ana Barros", recognition: "Destaque nacional" },
+const KEYNOTES: Person[] = [
+  {
+    name: "Pedro Chiamulera",
+    role: "Como construí uma empresa de R$ 2,5 bilhões",
+    recognition: "Keynote Speaker",
+  },
+  {
+    name: "Marco Riveiros",
+    role: "Inteligência Artificial deve ser um privilégio de todos",
+    recognition: "Keynote Speaker",
+  },
+  {
+    name: "Aline Bocardo",
+    role: "O maior desafio da era da IA",
+    recognition: "Keynote Speaker",
+  },
 ];
 
 const SPEAKERS: Person[] = [
-  { name: "Pedro Chiamulera" },
-  { name: "Juliano Kimura" },
-  { name: "Rodrigo Righetti" },
+  { name: "André Almeida", role: "Palestrante e painelista" },
+  { name: "Elen Melo", role: "Palestrante convidada" },
+  { name: "Ana Barros", role: "Palestrante convidada" },
+  { name: "Juliano Kimura", role: "Palestrante e facilitador" },
+  { name: "Rodrigo Righetti", role: "Palestrante" },
 ];
 
 const SPECIAL: Person[] = [
@@ -32,15 +44,15 @@ const SPECIAL: Person[] = [
 ];
 
 const SUPPORT: Person[] = [
-  { name: "Tiene Collins", photoName: "Tiene Colins" },
-  { name: "Ana Garms" },
-  { name: "Carolina da Luz" },
-  { name: "Gabriel Virissimo" },
-  { name: "Cilene Danta" },
-  { name: "Deize Andrade" },
-  { name: "Guta Raeder" },
-  { name: "Tiago Zouk" },
-  { name: "Elisangela Rosa" },
+  { name: "Tiene Collins", role: "Palestrante", photoName: "Tiene Colins" },
+  { name: "Ana Garms", role: "Palestrante" },
+  { name: "Carolina da Luz", role: "Mediadora e painelista" },
+  { name: "Gabriel Virissimo", role: "Painelista" },
+  { name: "Cilene Danta", role: "Mediadora" },
+  { name: "Deize Andrade", role: "Painelista" },
+  { name: "Guta Raeder", role: "Encerramento" },
+  { name: "Tiago Zouk", role: "Palestrante" },
+  { name: "Elisangela Rosa", role: "Organização e painelista" },
 ];
 
 function Portrait({ person, tone }: { person: Person; tone: "gold" | "neon" | "quiet" }) {
@@ -97,28 +109,48 @@ function PersonCard({ person, tone }: { person: Person; tone: "gold" | "neon" })
   );
 }
 
+function KeynoteCard({ person }: { person: Person }) {
+  return (
+    <article className="group h-full overflow-hidden rounded-lg border border-gold/60 bg-surface/65 shadow-gold-soft">
+      <Portrait person={person} tone="gold" />
+      <div className="p-4 sm:p-5">
+        <p className="font-display text-[10px] font-bold uppercase tracking-wider text-gold">
+          Keynote Speaker
+        </p>
+        <h3 className="mt-2 text-xl font-bold leading-tight sm:text-2xl">{person.name}</h3>
+        {person.role ? (
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{person.role}</p>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
 export function ArarasPeopleShowcase() {
   return (
-    <div className="space-y-14 sm:space-y-16">
+    <div className="space-y-16 sm:space-y-20">
       <div>
         <h3 className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-gold">
-          Palestrantes de destaque
+          Keynote Speakers
         </h3>
-        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-7 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-          {FEATURED.map((person, index) => (
-            <Reveal key={person.name} delay={(index % 5) * 60}>
-              <PersonCard person={person} tone="gold" />
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Três trajetórias de referência no palco principal, com visões que conectam negócios, inclusão e os desafios da nova era da IA.
+        </p>
+        <div className="mt-7 grid gap-5 sm:grid-cols-3 sm:gap-6">
+          {KEYNOTES.map((person, index) => (
+            <Reveal key={person.name} delay={index * 80}>
+              <KeynoteCard person={person} />
             </Reveal>
           ))}
         </div>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-2">
+      <div className="grid gap-14 lg:grid-cols-[1.35fr_0.65fr]">
         <div>
           <h3 className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-            Palestrantes
+            Palestrantes e painelistas
           </h3>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
+          <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-5">
             {SPEAKERS.map((person, index) => (
               <Reveal key={person.name} delay={index * 70}>
                 <PersonCard person={person} tone="neon" />
@@ -143,14 +175,19 @@ export function ArarasPeopleShowcase() {
 
       <div>
         <h3 className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-          Apoio
+          Membros e participações
         </h3>
-        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-7 min-[440px]:grid-cols-3 sm:grid-cols-5 lg:grid-cols-9">
+        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 min-[440px]:grid-cols-3 sm:grid-cols-5 lg:grid-cols-6">
           {SUPPORT.map((person, index) => (
             <Reveal key={person.name} delay={(index % 4) * 50}>
-              <article className="text-center">
+              <article className="h-full rounded-lg border border-border/70 bg-surface/30 p-2 text-left transition-colors duration-200 hover:border-primary/40">
                 <Portrait person={person} tone="quiet" />
-                <h3 className="mt-3 text-sm font-semibold leading-snug">{person.name}</h3>
+                <div className="px-1 pb-2">
+                  <h3 className="mt-3 text-sm font-semibold leading-snug">{person.name}</h3>
+                  {person.role ? (
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{person.role}</p>
+                  ) : null}
+                </div>
               </article>
             </Reveal>
           ))}
