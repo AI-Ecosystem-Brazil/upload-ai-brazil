@@ -10,6 +10,9 @@ import logoPrimeInsurance from "@/assets/apoio-prime-insurance-white.png.asset.j
 import logoAinov from "@/assets/apoio-ainov-dark.jpeg.asset.json";
 import logoDaMinhaVo from "@/assets/apoio-da-minha-vo.jpeg.asset.json";
 import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
+import logoFho from "@/assets/apoio-fho.png.asset.json";
+import logoCompsoft from "@/assets/apoio-compsoft.jpg.asset.json";
+import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
@@ -345,6 +348,9 @@ export const ARARAS_EDITION: Edition = {
     { name: "Abradi", logo: logoInstitucional.url },
     { name: "ABIACOM", logo: logoAbiacom.url },
     { name: "ANAMID", logo: logoAnamid.url },
+    { name: "FHO", logo: logoFho.url, light: true },
+    { name: "Compsoft", logo: logoCompsoft.url, light: true },
+    { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
   ],
   cfp: {
     requirement:
