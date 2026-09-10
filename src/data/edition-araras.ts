@@ -15,6 +15,7 @@ import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
 import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoCompsoft from "@/assets/apoio-compsoft.jpg.asset.json";
 import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
+import logoTimachigu from "@/assets/apoio-timachigu.png.asset.json";
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
@@ -64,8 +65,8 @@ const PALCO: Session[] = [
     kind: "painel",
     title: "Uso inteligente de dados",
     people: [
-      { name: "Valdir", role: "Painelista confirmado" },
-      { name: "Azarite", role: "Participação a confirmar" },
+      { name: "Valdir Pandolfe", role: "Painelista confirmado" },
+      { name: "José Azarite", role: "Participação a confirmar" },
       {
         name: "Carolina da Luz",
         role: "Mediadora",
@@ -146,7 +147,7 @@ const PALCO: Session[] = [
     kind: "palestra",
     badge: "SEBRAE",
     title: "IA na gestão do pequeno negócio: finanças, processos e por onde começar",
-    people: [{ name: "Participante a confirmar", role: "Palestrante" }],
+    people: [{ name: "SEBRAE", role: "Palestrante a confirmar" }],
   },
   {
     time: "14h30",
@@ -175,6 +176,11 @@ const PALCO: Session[] = [
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/40198222",
       },
+      {
+        name: "Cilene Danta",
+        role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/38862633",
+      },
     ],
   },
   {
@@ -187,22 +193,15 @@ const PALCO: Session[] = [
   {
     time: "16h00",
     period: "tarde",
-    kind: "painel",
-    title: "Tema a definir",
-    people: [
-      { name: "Participante a confirmar", role: "Painelista" },
-      {
-        name: "Cilene Danta",
-        role: "Mediadora",
-        profileUrl: "https://ai.eco.br/members/38862633",
-      },
-    ],
+    kind: "palestra",
+    title: "A Competição da Inteligência · O modelo mental para transformar a IA em vantagem competitiva",
+    people: [{ name: "Marcio Chleba", role: "Palestrante" }],
   },
   {
     time: "16h30",
     period: "tarde",
     kind: "palestra",
-    title: "Tema a definir",
+    title: "O Novo Nós · A Coevolução Humano e Agentes Artificiais",
     people: [{ name: "André Magno", role: "Palestrante" }],
   },
   {
@@ -371,6 +370,7 @@ export const ARARAS_EDITION: Edition = {
         { name: "Loqq'y", logo: logoLoqqy.url },
         { name: "Da Minha Vó", logo: logoDaMinhaVo.url, light: true, large: true },
         { name: "Instituto Amigu", logo: logoAmigu.url },
+        { name: "Timachigu", logo: logoTimachigu.url, light: true },
       ],
     },
   ],

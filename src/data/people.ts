@@ -50,6 +50,7 @@ import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
 import gutaFoto from "@/assets/guta-raeder.png.asset.json";
 import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 import pietroFoto from "@/assets/pietro-mauro.jpeg.asset.json";
+import sebraeLogo from "@/assets/apoio-sebrae.jpeg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -100,6 +101,8 @@ export const PHOTOS: Record<string, string> = {
   "Tiene Collins": tieneFoto.url,
   "Marcio Chleba": chlebaFoto2.url,
   Azarite: azariteFoto.url,
+  "José Azarite": azariteFoto.url,
+  SEBRAE: sebraeLogo.url,
   "Tiago Zouk": tiagoZoukFoto.url,
   "Elisangela Rosa": elisangelaFoto.url,
   "Guta Raeder": gutaFoto.url,
