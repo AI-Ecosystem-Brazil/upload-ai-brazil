@@ -348,6 +348,8 @@ export const ARARAS_EDITION: Edition = {
     { name: "FHO", logo: logoFho.url, light: true },
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
     { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
+    { name: "SEBRAE", logo: logoSebrae.url, light: true },
+    { name: "Instituto Amigu", logo: logoAmigu.url },
   ],
   cfp: {
     requirement:
