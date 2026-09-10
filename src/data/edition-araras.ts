@@ -188,11 +188,6 @@ const PALCO: Session[] = [
     kind: "painel",
     title: "Tema a definir",
     people: [
-      {
-        name: "Lucas Garcia",
-        role: "Painelista · ABRADI",
-        profileUrl: "https://ai.eco.br/members/40971538",
-      },
       { name: "Participante a confirmar", role: "Painelista" },
       {
         name: "Cilene Danta",

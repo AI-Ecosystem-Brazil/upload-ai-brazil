@@ -36,7 +36,7 @@ import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
 import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
 import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
 import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
-import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
+
 import pedroFoto from "@/assets/pedro-chiamulera.jpg.asset.json";
 import anaBarrosFoto from "@/assets/ana-barros.jpeg.asset.json";
 import elenFoto from "@/assets/elen-melo.png.asset.json";
