@@ -34,15 +34,22 @@ import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
 import danielFoto2 from "@/assets/daniel-ramos-2.avif.asset.json";
 import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
 import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
-import marcoRiveirosFoto from "@/assets/marco-riveiros.png.asset.json";
 import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
 import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
 import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
+import pedroFoto from "@/assets/pedro-chiamulera.jpg.asset.json";
+import anaBarrosFoto from "@/assets/ana-barros.jpeg.asset.json";
+import elenFoto from "@/assets/elen-melo.png.asset.json";
+import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asset.json";
+import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
+import deizeFoto from "@/assets/deize-andrade.jpg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
 export const PHOTOS: Record<string, string> = {
   "Aline Bocardo": alineFoto.url,
+  "Ana Barros": anaBarrosFoto.url,
+  "Ana Garms": anaGarmsFoto.url,
   "Alessandro Milagres": alessandroFoto.url,
   "Jairo Segre": jairoFoto2.url,
   "Roan Santos": roanFoto.url,
@@ -55,10 +62,12 @@ export const PHOTOS: Record<string, string> = {
   "Cristiano Christianini": christianiniFoto.url,
   Linuxmen: linuxmenFoto.url,
   "Daniel Ramos": danielFoto2.url,
+  "Deize Andrade": deizeFoto.url,
   "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
   "Eduardo Piedade": eduardoPiedadeFoto.url,
   "Elaine Coimbra": elaineFoto.url,
   "Eva Lazarini": evaFoto.url,
+  "Elen Melo": elenFoto.url,
   "Gabriel Virissimo": gabrielFoto.url,
   "Gerson Viergutz": gersonFoto.url,
   "Juliana Lopes": julianaFoto.url,
@@ -77,7 +86,8 @@ export const PHOTOS: Record<string, string> = {
   "Vagner Campos": vagnerFoto.url,
   "Rafael Soares": rafaelSoaresFoto.url,
   "Marcos Oliveira": marcosOliveiraFoto.url,
-  "Marco Riveiros": marcoRiveirosFoto.url,
+  "Marco Riveiros": marcoRiveirosFeaturedFoto.url,
+  "Pedro Chiamulera": pedroFoto.url,
   "Luiz Tibiriçá": tibiricaFoto.url,
   "Tiene Colins": tieneFoto.url,
   "Marcio Chleba": chlebaFoto.url,
