@@ -24,101 +24,265 @@ const TBD = (time: string, period: Session["period"], kind: Session["kind"], tit
 
 const PALCO: Session[] = [
   {
-    time: "08h30",
-    period: "manha",
-    kind: "momento",
-    title: "Credenciamento e boas-vindas",
-    description:
-      "Recepção dos participantes na FHO e abertura oficial da edição de Araras.",
-  },
-  {
     time: "09h00",
     period: "manha",
     kind: "momento",
     highlight: true,
     badge: "Abertura oficial",
-    title: "Abertura · Upload AI Brasil Araras",
-    description:
-      "Abertura do evento com o organizador da edição de Araras e a liderança do ecossistema AI Brasil.",
+    title: "Abertura e palestra · Como construí uma empresa de R$ 2,5 bilhões",
     people: [
       {
         name: "Jairo Segre",
-        role: "Organizador da edição de Araras",
+        role: "Abertura",
         profileUrl: "https://ai.eco.br/members/35645767",
       },
-      { name: "Juliano Kimura", role: "AI Brasil" },
+      { name: "Pedro Chiamulera", role: "Palestrante" },
     ],
   },
   {
     time: "09h30",
     period: "manha",
-    kind: "keynote",
-    title: "Keynote de abertura",
-    description: "Palestrante e tema em definição pela curadoria.",
-    tbd: true,
+    kind: "palestra",
+    title: "IA para empreendedores",
+    people: [
+      { name: "Tiene Colins", role: "Palestrante" },
+      {
+        name: "André Almeida",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/38743151",
+      },
+    ],
   },
-  TBD("10h10", "manha", "palestra", "Palestra · a definir"),
-  TBD("10h40", "manha", "painel", "Painel · a definir"),
-  { time: "11h30", period: "manha", kind: "intervalo", title: "Intervalo" },
-  TBD("11h45", "manha", "palestra", "Palestra · a definir"),
-  { time: "12h15", period: "tarde", kind: "intervalo", title: "Almoço" },
+  {
+    time: "10h00",
+    period: "manha",
+    kind: "painel",
+    title: "Uso inteligente de dados",
+    people: [
+      { name: "Valdir", role: "Painelista confirmado" },
+      { name: "Azarite", role: "Participação a confirmar" },
+      {
+        name: "Carolina da Luz",
+        role: "Mediadora",
+        profileUrl: "https://ai.eco.br/members/40198222",
+      },
+    ],
+  },
+  {
+    time: "10h30",
+    period: "manha",
+    kind: "palestra",
+    title: "Uso responsável de IA",
+    people: [{ name: "Ana Garms", role: "Palestrante" }],
+  },
+  {
+    time: "11h00",
+    period: "manha",
+    kind: "painel",
+    title: "Cybersegurança aplicada à IA",
+    people: [
+      {
+        name: "André Almeida",
+        role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/38743151",
+      },
+      {
+        name: "Maurício Conte",
+        role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/39466547",
+      },
+    ],
+  },
+  {
+    time: "11h30",
+    period: "manha",
+    kind: "palestra",
+    title: "Marketing para PMEs",
+    people: [
+      {
+        name: "Rodrigo Righetti",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/38382453",
+      },
+    ],
+  },
+  { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
+  { time: "12h30", period: "tarde", kind: "intervalo", title: "Almoço" },
+  {
+    time: "13h00",
+    period: "tarde",
+    kind: "palestra",
+    title: "Aprenda mais rápido que a Inteligência Artificial",
+    people: [
+      {
+        name: "Juliano Kimura",
+        role: "Palestrante · Head de Ecossistema da AI Brasil",
+        profileUrl: "https://ai.eco.br/members/21874664",
+      },
+    ],
+  },
   {
     time: "13h30",
     period: "tarde",
     kind: "palestra",
-    title: "Palestra · a definir",
-    tbd: true,
+    title: "Inteligência Artificial deve ser um privilégio de todos",
+    people: [
+      {
+        name: "Marco Riveiros",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/40122900",
+      },
+    ],
   },
   {
     time: "14h00",
     period: "tarde",
+    kind: "palestra",
+    badge: "SEBRAE",
+    title: "IA na gestão do pequeno negócio: finanças, processos e por onde começar",
+    people: [{ name: "Participante a confirmar", role: "Palestrante" }],
+  },
+  {
+    time: "14h30",
+    period: "tarde",
     kind: "painel",
-    title: "Painel · ecossistema de IA no interior de São Paulo",
-    description:
-      "Tema confirmado, demais painelistas em definição pela curadoria.",
+    title: "IA e marca pessoal · Engajamento de colaboradores",
+    people: [
+      { name: "Elisangela Rosa", role: "Painelista" },
+      { name: "Deize Andrade", role: "Painelista" },
+    ],
+  },
+  {
+    time: "15h00",
+    period: "tarde",
+    kind: "painel",
+    title: "Mitos e verdades sobre IA · Perguntas e respostas",
     people: [
       {
-        name: "Tiene Colins",
+        name: "Gabriel Virissimo",
         role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/39700330",
+      },
+      { name: "Cibele", role: "Painelista" },
+      {
+        name: "Carolina da Luz",
+        role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/40198222",
       },
     ],
   },
-  TBD("14h45", "tarde", "palestra", "Palestra · a definir"),
-  TBD("15h15", "tarde", "painel", "Painel · a definir"),
-  { time: "16h00", period: "tarde", kind: "intervalo", title: "Intervalo" },
-  TBD("16h15", "tarde", "keynote", "Keynote de encerramento"),
+  {
+    time: "15h30",
+    period: "tarde",
+    kind: "palestra",
+    title: "Seu melhor vendedor pode ser uma IA",
+    people: [{ name: "Tiago Zouk", role: "Palestrante" }],
+  },
+  {
+    time: "16h00",
+    period: "tarde",
+    kind: "painel",
+    title: "Tema a definir",
+    people: [
+      {
+        name: "Lucas Garcia",
+        role: "Painelista · ABRADI",
+        profileUrl: "https://ai.eco.br/members/40971538",
+      },
+      { name: "Participante a confirmar", role: "Painelista" },
+      {
+        name: "Cilene Danta",
+        role: "Mediadora",
+        profileUrl: "https://ai.eco.br/members/38862633",
+      },
+    ],
+  },
+  {
+    time: "16h30",
+    period: "tarde",
+    kind: "palestra",
+    title: "Tema a definir",
+    people: [{ name: "André Magno", role: "Palestrante" }],
+  },
   {
     time: "17h00",
     period: "tarde",
-    kind: "momento",
-    title: "Encerramento e networking",
-    description:
-      "Conexões finais entre a comunidade AI Brasil e o ecossistema local. Encerramento às 17h30.",
+    kind: "palestra",
+    title: "O maior desafio da era da IA",
     people: [
-      { name: "Juliano Kimura", role: "AI Brasil" },
       {
-        name: "Jairo Segre",
-        role: "Organizador da edição de Araras",
-        profileUrl: "https://ai.eco.br/members/35645767",
+        name: "Aline Bocardo",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/40311374",
       },
+    ],
+  },
+  {
+    time: "17h30",
+    period: "tarde",
+    kind: "momento",
+    badge: "Encerramento",
+    title: "Ecossistema e IA",
+    people: [
+      { name: "Guta Raeder", role: "Encerramento" },
+      { name: "Participante a confirmar", role: "Palestrante" },
     ],
   },
 ];
 
 const LAB_1: Session[] = [
-  TBD("09h30", "manha", "handson", "Laboratório 1 · sessão a definir"),
-  TBD("10h40", "manha", "handson", "Laboratório 1 · sessão a definir"),
-  { time: "12h15", period: "tarde", kind: "intervalo", title: "Almoço" },
-  TBD("13h30", "tarde", "handson", "Laboratório 1 · sessão a definir"),
-  TBD("15h15", "tarde", "handson", "Laboratório 1 · sessão a definir"),
+  TBD("09h00", "manha", "momento", "Abertura · a definir"),
+  TBD("09h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
+  TBD("10h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
+  TBD("10h30", "manha", "handson", "ManyContent · atividade a definir"),
+  TBD("11h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
+  TBD("11h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
+  { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
+  {
+    time: "13h30",
+    period: "tarde",
+    kind: "handson",
+    badge: "Workshop · 90 minutos",
+    title: "Palestra e workshop prático",
+    people: [{ name: "Pietro", role: "Facilitador" }],
+  },
+  {
+    time: "15h30",
+    period: "tarde",
+    kind: "handson",
+    title: "Laboratório aberto",
+    people: [{ name: "Pietro", role: "Facilitador" }],
+  },
 ];
 
 const LAB_2: Session[] = [
-  TBD("09h30", "manha", "handson", "Laboratório 2 · sessão a definir"),
-  TBD("10h40", "manha", "handson", "Laboratório 2 · sessão a definir"),
-  { time: "12h15", period: "tarde", kind: "intervalo", title: "Almoço" },
-  TBD("13h30", "tarde", "handson", "Laboratório 2 · sessão a definir"),
-  TBD("15h15", "tarde", "handson", "Laboratório 2 · sessão a definir"),
+  {
+    time: "10h00",
+    period: "manha",
+    kind: "handson",
+    title: "De volta ao jogo: 50+ Inteligência Artificial na prática",
+    people: [
+      {
+        name: "Marco Riveiros",
+        role: "Facilitador",
+        profileUrl: "https://ai.eco.br/members/40122900",
+      },
+    ],
+  },
+  { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
+  {
+    time: "14h30",
+    period: "tarde",
+    kind: "handson",
+    title: "101%: Criando uma empresa do zero com IA na prática",
+    people: [
+      {
+        name: "Juliano Kimura",
+        role: "Facilitador",
+        profileUrl: "https://ai.eco.br/members/21874664",
+      },
+    ],
+  },
 ];
 
 const TRACKS: Track[] = [
