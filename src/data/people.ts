@@ -22,7 +22,7 @@ import julianoFoto from "@/assets/juliano-kimura.png.asset.json";
 import leandroFoto from "@/assets/leandro-mastellini.png.asset.json";
 import leilaFoto from "@/assets/leila-navarro.png.asset.json";
 import leonardoFoto from "@/assets/leonardo-santos.png.asset.json";
-import lucasFoto from "@/assets/lucas-garcia.png.asset.json";
+
 import luisFoto from "@/assets/luis-rodeguero.png.asset.json";
 import mauricioFoto from "@/assets/mauricio-conte.png.asset.json";
 import michaelFoto from "@/assets/michael-silva.png.asset.json";
