@@ -94,6 +94,20 @@ export const PHOTOS: Record<string, string> = {
   "Marcio Chleba": chlebaFoto.url,
 };
 
+export const RECOGNIZED_PEOPLE = new Set([
+  "André Almeida",
+  "Marco Riveiros",
+  "Aline Bocardo",
+  "Elen Melo",
+  "Ana Barros",
+  "Jairo Segre",
+  "Maurício Conte",
+]);
+
+export function isRecognizedPerson(name: string): boolean {
+  return RECOGNIZED_PEOPLE.has(name);
+}
+
 
 export function photoOf(name: string): string | undefined {
   return PHOTOS[name];

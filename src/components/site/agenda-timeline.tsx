@@ -6,7 +6,7 @@ import {
   type Session,
   type SessionKind,
 } from "@/data/types";
-import { initialsOf, photoOf } from "@/data/people";
+import { initialsOf, isRecognizedPerson, photoOf } from "@/data/people";
 import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
 import { Button } from "@/components/ui/button";
@@ -31,6 +31,7 @@ const KIND_STYLE: Record<SessionKind, string> = {
 const AVATAR_SIZE = {
   sm: "h-12 w-12 text-[11px]",
   md: "h-20 w-20 text-sm",
+  lg: "h-24 w-24 text-base sm:h-28 sm:w-28",
 } as const;
 
 function Avatar({
@@ -99,36 +100,30 @@ function PersonChip({ person, className }: { person: Participant; className?: st
 }
 
 function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey: string }) {
-  const [active, setActive] = useState<string | null>(null);
-
   return (
-    <div className="mt-4">
-      <div className="flex items-center pl-1">
+    <div className="mt-5">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {people.map((p) => (
-          <Avatar
-            key={`${sessionKey}-av-${p.name}`}
-            name={p.name}
-            size="sm"
-            className={cn(
-              "-ml-3 ring-2 ring-surface transition-transform duration-200 first:ml-0 motion-reduce:transition-none",
-              active === p.name
-                ? "z-10 -translate-y-1 ring-primary motion-reduce:translate-y-0"
-                : "",
-            )}
-          />
-        ))}
-      </div>
-
-      <ul className="mt-3 flex flex-wrap gap-2">
-        {people.map((p) => (
-          <li
-            key={`${sessionKey}-${p.name}`}
-            onMouseEnter={() => setActive(p.name)}
-            onMouseLeave={() => setActive(null)}
-            onFocus={() => setActive(p.name)}
-            onBlur={() => setActive(null)}
-          >
-            <PersonChip person={p} />
+          <li key={`${sessionKey}-${p.name}`} className="min-w-0">
+            <div className={cn(
+              "flex h-full items-center gap-3 rounded-lg border border-border bg-background/35 p-3",
+              isRecognizedPerson(p.name) && "border-gold/55 bg-gold/5",
+            )}>
+              <Avatar
+                name={p.name}
+                size="sm"
+                className={isRecognizedPerson(p.name) ? "border-gold ring-2 ring-gold/20" : ""}
+              />
+              <div className="min-w-0">
+                <p className="text-xs font-semibold leading-snug text-foreground">{p.name}</p>
+                <p className="mt-1 text-[10px] leading-snug text-muted-foreground">{p.role}</p>
+                {p.profileUrl ? (
+                  <a href={p.profileUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex text-[10px] font-semibold text-primary underline-offset-2 hover:underline">
+                    Ver perfil
+                  </a>
+                ) : null}
+              </div>
+            </div>
           </li>
         ))}
       </ul>
@@ -245,9 +240,14 @@ function StandardCard({ session }: { session: Session }) {
   const people = session.people ?? [];
   const isPanel = people.length > 1;
   const solo = !isPanel ? people[0] : undefined;
+  const recognized = Boolean(solo && isRecognizedPerson(solo.name));
+  const highlighted = Boolean(session.highlight || recognized);
 
   return (
-    <article className="rounded-2xl border border-border bg-surface/60 p-5 transition-colors duration-200 hover:border-primary/40 sm:p-6">
+    <article className={cn(
+      "rounded-lg border bg-surface/60 p-5 transition-colors duration-200 sm:p-6",
+      highlighted ? "border-gold/55 shadow-gold-soft hover:border-gold" : "border-border hover:border-primary/40",
+    )}>
       <div className="flex flex-wrap items-center gap-3">
         <span className="font-display text-lg font-bold tabular-nums text-primary">
           {session.time}
@@ -263,7 +263,13 @@ function StandardCard({ session }: { session: Session }) {
       </div>
 
       <div className={cn(solo ? "mt-4 flex gap-4 sm:gap-5" : "")}>
-        {solo ? <Avatar name={solo.name} size="md" /> : null}
+        {solo ? (
+          <Avatar
+            name={solo.name}
+            size="lg"
+            className={recognized ? "border-gold ring-2 ring-gold/20" : "border-primary/45"}
+          />
+        ) : null}
 
         <div className="min-w-0 flex-1">
           <h3 className={cn("text-lg font-semibold leading-snug sm:text-xl", solo ? "" : "mt-3")}>
@@ -285,6 +291,12 @@ function StandardCard({ session }: { session: Session }) {
                 </a>
               ) : null}
             </p>
+          ) : null}
+
+          {recognized ? (
+            <span className="mt-3 inline-flex rounded-sm border border-gold/50 bg-gold/5 px-2 py-1 font-display text-[9px] font-bold uppercase tracking-wider text-gold">
+              Presença de destaque
+            </span>
           ) : null}
 
           {isPanel ? (
