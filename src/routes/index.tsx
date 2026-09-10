@@ -11,6 +11,7 @@ import { SponsorGrid } from "@/components/site/sponsor-grid";
 import { RsvpButton } from "@/components/site/rsvp-button";
 import { SiteFooter } from "@/components/site/site-footer";
 import { WhatsAppFab } from "@/components/site/whatsapp-fab";
+import { BackToTop } from "@/components/site/back-to-top";
 
 const TITLE = "Upload AI Brasil Araras 2026 — 23 de setembro, FHO";
 const DESCRIPTION =
@@ -83,21 +84,23 @@ function Index() {
           crossLink={CROSS_LINK}
         />
 
-        <Section
+          <Section
           id="palestrantes"
           eyebrow="Encontros que transformam"
           title="As vozes que chegam a Araras"
           intro="Lideranças, palestrantes e apoiadores reunidos para aproximar a Inteligência Artificial das pessoas, empresas e da região."
-        >
+            className="bg-surface/20"
+          >
           <ArarasPeopleShowcase />
         </Section>
 
-        <Section
+          <Section
           id="programacao"
           eyebrow="Programação"
           title="Três trilhas simultâneas, das 08h30 às 17h30"
           intro="Palco principal no auditório e dois laboratórios de IA na prática. A grade está em construção: as atividades marcadas como “a definir” serão atualizadas conforme a curadoria confirmar."
-        >
+            className="bg-surface/20"
+          >
           <AgendaTimeline />
         </Section>
 
@@ -146,6 +149,7 @@ function Index() {
         <SiteFooter crossLink={CROSS_LINK} />
 
         <WhatsAppFab />
+        <BackToTop />
 
         {/* CTA fixo no mobile */}
         <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden">

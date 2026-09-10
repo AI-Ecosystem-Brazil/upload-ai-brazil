@@ -81,6 +81,7 @@ function LegacyEdition() {
           eyebrow="Programação realizada"
           title="Das 08h30 às 21h, sem intervalo de conteúdo"
           intro="A grade completa da edição de São Paulo, com palestras, painéis e keynotes do dia inteiro."
+          className="bg-surface/20"
         >
           <AgendaTimeline />
         </Section>
@@ -90,6 +91,7 @@ function LegacyEdition() {
           eyebrow="Quem subiu ao palco"
           title="Palestrantes e painelistas"
           intro="Todos os nomes que participaram da programação oficial da edição de São Paulo."
+          className="bg-surface/20"
         >
           <SpeakerGrid />
         </Section>

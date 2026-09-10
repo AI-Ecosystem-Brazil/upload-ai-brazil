@@ -20,7 +20,7 @@ export function SponsorGrid() {
                 href={linkUrl ?? edition.rsvpUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className={`flex h-28 items-center justify-center rounded-xl border border-border p-6 transition-colors duration-200 hover:border-primary/40 ${
+                className={`flex h-28 items-center justify-center rounded-lg border border-border p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
                   s.light ? "bg-white" : "bg-surface/40"
                 }`}
               >
@@ -51,7 +51,7 @@ export function SponsorGrid() {
                       href={edition.rsvpUrl}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className={`flex h-24 items-center justify-center rounded-xl border border-border p-5 transition-colors duration-200 hover:border-primary/40 ${
+                      className={`flex h-24 items-center justify-center rounded-lg border border-border p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
                         s.light ? "bg-white" : "bg-surface/40"
                       }`}
                     >
@@ -70,7 +70,7 @@ export function SponsorGrid() {
                       href={edition.rsvpUrl}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="flex h-24 items-center justify-center rounded-xl border border-dashed border-border bg-surface/40 text-xs uppercase tracking-wider text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
+                      className="flex h-24 items-center justify-center rounded-lg border border-dashed border-border bg-background/20 text-xs uppercase tracking-wider text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
                     >
                       Vaga aberta
                     </a>

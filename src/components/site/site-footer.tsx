@@ -13,7 +13,7 @@ export function SiteFooter({
 
   return (
     <footer className="border-t border-border py-14">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-8 md:grid-cols-[1fr_auto_auto] md:items-start">
         <div>
           <img
             src={logoAsset.url}
@@ -37,6 +37,12 @@ export function SiteFooter({
             </Link>
           ) : null}
         </div>
+        <nav aria-label="Navegação do rodapé" className="grid gap-3 text-sm">
+          <a href="#palestrantes" className="text-muted-foreground hover:text-foreground">Palestrantes</a>
+          <a href="#programacao" className="text-muted-foreground hover:text-foreground">Programação</a>
+          <a href="#local" className="text-muted-foreground hover:text-foreground">Local</a>
+          <a href="#patrocinadores" className="text-muted-foreground hover:text-foreground">Marcas</a>
+        </nav>
         <div className="flex flex-col items-start gap-4 md:items-end">
           {isPast ? (
             <RsvpButton
