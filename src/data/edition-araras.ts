@@ -164,7 +164,7 @@ const PALCO: Session[] = [
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/39700330",
       },
-      { name: "Cibele", role: "Painelista" },
+      { name: "Mauricio Conte", role: "Painelista" },
       {
         name: "Carolina da Luz",
         role: "Painelista",
