@@ -8,7 +8,9 @@ import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
 import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
 import logoPrimeInsurance from "@/assets/apoio-prime-insurance-white.png.asset.json";
 import logoAinov from "@/assets/apoio-ainov-dark.jpeg.asset.json";
-import logoDaMinhaVo from "@/assets/apoio-da-minha-vo.jpeg.asset.json";
+import logoDaMinhaVo from "@/assets/apoio-da-minha-vo-2.png.asset.json";
+import logoAmigu from "@/assets/apoio-instituto-amigu.jpeg.asset.json";
+import logoSebrae from "@/assets/apoio-sebrae.jpeg.asset.json";
 import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
 import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoCompsoft from "@/assets/apoio-compsoft.jpg.asset.json";
@@ -167,7 +169,7 @@ const PALCO: Session[] = [
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/39700330",
       },
-      { name: "Mauricio Conte", role: "Painelista" },
+      { name: "Maurício Conte", role: "Painelista" },
       {
         name: "Carolina da Luz",
         role: "Painelista",
@@ -244,14 +246,14 @@ const LAB_1: Session[] = [
     kind: "handson",
     badge: "Workshop · 90 minutos",
     title: "Palestra e workshop prático",
-    people: [{ name: "Pietro", role: "Facilitador" }],
+    people: [{ name: "Pietro Mauro", role: "Facilitador" }],
   },
   {
     time: "15h00",
     period: "tarde",
     kind: "handson",
     title: "Atividade prática · tema a definir",
-    people: [{ name: "Pietro", role: "Facilitador" }],
+    people: [{ name: "Pietro Mauro", role: "Facilitador" }],
   },
   {
     time: "15h30",
@@ -346,6 +348,8 @@ export const ARARAS_EDITION: Edition = {
     { name: "FHO", logo: logoFho.url, light: true },
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
     { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
+    { name: "SEBRAE", logo: logoSebrae.url, light: true },
+    { name: "Instituto Amigu", logo: logoAmigu.url },
   ],
   cfp: {
     requirement:

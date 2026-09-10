@@ -49,6 +49,7 @@ import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
 import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
 import gutaFoto from "@/assets/guta-raeder.png.asset.json";
 import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
+import pietroFoto from "@/assets/pietro-mauro.jpeg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -103,6 +104,7 @@ export const PHOTOS: Record<string, string> = {
   "Elisangela Rosa": elisangelaFoto.url,
   "Guta Raeder": gutaFoto.url,
   "André Magno": andreMagnoFoto.url,
+  "Pietro Mauro": pietroFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([
