@@ -46,6 +46,8 @@ const eventJsonLd = {
     name: "FHO — Araras",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Av. Dr. Maximiliano Baruto, 500 - Jardim Universitario",
+      postalCode: "13607-339",
       addressLocality: "Araras",
       addressRegion: "SP",
       addressCountry: "BR",
