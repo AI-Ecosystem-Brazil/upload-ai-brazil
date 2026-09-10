@@ -81,7 +81,7 @@ export const PHOTOS: Record<string, string> = {
   "Leandro Mastellini": leandroFoto.url,
   "Leila Navarro": leilaFoto.url,
   "Leonardo Santos": leonardoFoto.url,
-  "Lucas Garcia": lucasFoto.url,
+  
   "Luis Rodeguero": luisFoto.url,
   "Maurício Conte": mauricioFoto.url,
   "Michael Silva": michaelFoto.url,
