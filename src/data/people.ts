@@ -43,6 +43,12 @@ import elenFoto from "@/assets/elen-melo.png.asset.json";
 import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asset.json";
 import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
 import deizeFoto from "@/assets/deize-andrade.jpg.asset.json";
+import azariteFoto from "@/assets/azarite.jpeg.asset.json";
+import chlebaFoto2 from "@/assets/marcio-chleba-2.png.asset.json";
+import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
+import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
+import gutaFoto from "@/assets/guta-raeder.png.asset.json";
+import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
