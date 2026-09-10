@@ -225,7 +225,7 @@ const PALCO: Session[] = [
     title: "Ecossistema e IA",
     people: [
       { name: "Guta Raeder", role: "Encerramento" },
-      { name: "Participante a confirmar", role: "Palestrante" },
+      { name: "Marcio Chleba", role: "Palestrante" },
     ],
   },
 ];
