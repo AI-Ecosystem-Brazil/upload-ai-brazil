@@ -258,7 +258,7 @@ const LAB_1: Session[] = [
     period: "tarde",
     kind: "handson",
     title: "Laboratório aberto",
-    people: [{ name: "Pietro 2", role: "Facilitador a confirmar" }],
+    people: [{ name: "Participante a confirmar", role: "Facilitador" }],
   },
 ];
 
