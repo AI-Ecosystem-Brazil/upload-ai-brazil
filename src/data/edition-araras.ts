@@ -36,20 +36,19 @@ const PALCO: Session[] = [
         role: "Abertura",
         profileUrl: "https://ai.eco.br/members/35645767",
       },
-      { name: "Pedro Chiamulera", role: "Palestrante" },
+      { name: "Pedro Chiamulera", role: "Keynote Speaker" },
     ],
   },
   {
     time: "09h30",
     period: "manha",
-    kind: "keynote",
-    badge: "Keynote Speaker",
+    kind: "palestra",
     title: "IA para empreendedores",
     people: [
       { name: "Tiene Collins", role: "Palestrante" },
       {
         name: "André Almeida",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/38743151",
       },
     ],
@@ -102,7 +101,7 @@ const PALCO: Session[] = [
     people: [
       {
         name: "Rodrigo Righetti",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/38382453",
       },
     ],

@@ -211,7 +211,7 @@ function KeynoteCard({ session }: { session: Session }) {
           </span>
 
           {lead ? (
-              className="mt-3 font-display text-2xl font-bold leading-tight text-gold sm:text-3xl"
+            <p className="mt-3 font-display text-2xl font-bold leading-tight text-gold sm:text-3xl">
               {lead.name}
             </p>
           ) : null}
