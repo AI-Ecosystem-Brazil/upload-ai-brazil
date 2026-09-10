@@ -97,7 +97,12 @@ export const PHOTOS: Record<string, string> = {
   "Luiz Tibiriçá": tibiricaFoto.url,
   "Tiene Colins": tieneFoto.url,
   "Tiene Collins": tieneFoto.url,
-  "Marcio Chleba": chlebaFoto.url,
+  "Marcio Chleba": chlebaFoto2.url,
+  Azarite: azariteFoto.url,
+  "Tiago Zouk": tiagoZoukFoto.url,
+  "Elisangela Rosa": elisangelaFoto.url,
+  "Guta Raeder": gutaFoto.url,
+  "André Magno": andreMagnoFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([
