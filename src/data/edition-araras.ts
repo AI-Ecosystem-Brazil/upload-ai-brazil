@@ -167,7 +167,7 @@ const PALCO: Session[] = [
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/39700330",
       },
-      { name: "Mauricio Conte", role: "Painelista" },
+      { name: "Maurício Conte", role: "Painelista" },
       {
         name: "Carolina da Luz",
         role: "Painelista",
@@ -244,14 +244,14 @@ const LAB_1: Session[] = [
     kind: "handson",
     badge: "Workshop · 90 minutos",
     title: "Palestra e workshop prático",
-    people: [{ name: "Pietro", role: "Facilitador" }],
+    people: [{ name: "Pietro Mauro", role: "Facilitador" }],
   },
   {
     time: "15h00",
     period: "tarde",
     kind: "handson",
     title: "Atividade prática · tema a definir",
-    people: [{ name: "Pietro", role: "Facilitador" }],
+    people: [{ name: "Pietro Mauro", role: "Facilitador" }],
   },
   {
     time: "15h30",
