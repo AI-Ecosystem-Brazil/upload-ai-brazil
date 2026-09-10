@@ -100,6 +100,9 @@ function PersonChip({ person, className }: { person: Participant; className?: st
 }
 
 function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey: string }) {
+  const edition = useEdition();
+  const recognitionEnabled = edition.slug === "araras-2026";
+
   return (
     <div className="mt-5">
       <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -107,12 +110,12 @@ function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey
           <li key={`${sessionKey}-${p.name}`} className="min-w-0">
             <div className={cn(
               "flex h-full items-center gap-3 rounded-lg border border-border bg-background/35 p-3",
-              isRecognizedPerson(p.name) && "border-gold/55 bg-gold/5",
+              recognitionEnabled && isRecognizedPerson(p.name) && "border-gold/55 bg-gold/5",
             )}>
               <Avatar
                 name={p.name}
                 size="sm"
-                className={isRecognizedPerson(p.name) ? "border-gold ring-2 ring-gold/20" : ""}
+                className={recognitionEnabled && isRecognizedPerson(p.name) ? "border-gold ring-2 ring-gold/20" : ""}
               />
               <div className="min-w-0">
                 <p className="text-xs font-semibold leading-snug text-foreground">{p.name}</p>
@@ -237,10 +240,13 @@ function KeynoteCard({ session }: { session: Session }) {
 }
 
 function StandardCard({ session }: { session: Session }) {
+  const edition = useEdition();
   const people = session.people ?? [];
   const isPanel = people.length > 1;
   const solo = !isPanel ? people[0] : undefined;
-  const recognized = Boolean(solo && isRecognizedPerson(solo.name));
+  const recognized = Boolean(
+    edition.slug === "araras-2026" && solo && isRecognizedPerson(solo.name),
+  );
   const highlighted = Boolean(session.highlight || recognized);
 
   return (
