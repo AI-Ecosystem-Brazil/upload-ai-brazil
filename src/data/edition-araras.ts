@@ -26,9 +26,9 @@ const PALCO: Session[] = [
   {
     time: "09h00",
     period: "manha",
-    kind: "momento",
+    kind: "keynote",
     highlight: true,
-    badge: "Abertura oficial",
+    badge: "Abertura + Keynote",
     title: "Abertura e palestra · Como construí uma empresa de R$ 2,5 bilhões",
     people: [
       {
@@ -36,7 +36,7 @@ const PALCO: Session[] = [
         role: "Abertura",
         profileUrl: "https://ai.eco.br/members/35645767",
       },
-      { name: "Pedro Chiamulera", role: "Palestrante" },
+      { name: "Pedro Chiamulera", role: "Keynote Speaker" },
     ],
   },
   {
@@ -101,7 +101,7 @@ const PALCO: Session[] = [
     people: [
       {
         name: "Rodrigo Righetti",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/38382453",
       },
     ],
@@ -124,12 +124,13 @@ const PALCO: Session[] = [
   {
     time: "13h30",
     period: "tarde",
-    kind: "palestra",
+    kind: "keynote",
+    badge: "Keynote Speaker",
     title: "Inteligência Artificial deve ser um privilégio de todos, nascida para exponenciar",
     people: [
       {
         name: "Marco Riveiros",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/40122900",
       },
     ],
@@ -207,12 +208,13 @@ const PALCO: Session[] = [
   {
     time: "17h00",
     period: "tarde",
-    kind: "palestra",
+    kind: "keynote",
+    badge: "Keynote Speaker",
     title: "O maior desafio da era da IA",
     people: [
       {
         name: "Aline Bocardo",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/40311374",
       },
     ],

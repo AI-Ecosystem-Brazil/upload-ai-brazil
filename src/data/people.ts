@@ -94,15 +94,24 @@ export const PHOTOS: Record<string, string> = {
   "Marcio Chleba": chlebaFoto.url,
 };
 
-export const RECOGNIZED_PEOPLE = new Set([
-  "André Almeida",
+export const KEYNOTE_SPEAKERS = new Set([
+  "Pedro Chiamulera",
   "Marco Riveiros",
   "Aline Bocardo",
+]);
+
+export const RECOGNIZED_PEOPLE = new Set([
+  "André Almeida",
   "Elen Melo",
   "Ana Barros",
   "Jairo Segre",
   "Maurício Conte",
+  ...KEYNOTE_SPEAKERS,
 ]);
+
+export function isKeynoteSpeaker(name: string): boolean {
+  return KEYNOTE_SPEAKERS.has(name);
+}
 
 export function isRecognizedPerson(name: string): boolean {
   return RECOGNIZED_PEOPLE.has(name);
