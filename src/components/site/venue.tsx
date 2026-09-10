@@ -1,6 +1,7 @@
 import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
 import { LazyMap } from "@/components/site/lazy-map";
+import { RsvpButton } from "@/components/site/rsvp-button";
 
 export function Venue() {
   const edition = useEdition();
@@ -41,6 +42,29 @@ export function Venue() {
           )}
         </div>
       </Reveal>
+
+      {edition.slug === "araras-2026" ? (
+        <div className="grid gap-4 md:grid-cols-2">
+          <Reveal>
+            <div className="flex h-full flex-col items-start border-t border-border pt-6">
+              <h3 className="text-lg font-semibold">Onde hospedar</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                Encontre hotéis ou AirBNB para aproveitar sua passagem por Araras.
+              </p>
+              <RsvpButton className="mt-5" variant="outline" label="Onde hospedar" />
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="flex h-full flex-col items-start border-t border-border pt-6">
+              <h3 className="text-lg font-semibold">Caronas e Caravanas</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                Entre nos grupos e bate-papo para organizar sua vinda para Araras.
+              </p>
+              <RsvpButton className="mt-5" variant="outline" label="Caronas e Caravanas" />
+            </div>
+          </Reveal>
+        </div>
+      ) : null}
     </div>
   );
 }

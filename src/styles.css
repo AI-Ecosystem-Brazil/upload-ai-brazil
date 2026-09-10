@@ -41,6 +41,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-gold: var(--gold);
   --color-ring-offset-background: var(--background);
 }
 
@@ -70,10 +71,13 @@
   --border: oklch(0.3684 0.0831 265.59 / 60%);
   --input: oklch(0.3684 0.0831 265.59);
   --ring: oklch(0.8953 0.2064 121.43);
+  --gold: oklch(0.82 0.15 82);
 
   --gradient-brand: linear-gradient(100deg, var(--accent), var(--primary));
   --glow-lime: 0 0 0 1px oklch(0.8953 0.2064 121.43 / 25%),
     0 18px 60px -24px oklch(0.8953 0.2064 121.43 / 45%);
+  --glow-gold: 0 0 0 1px oklch(0.82 0.15 82 / 55%),
+    0 14px 38px -18px oklch(0.82 0.15 82 / 75%);
 }
 
 @layer base {
@@ -119,6 +123,28 @@
 
 @utility shadow-lime-glow {
   box-shadow: var(--glow-lime);
+}
+
+@utility frame-neon {
+  border-color: var(--primary);
+  box-shadow: var(--glow-lime);
+}
+
+@utility frame-gold {
+  border-color: var(--gold);
+  box-shadow: var(--glow-gold);
+  animation: gold-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes gold-pulse {
+  0%,
+  100% {
+    box-shadow: var(--glow-gold);
+  }
+  50% {
+    box-shadow: 0 0 0 2px oklch(0.82 0.15 82 / 70%),
+      0 18px 48px -15px oklch(0.82 0.15 82 / 90%);
+  }
 }
 
 /* Grafismo sutil de circuito, ecoando o logo da árvore/abelha */

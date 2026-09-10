@@ -159,7 +159,7 @@ export const ARARAS_EDITION: Edition = {
   venue: "FHO — Araras",
   city: "Araras, SP",
   format: "Presencial",
-  organizer: "Jairo Segre",
+  organizer: "Jairo Segre, Elisangela Rosa",
   sealImage: seloAraras.url,
   whatsappUrl: "https://wa.me/5519981034103",
   rsvpUrl:
@@ -180,12 +180,8 @@ export const ARARAS_EDITION: Edition = {
   ],
   cfp: {
     requirement:
-      "Para palestrar ou participar como painelista, todos devem estar cadastrados na plataforma e com o perfil preenchido em ai.eco.br.",
-    formats: [
-      "Palestra de 30 minutos",
-      "Painel de 60 minutos com 4 participantes",
-      "Oficinas práticas de 90 a 120 minutos",
-    ],
+      "Compartilhe o conhecimento que está transformando a sua atuação e ajude a construir novas possibilidades para pessoas, negócios e para o futuro da Inteligência Artificial no Brasil.",
+    formats: [],
   },
   sponsorTiers: [
     { tier: "Ouro", slots: 4 },
@@ -207,8 +203,15 @@ export const ARARAS_EDITION: Edition = {
   ],
   venueInfo: [
     { label: "Local", value: "FHO — Araras/SP" },
-    { label: "Endereço", value: "Endereço completo a confirmar" },
+    {
+      label: "Endereço",
+      value: "Av. Dr. Maximiliano Baruto, 500 - Jardim Universitario, Araras - SP, 13607-339",
+    },
     { label: "Credenciamento", value: "A partir das 08h30, na recepção" },
     { label: "Formato", value: "Presencial · 1 palco principal e 2 laboratórios de IA na prática" },
   ],
+  mapEmbedUrl:
+    "https://www.google.com/maps?q=Av.%20Dr.%20Maximiliano%20Baruto%2C%20500%20-%20Jardim%20Universitario%2C%20Araras%20-%20SP%2C%2013607-339&output=embed",
+  mapAddress:
+    "Av. Dr. Maximiliano Baruto, 500 - Jardim Universitario, Araras - SP, 13607-339",
 };
