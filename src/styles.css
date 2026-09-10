@@ -42,6 +42,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-gold: var(--gold);
+  --color-impact-band: var(--impact-band);
   --color-ring-offset-background: var(--background);
 }
 
@@ -72,12 +73,14 @@
   --input: oklch(0.3684 0.0831 265.59);
   --ring: oklch(0.8953 0.2064 121.43);
   --gold: oklch(0.82 0.15 82);
+  --impact-band: oklch(0.215 0.052 263.5);
 
   --gradient-brand: linear-gradient(100deg, var(--accent), var(--primary));
   --glow-lime: 0 0 0 1px oklch(0.8953 0.2064 121.43 / 25%),
     0 18px 60px -24px oklch(0.8953 0.2064 121.43 / 45%);
   --glow-gold: 0 0 0 1px oklch(0.82 0.15 82 / 55%),
     0 14px 38px -18px oklch(0.82 0.15 82 / 75%);
+  --gold-soft: 0 14px 42px -28px oklch(0.82 0.15 82 / 70%);
 }
 
 @layer base {
@@ -126,6 +129,10 @@
   box-shadow: var(--glow-lime);
 }
 
+@utility shadow-gold-soft {
+  box-shadow: var(--gold-soft);
+}
+
 @utility scrollbar-none {
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -141,7 +148,7 @@
 @utility frame-gold {
   border-color: var(--gold);
   box-shadow: var(--glow-gold);
-  animation: gold-pulse 3.2s ease-in-out infinite;
+  animation: gold-pulse 4.2s ease-in-out infinite;
 }
 
 @keyframes gold-pulse {

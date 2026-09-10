@@ -80,15 +80,31 @@ function Index() {
           titleLead="O maior movimento de"
           titleHighlight="Inteligência Artificial"
           titleTail="do Brasil chegou em Araras!"
-          intro="Upload AI Brasil Araras 2026. Um dia inteiro de conhecimento, conexões e Inteligência Artificial na prática."
+          intro="Araras entra no circuito nacional da inovação. Um dia inteiro para conectar talentos, empresas e a região às vozes que estão construindo o futuro da Inteligência Artificial no Brasil."
           crossLink={CROSS_LINK}
         />
+
+        <section aria-labelledby="araras-impact-title" className="border-y border-gold/20 bg-impact-band">
+          <div className="mx-auto grid w-full max-w-6xl gap-6 px-5 py-10 sm:px-8 md:grid-cols-[0.72fr_1.28fr] md:items-center md:py-14">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Araras no centro da inovação
+            </p>
+            <div>
+              <h2 id="araras-impact-title" className="text-2xl font-bold leading-tight sm:text-3xl">
+                Um encontro nacional com impacto direto na cidade e em toda a região
+              </h2>
+              <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+                Na FHO, lideranças, empreendedores e especialistas se encontram para transformar conhecimento em oportunidades, fortalecer negócios locais e aproximar Araras das discussões que definem o futuro da IA no Brasil.
+              </p>
+            </div>
+          </div>
+        </section>
 
           <Section
           id="palestrantes"
           eyebrow="Encontros que transformam"
           title="As vozes que chegam a Araras"
-          intro="Lideranças, palestrantes e apoiadores reunidos para aproximar a Inteligência Artificial das pessoas, empresas e da região."
+          intro="Vozes reconhecidas nacionalmente e lideranças da região reunidas em Araras para compartilhar conhecimento aplicado, abrir novas oportunidades e fortalecer o ecossistema local."
             className="bg-surface/20"
           >
           <ArarasPeopleShowcase />
@@ -136,10 +152,10 @@ function Index() {
           <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
             <Reveal>
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
-                Garanta seu lugar em <span className="text-brand-gradient">Araras</span>
+                Araras recebe o futuro. <span className="text-brand-gradient">Faça parte deste encontro.</span>
               </h2>
               <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                {E.dateLabel}, {E.timeLabel}, na {E.venue}.
+                Um movimento nacional de Inteligência Artificial, conectado ao talento e ao potencial da nossa região. {E.dateLabel}, {E.timeLabel}, na {E.venue}.
               </p>
               <RsvpButton className="mt-8" />
             </Reveal>
