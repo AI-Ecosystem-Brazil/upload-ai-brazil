@@ -349,7 +349,6 @@ export const ARARAS_EDITION: Edition = {
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
     { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
     { name: "SEBRAE", logo: logoSebrae.url, light: true },
-    { name: "Instituto Amigu", logo: logoAmigu.url },
   ],
   cfp: {
     requirement:
@@ -370,7 +369,8 @@ export const ARARAS_EDITION: Edition = {
         { name: "AINOV", logo: logoAinov.url },
         { name: "Prime Insurance", logo: logoPrimeInsurance.url },
         { name: "Loqq'y", logo: logoLoqqy.url },
-        { name: "Da Minha Vó", logo: logoDaMinhaVo.url, light: true },
+        { name: "Da Minha Vó", logo: logoDaMinhaVo.url, light: true, large: true },
+        { name: "Instituto Amigu", logo: logoAmigu.url },
       ],
     },
   ],

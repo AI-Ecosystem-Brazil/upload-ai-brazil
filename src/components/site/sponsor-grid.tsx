@@ -51,16 +51,16 @@ export function SponsorGrid() {
                       href={edition.rsvpUrl}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className={`flex h-24 items-center justify-center rounded-lg border border-border p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
+                      className={`flex items-center justify-center rounded-lg border border-border transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
                         s.light ? "bg-white" : "bg-surface/40"
-                      }`}
+                      } ${s.large ? "h-24 p-2" : "h-24 p-5"}`}
                     >
                       <img
                         src={s.logo}
                         alt={`Logotipo ${s.name}`}
                         loading="lazy"
                         decoding="async"
-                        className="h-14 w-full object-contain"
+                        className={`${s.large ? "h-20 w-full object-contain" : "h-14 w-full object-contain"}`}
                       />
                     </a>
                   ))}

@@ -43,7 +43,7 @@ export type Speaker = {
   featured?: boolean;
 };
 
-export type Supporter = { name: string; logo: string; light?: boolean };
+export type Supporter = { name: string; logo: string; light?: boolean; large?: boolean };
 
 export type Cfp = {
   requirement: string;
