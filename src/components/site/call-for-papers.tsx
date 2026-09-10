@@ -1,11 +1,71 @@
 import { useEdition } from "@/data/edition-context";
 import { RsvpButton } from "@/components/site/rsvp-button";
 import { Reveal } from "@/components/site/section";
+import { photoOf } from "@/data/people";
+
+const ARARAS_FACES = [
+  "André Almeida",
+  "Aline Bocardo",
+  "Jairo Segre",
+  "Maurício Conte",
+  "Juliano Kimura",
+];
 
 export function CallForPapers() {
   const edition = useEdition();
   const CFP = edition.cfp;
   const criteria = CFP.criteria;
+
+  if (edition.slug === "araras-2026") {
+    return (
+      <Reveal>
+        <div className="grid overflow-hidden rounded-2xl border border-gold/35 bg-surface/60 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-80 overflow-hidden bg-background/40 p-6 sm:p-8">
+            <div aria-hidden className="circuit-grid absolute inset-0 opacity-40" />
+            <div className="relative grid h-full grid-cols-6 items-end gap-3">
+              {ARARAS_FACES.map((name, index) => {
+                const photo = photoOf(name);
+                if (!photo) return null;
+                return (
+                  <div
+                    key={name}
+                    className={`overflow-hidden rounded-xl border frame-gold ${
+                      index === 0
+                        ? "col-span-3 row-span-2 self-stretch"
+                        : "col-span-3 sm:col-span-2"
+                    }`}
+                  >
+                    <img
+                      src={photo}
+                      alt={`Retrato de ${name}`}
+                      loading="lazy"
+                      decoding="async"
+                      width={480}
+                      height={600}
+                      className="h-full min-h-32 w-full object-cover object-top"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Sua voz pode transformar
+            </p>
+            <h3 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+              Compartilhe o conhecimento que pode mudar o futuro da IA
+            </h3>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+              {CFP.requirement}
+            </p>
+            <RsvpButton className="mt-8 self-start px-9 py-4" label="Quero palestrar" />
+          </div>
+        </div>
+      </Reveal>
+    );
+  }
 
   return (
     <div className={criteria?.length ? "grid gap-6 lg:grid-cols-2" : "grid gap-6"}>

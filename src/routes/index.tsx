@@ -4,7 +4,7 @@ import { EditionProvider } from "@/data/edition-context";
 import { Hero } from "@/components/site/hero";
 import { Section, Reveal } from "@/components/site/section";
 import { AgendaTimeline } from "@/components/site/agenda-timeline";
-import { SpeakerGrid } from "@/components/site/speaker-grid";
+import { ArarasPeopleShowcase } from "@/components/site/araras-people-showcase";
 import { Venue } from "@/components/site/venue";
 import { CallForPapers } from "@/components/site/call-for-papers";
 import { SponsorGrid } from "@/components/site/sponsor-grid";
@@ -32,28 +32,6 @@ export const Route = createFileRoute("/")({
 
 const E = ARARAS_EDITION;
 
-const HIGHLIGHTS = [
-  { value: "1", label: "palco principal" },
-  { value: "2", label: "laboratórios mão na massa" },
-  { value: "9h", label: "de programação" },
-  { value: "Presencial", label: "em Araras/SP" },
-];
-
-const PILLARS = [
-  {
-    title: "Ecossistema no interior",
-    text: "A força da comunidade AI Brasil chega a Araras, reunindo empresas, universidade e profissionais da região.",
-  },
-  {
-    title: "IA na prática",
-    text: "Dois laboratórios simultâneos com sessões mão na massa, para sair do evento aplicando de verdade.",
-  },
-  {
-    title: "Conexões e anúncios",
-    text: "Networking com o ecossistema e novidades oficiais sobre o AI Brasil Experience.",
-  },
-];
-
 const eventJsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -73,7 +51,10 @@ const eventJsonLd = {
       addressCountry: "BR",
     },
   },
-  organizer: { "@type": "Organization", name: "AI Brasil", url: E.rsvpUrl },
+  organizer: [
+    { "@type": "Person", name: "Jairo Segre" },
+    { "@type": "Person", name: "Elisangela Rosa" },
+  ],
   offers: {
     "@type": "Offer",
     url: E.rsvpUrl,
@@ -93,46 +74,20 @@ function Index() {
         />
 
         <Hero
-          titleLead="Upload"
-          titleHighlight="AI Brasil"
-          titleTail="Araras 2026"
-          intro={`${E.tagline}. Um dia inteiro em Araras com palco principal, laboratórios de IA na prática e o ecossistema reunido.`}
+          titleLead="O maior movimento de"
+          titleHighlight="Inteligência Artificial"
+          titleTail="do Brasil chegou em Araras!"
+          intro="Upload AI Brasil Araras 2026. Um dia inteiro de conhecimento, conexões e Inteligência Artificial na prática."
           crossLink={CROSS_LINK}
         />
 
         <Section
-          id="sobre"
-          eyebrow="O movimento"
-          title="A comunidade AI Brasil chega a Araras"
-          intro="Organizada por Jairo Segre, a nova edição do Upload AI Brasil reúne a regional de Araras e o ecossistema nacional em um dia de conteúdo e prática."
+          id="palestrantes"
+          eyebrow="Encontros que transformam"
+          title="As vozes que chegam a Araras"
+          intro="Lideranças, palestrantes e apoiadores reunidos para aproximar a Inteligência Artificial das pessoas, empresas e da região."
         >
-          <div className="grid gap-5 md:grid-cols-3">
-            {PILLARS.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80}>
-                <div className="h-full rounded-2xl border border-border bg-surface/60 p-6">
-                  <h3 className="text-lg font-semibold">{p.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {p.text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {HIGHLIGHTS.map((h, i) => (
-              <Reveal key={h.label} delay={i * 60}>
-                <div className="rounded-2xl border border-border bg-background/40 p-6">
-                  <div className="font-display text-3xl font-bold text-primary">
-                    {h.value}
-                  </div>
-                  <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-                    {h.label}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <ArarasPeopleShowcase />
         </Section>
 
         <Section
@@ -142,15 +97,6 @@ function Index() {
           intro="Palco principal no auditório e dois laboratórios de IA na prática. A grade está em construção: as atividades marcadas como “a definir” serão atualizadas conforme a curadoria confirmar."
         >
           <AgendaTimeline />
-        </Section>
-
-        <Section
-          id="palestrantes"
-          eyebrow="Quem sobe ao palco"
-          title="Palestrantes confirmados"
-          intro="Primeiros nomes confirmados da edição de Araras. Novos palestrantes e painelistas entram conforme a curadoria avança."
-        >
-          <SpeakerGrid />
         </Section>
 
         <Section
@@ -166,7 +112,7 @@ function Index() {
           id="call-for-papers"
           eyebrow="Call for Papers"
           title="Chamado para palestrantes e painelistas"
-          intro="Formatos, requisitos e critérios de avaliação para participar da programação de Araras."
+          intro="Sua experiência pode abrir caminhos, provocar novas ideias e transformar a maneira como outras pessoas enxergam a Inteligência Artificial."
         >
           <CallForPapers />
         </Section>
