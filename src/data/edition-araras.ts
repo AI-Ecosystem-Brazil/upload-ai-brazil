@@ -3,7 +3,7 @@ import { buildSpeakers } from "@/data/people";
 import logoAbria from "@/assets/apoio-abria.png.asset.json";
 import logoInstitucional from "@/assets/apoio-logo-branco.png.asset.json";
 import logoAiSafety from "@/assets/apoio-ai-safety-brazil.png.asset.json";
-import logoInstitutoMaturidade from "@/assets/apoio-instituto-maturidade-digital.png.asset.json";
+import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
 import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
 import logoPrimeInsurance from "@/assets/apoio-prime-insurance-white.png.asset.json";
@@ -345,11 +345,7 @@ export const ARARAS_EDITION: Edition = {
     { name: "Abradi", logo: logoInstitucional.url },
     { name: "ABIACOM", logo: logoAbiacom.url },
     { name: "ANAMID", logo: logoAnamid.url },
-    {
-      name: "Instituto da Maturidade Digital",
-      logo: logoInstitutoMaturidade.url,
-      light: true,
-    },
+    { name: "FHO", logo: logoFho.url, light: true },
   ],
   cfp: {
     requirement:
