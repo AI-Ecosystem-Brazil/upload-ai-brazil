@@ -45,7 +45,7 @@ const PALCO: Session[] = [
     kind: "palestra",
     title: "IA para empreendedores",
     people: [
-      { name: "Tiene Colins", role: "Palestrante" },
+      { name: "Tiene Collins", role: "Palestrante" },
       {
         name: "André Almeida",
         role: "Palestrante",
@@ -125,7 +125,7 @@ const PALCO: Session[] = [
     time: "13h30",
     period: "tarde",
     kind: "palestra",
-    title: "Inteligência Artificial deve ser um privilégio de todos",
+    title: "Inteligência Artificial deve ser um privilégio de todos, nascida para exponenciar",
     people: [
       {
         name: "Marco Riveiros",
@@ -234,7 +234,7 @@ const LAB_1: Session[] = [
   TBD("09h00", "manha", "momento", "Abertura · a definir"),
   TBD("09h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
   TBD("10h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
-  TBD("10h30", "manha", "handson", "ManyContent · atividade a definir"),
+  TBD("10h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
   TBD("11h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
   TBD("11h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
   { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
@@ -247,11 +247,18 @@ const LAB_1: Session[] = [
     people: [{ name: "Pietro", role: "Facilitador" }],
   },
   {
+    time: "15h00",
+    period: "tarde",
+    kind: "handson",
+    title: "Atividade prática · tema a definir",
+    people: [{ name: "Pietro", role: "Facilitador" }],
+  },
+  {
     time: "15h30",
     period: "tarde",
     kind: "handson",
     title: "Laboratório aberto",
-    people: [{ name: "Pietro", role: "Facilitador" }],
+    people: [{ name: "Pietro 2", role: "Facilitador a confirmar" }],
   },
 ];
 
