@@ -19,8 +19,8 @@ export function CallForPapers() {
   if (edition.slug === "araras-2026") {
     return (
       <Reveal>
-        <div className="grid overflow-hidden rounded-2xl border border-gold/35 bg-surface/60 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="relative min-h-80 overflow-hidden bg-background/40 p-6 sm:p-8">
+        <div className="grid overflow-hidden rounded-lg border border-gold/35 bg-surface/60 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-64 overflow-hidden bg-background/40 p-5 sm:min-h-80 sm:p-8">
             <div aria-hidden className="circuit-grid absolute inset-0 opacity-40" />
             <div className="relative grid h-full grid-cols-6 items-end gap-3">
               {ARARAS_FACES.map((name, index) => {
@@ -29,7 +29,7 @@ export function CallForPapers() {
                 return (
                   <div
                     key={name}
-                    className={`overflow-hidden rounded-xl border frame-gold ${
+                    className={`overflow-hidden rounded-lg border frame-gold ${
                       index === 0
                         ? "col-span-3 row-span-2 self-stretch"
                         : "col-span-3 sm:col-span-2"

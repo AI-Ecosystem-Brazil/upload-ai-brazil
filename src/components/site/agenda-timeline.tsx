@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState, type KeyboardEvent } from "react";
 import {
   KIND_LABEL,
   type Participant,
@@ -9,6 +9,7 @@ import {
 import { initialsOf, photoOf } from "@/data/people";
 import { useEdition } from "@/data/edition-context";
 import { Reveal } from "@/components/site/section";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const FILTERS: Array<{ id: Period | "todos"; label: string }> = [
@@ -137,27 +138,27 @@ function PanelPeople({ people, sessionKey }: { people: Participant[]; sessionKey
 
 function TbdCard({ session }: { session: Session }) {
   return (
-    <article className="rounded-2xl border border-dashed border-border/70 bg-surface/30 p-5 sm:p-6">
+    <article className="rounded-lg border border-dashed border-border/70 bg-surface/25 px-4 py-3 sm:rounded-xl sm:px-5 sm:py-4">
       <div className="flex flex-wrap items-center gap-3">
-        <span className="font-display text-lg font-bold tabular-nums text-muted-foreground">
+        <span className="font-display text-sm font-bold tabular-nums text-muted-foreground sm:text-base">
           {session.time}
         </span>
-        <span className="rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+        <span className="rounded-full border border-border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
           {KIND_LABEL[session.kind]}
         </span>
-        <span className="rounded-full border border-accent/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-accent">
+        <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-accent">
           A definir
         </span>
       </div>
-      <h3 className="mt-3 text-lg font-semibold leading-snug text-muted-foreground sm:text-xl">
+      <h3 className="mt-2 text-sm font-semibold leading-snug text-muted-foreground sm:text-base">
         {session.title}
       </h3>
       {session.description ? (
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
           {session.description}
         </p>
       ) : (
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
           Conteúdo e participantes em definição pela curadoria.
         </p>
       )}
@@ -303,13 +304,13 @@ function StandardCard({ session }: { session: Session }) {
 
 function SessionList({ sessions }: { sessions: Session[] }) {
   return (
-    <ol className="mt-10 space-y-3 border-l border-border pl-5 sm:pl-8">
+    <ol className="mt-7 space-y-3 border-l border-border pl-4 sm:mt-10 sm:pl-8">
       {sessions.map((s) => (
         <li key={`${s.time}-${s.title}`} className="relative">
           <span
             aria-hidden
             className={cn(
-              "absolute -left-[25px] top-7 h-2.5 w-2.5 rounded-full sm:-left-[37px]",
+              "absolute -left-[21px] top-6 h-2.5 w-2.5 rounded-full sm:-left-[37px] sm:top-7",
               s.kind === "intervalo" || s.tbd ? "bg-muted" : "bg-primary",
             )}
           />
@@ -337,28 +338,29 @@ function PeriodFilters({
 }) {
   return (
     <div
-      className="flex flex-wrap gap-2"
+      className="scrollbar-none flex snap-x gap-2 overflow-x-auto pb-1"
       role="tablist"
       aria-label="Filtrar programação por período"
     >
       {FILTERS.map((f) => {
         const active = filter === f.id;
         return (
-          <button
+          <Button
             key={f.id}
             type="button"
             role="tab"
             aria-selected={active}
             onClick={() => onChange(f.id)}
+            variant="outline"
             className={cn(
-              "rounded-full border px-5 py-2 font-display text-xs font-semibold uppercase tracking-wider transition-colors",
+              "h-9 shrink-0 snap-start rounded-full px-4 font-display text-[11px] font-semibold uppercase tracking-wider",
               active
                 ? "border-transparent bg-primary text-primary-foreground"
                 : "border-border text-muted-foreground hover:text-foreground",
             )}
           >
             {f.label}
-          </button>
+          </Button>
         );
       })}
     </div>
@@ -370,57 +372,91 @@ export function AgendaTimeline() {
   const tracks = edition.tracks;
   const [filter, setFilter] = useState<Period | "todos">("todos");
   const [trackId, setTrackId] = useState<string>(tracks?.[0]?.id ?? "");
+  const tabsId = useId();
 
   const activeTrack = tracks?.find((t) => t.id === trackId) ?? tracks?.[0];
   const source = activeTrack ? activeTrack.sessions : (edition.agenda ?? []);
   const sessions = source.filter((s) => filter === "todos" || s.period === filter);
 
+  const changeTrackFromKeyboard = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    if (!tracks || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? tracks.length - 1
+        : (index + (event.key === "ArrowRight" ? 1 : -1) + tracks.length) % tracks.length;
+    const nextTrack = tracks[nextIndex];
+    if (!nextTrack) return;
+    setTrackId(nextTrack.id);
+    document.getElementById(`${tabsId}-${nextTrack.id}`)?.focus();
+  };
+
   return (
     <div>
       {tracks ? (
         <div
-          className="mb-6 flex flex-wrap gap-2"
+          className="scrollbar-none mb-5 flex snap-x gap-2 overflow-x-auto pb-1"
           role="tablist"
           aria-label="Escolher trilha da programação"
         >
           {tracks.map((t) => {
             const active = t.id === activeTrack?.id;
             return (
-              <button
+              <Button
                 key={t.id}
                 type="button"
                 role="tab"
                 aria-selected={active}
+                aria-controls={`${tabsId}-panel`}
+                id={`${tabsId}-${t.id}`}
+                tabIndex={active ? 0 : -1}
                 onClick={() => setTrackId(t.id)}
+                onKeyDown={(event) => changeTrackFromKeyboard(event, tracks.indexOf(t))}
+                variant="outline"
                 className={cn(
-                  "rounded-2xl border px-5 py-3 text-left font-display text-sm font-semibold transition-colors",
+                  "h-11 shrink-0 snap-start rounded-lg px-4 text-left font-display text-xs font-semibold sm:text-sm",
                   active
                     ? "border-primary/60 bg-primary/10 text-primary"
                     : "border-border text-muted-foreground hover:text-foreground",
                 )}
               >
                 {t.name}
-              </button>
+              </Button>
             );
           })}
         </div>
       ) : null}
 
-      {activeTrack?.description ? (
-        <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          {activeTrack.description}
-        </p>
-      ) : null}
+      <div
+        className="sticky top-16 z-20 -mx-5 border-y border-border/70 bg-background/95 px-5 py-4 backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0"
+      >
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
+          <div className="min-w-0">
+            {activeTrack?.description ? (
+              <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground sm:mb-6 sm:max-w-2xl sm:text-sm">
+                {activeTrack.description}
+              </p>
+            ) : null}
+          </div>
+          <span className="shrink-0 text-xs font-semibold text-primary" aria-live="polite">
+            {sessions.length} {sessions.length === 1 ? "atividade" : "atividades"}
+          </span>
+        </div>
+        <div className="mt-3 sm:mt-0">
+          <PeriodFilters filter={filter} onChange={setFilter} />
+        </div>
+      </div>
 
-      <PeriodFilters filter={filter} onChange={setFilter} />
-
-      {sessions.length ? (
-        <SessionList sessions={sessions} />
-      ) : (
-        <p className="mt-10 rounded-2xl border border-dashed border-border/70 bg-surface/30 p-6 text-sm text-muted-foreground">
-          Nenhuma atividade neste período nesta trilha.
-        </p>
-      )}
+      <div id={`${tabsId}-panel`} role="tabpanel" aria-labelledby={activeTrack ? `${tabsId}-${activeTrack.id}` : undefined}>
+        {sessions.length ? (
+          <SessionList sessions={sessions} />
+        ) : (
+          <p className="mt-10 rounded-xl border border-dashed border-border/70 bg-surface/30 p-6 text-sm text-muted-foreground">
+            Nenhuma atividade neste período nesta trilha.
+          </p>
+        )}
+      </div>
     </div>
   );
 }

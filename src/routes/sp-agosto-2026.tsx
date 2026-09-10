@@ -81,6 +81,7 @@ function LegacyEdition() {
           eyebrow="Programação realizada"
           title="Das 08h30 às 21h, sem intervalo de conteúdo"
           intro="A grade completa da edição de São Paulo, com palestras, painéis e keynotes do dia inteiro."
+          className="bg-surface/20"
         >
           <AgendaTimeline />
         </Section>
@@ -90,6 +91,7 @@ function LegacyEdition() {
           eyebrow="Quem subiu ao palco"
           title="Palestrantes e painelistas"
           intro="Todos os nomes que participaram da programação oficial da edição de São Paulo."
+          className="bg-surface/20"
         >
           <SpeakerGrid />
         </Section>
@@ -142,7 +144,7 @@ function LegacyEdition() {
 
         <SiteFooter crossLink={CROSS_LINK} />
 
-        <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden">
           <RsvpButton
             className="w-full"
             label="Download de fotos e vídeos"

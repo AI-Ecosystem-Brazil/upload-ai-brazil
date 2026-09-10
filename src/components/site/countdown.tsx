@@ -33,14 +33,14 @@ export function Countdown() {
 
   return (
     <div
-      className="flex gap-3"
+      className="grid w-full grid-cols-3 gap-2 sm:flex sm:w-auto sm:gap-3"
       role="timer"
       aria-label="Contagem regressiva para o evento"
     >
       {items.map(([label, value]) => (
         <div
           key={label}
-          className="min-w-[86px] rounded-xl border border-border bg-surface/70 px-4 py-3 text-center backdrop-blur"
+          className="min-w-0 rounded-lg border border-border bg-surface/70 px-2 py-3 text-center backdrop-blur sm:min-w-[86px] sm:rounded-xl sm:px-4"
         >
           <div className="font-display text-2xl font-bold tabular-nums text-primary sm:text-3xl">
             {value === null ? "--" : String(value).padStart(2, "0")}

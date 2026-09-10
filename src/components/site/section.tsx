@@ -20,7 +20,7 @@ export function Section({
   const reveal = useReveal<HTMLDivElement>();
 
   return (
-    <section id={id} className={cn("scroll-mt-24 py-20 sm:py-28", className)}>
+    <section id={id} className={cn("scroll-mt-28 py-16 sm:py-24", className)}>
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div ref={reveal.ref} className={reveal.className}>
           {eyebrow ? (
@@ -37,7 +37,7 @@ export function Section({
             </p>
           ) : null}
         </div>
-        <div className="mt-12">{children}</div>
+        <div className="mt-9 sm:mt-12">{children}</div>
       </div>
     </section>
   );

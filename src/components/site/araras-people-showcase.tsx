@@ -38,6 +38,7 @@ const SUPPORT: Person[] = [
   { name: "Deize Andrade" },
   { name: "Guta Raeder" },
   { name: "Tiago Zouk" },
+  { name: "Elisangela Rosa" },
 ];
 
 function Portrait({ person, tone }: { person: Person; tone: "gold" | "neon" | "quiet" }) {
@@ -91,12 +92,12 @@ function PersonCard({ person, tone }: { person: Person; tone: "gold" | "neon" })
 
 export function ArarasPeopleShowcase() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-14 sm:space-y-16">
       <div>
         <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-gold">
           Palestrantes de destaque
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-7 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
           {FEATURED.map((person, index) => (
             <Reveal key={person.name} delay={(index % 5) * 60}>
               <PersonCard person={person} tone="gold" />
@@ -105,12 +106,12 @@ export function ArarasPeopleShowcase() {
         </div>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-[0.72fr_1fr]">
+      <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-primary">
             Palestrantes
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
             {SPEAKERS.map((person, index) => (
               <Reveal key={person.name} delay={index * 70}>
                 <PersonCard person={person} tone="neon" />
@@ -123,7 +124,7 @@ export function ArarasPeopleShowcase() {
           <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             Liderança regional
           </p>
-          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:gap-5">
             {SPECIAL.map((person, index) => (
               <Reveal key={person.name} delay={index * 80}>
                 <PersonCard person={person} tone="gold" />
@@ -137,7 +138,7 @@ export function ArarasPeopleShowcase() {
         <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
           Apoio
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4 lg:grid-cols-8">
+        <div className="mt-6 grid grid-cols-3 gap-x-4 gap-y-7 sm:grid-cols-5 lg:grid-cols-9">
           {SUPPORT.map((person, index) => (
             <Reveal key={person.name} delay={(index % 4) * 50}>
               <article className="text-center">
