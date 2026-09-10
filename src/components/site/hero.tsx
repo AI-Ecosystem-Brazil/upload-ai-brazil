@@ -23,7 +23,7 @@ export function Hero({
 
   return (
     <header className="relative overflow-hidden">
-      <SiteNavigation crossLink={crossLink} />
+      <SiteNavigation {...(crossLink ? { crossLink } : {})} />
       <div aria-hidden className="circuit-grid absolute inset-0 opacity-60" />
       <div
         aria-hidden
