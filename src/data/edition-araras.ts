@@ -172,7 +172,6 @@ export const ARARAS_EDITION: Edition = {
     { name: "Abradi", logo: logoInstitucional.url },
     { name: "ABIACOM", logo: logoAbiacom.url },
     { name: "ANAMID", logo: logoAnamid.url },
-    { name: "FHO", logo: logoFho.url },
     {
       name: "Instituto da Maturidade Digital",
       logo: logoInstitutoMaturidade.url,
