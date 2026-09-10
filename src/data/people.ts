@@ -90,6 +90,7 @@ export const PHOTOS: Record<string, string> = {
   "Pedro Chiamulera": pedroFoto.url,
   "Luiz Tibiriçá": tibiricaFoto.url,
   "Tiene Colins": tieneFoto.url,
+  "Tiene Collins": tieneFoto.url,
   "Marcio Chleba": chlebaFoto.url,
 };
 
