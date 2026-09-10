@@ -34,7 +34,6 @@ import vagnerFoto from "@/assets/vagner-campos.png.asset.json";
 import danielFoto2 from "@/assets/daniel-ramos-2.avif.asset.json";
 import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
 import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
-import marcoRiveirosFoto from "@/assets/marco-riveiros.png.asset.json";
 import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
 import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
 import chlebaFoto from "@/assets/marcio-chleba.jpg.asset.json";
