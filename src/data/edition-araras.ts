@@ -48,7 +48,7 @@ const PALCO: Session[] = [
       { name: "Tiene Collins", role: "Palestrante" },
       {
         name: "André Almeida",
-        role: "Keynote Speaker",
+        role: "Palestrante",
         profileUrl: "https://ai.eco.br/members/38743151",
       },
     ],
@@ -130,7 +130,7 @@ const PALCO: Session[] = [
     people: [
       {
         name: "Marco Riveiros",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/40122900",
       },
     ],
@@ -214,7 +214,7 @@ const PALCO: Session[] = [
     people: [
       {
         name: "Aline Bocardo",
-        role: "Palestrante",
+        role: "Keynote Speaker",
         profileUrl: "https://ai.eco.br/members/40311374",
       },
     ],
