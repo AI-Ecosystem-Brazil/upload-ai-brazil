@@ -75,7 +75,7 @@ export type Edition = {
   organizer?: string;
   sealImage?: string;
   whatsappUrl?: string;
-  rsvpUrl: string;
+  rsvpUrl?: string;
   downloadUrl?: string;
   agenda?: Session[];
   tracks?: Track[];
