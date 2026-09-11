@@ -334,8 +334,6 @@ export const ARARAS_EDITION: Edition = {
   organizer: "Jairo Segre, Elisangela Rosa",
   sealImage: seloAraras.url,
   whatsappUrl: "https://wa.me/5519981034103",
-  rsvpUrl:
-    "https://www.sympla.com.br/evento/upload-ai-brasil-araras/3574768?share_id=copiarlink",
   tracks: TRACKS,
   speakers: buildSpeakers(ALL_SESSIONS),
   supporters: [
