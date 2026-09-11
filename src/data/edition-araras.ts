@@ -13,7 +13,7 @@ import logoAmigu from "@/assets/apoio-instituto-amigu.jpeg.asset.json";
 import logoSebrae from "@/assets/apoio-sebrae.jpeg.asset.json";
 import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
 import logoFho from "@/assets/apoio-fho.png.asset.json";
-import logoCompsoft from "@/assets/apoio-compsoft.jpg.asset.json";
+import logoCompsoft from "@/assets/apoio-compsoft.png.asset.json";
 import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
 import logoTimachigu from "@/assets/apoio-timachigu.png.asset.json";
 
