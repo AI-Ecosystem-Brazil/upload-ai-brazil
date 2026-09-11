@@ -51,6 +51,7 @@ import gutaFoto from "@/assets/guta-raeder.png.asset.json";
 import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 import pietroFoto from "@/assets/pietro-mauro.jpeg.asset.json";
 import sebraeLogo from "@/assets/apoio-sebrae.jpeg.asset.json";
+import seloAraras from "@/assets/selo-araras.jpg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -108,6 +109,7 @@ export const PHOTOS: Record<string, string> = {
   "Guta Raeder": gutaFoto.url,
   "André Magno": andreMagnoFoto.url,
   "Pietro Mauro": pietroFoto.url,
+  "Comunidade AI Brasil": seloAraras.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([

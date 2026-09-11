@@ -145,9 +145,8 @@ const PALCO: Session[] = [
     time: "14h00",
     period: "tarde",
     kind: "palestra",
-    badge: "SEBRAE",
-    title: "IA na gestão do pequeno negócio: finanças, processos e por onde começar",
-    people: [{ name: "SEBRAE", role: "Palestrante a confirmar" }],
+    title: "A real da IA no Marketing",
+    people: [{ name: "Bruno Mello", role: "Palestrante" }],
   },
   {
     time: "14h30",
@@ -226,7 +225,7 @@ const PALCO: Session[] = [
     title: "Ecossistema e IA",
     people: [
       { name: "Guta Raeder", role: "Mestre de Cerimônia" },
-      { name: "Bruno Mello", role: "Palestrante" },
+      { name: "Comunidade AI Brasil", role: "Comunidade" },
     ],
   },
 ];
