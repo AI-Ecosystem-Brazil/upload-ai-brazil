@@ -335,7 +335,7 @@ export const ARARAS_EDITION: Edition = {
   sealImage: seloAraras.url,
   whatsappUrl: "https://wa.me/5519981034103",
   rsvpUrl:
-    "https://ai.eco.br/plans/1987849?bundle_token=a787af0f0803c189379298c03fe83acc&utm_source=manual",
+    "https://www.sympla.com.br/evento/upload-ai-brasil-araras/3574768?share_id=copiarlink",
   tracks: TRACKS,
   speakers: buildSpeakers(ALL_SESSIONS),
   supporters: [
