@@ -332,7 +332,7 @@ export const ARARAS_EDITION: Edition = {
   city: "Araras, SP",
   format: "Presencial",
   organizer: "Jairo Segre, Elisangela Rosa",
-  rsvpUrl: "https://www.sympla.com.br/evento/upload-ai-brasil-araras/3574768?share_id=copiarlink",
+  rsvpUrl: "https://ai.eco.br/plans/1987849?bundle_token=a787af0f0803c189379298c03fe83acc&utm_source=manual",
   sealImage: seloAraras.url,
   whatsappUrl: "https://wa.me/5519981034103",
   tracks: TRACKS,
