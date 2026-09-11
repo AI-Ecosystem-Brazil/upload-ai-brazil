@@ -6,6 +6,11 @@ export function SponsorGrid() {
   const edition = useEdition();
   const linkUrl = edition.status === "past" ? edition.downloadUrl : edition.rsvpUrl;
 
+  const cardClass = (light?: boolean, large?: boolean) =>
+    `flex items-center justify-center rounded-lg border border-border transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
+      light ? "bg-white" : "bg-surface/40"
+    } ${large ? "h-24 p-2" : "h-28 p-6"}`;
+
   return (
     <div className="space-y-12">
       <Reveal>
@@ -15,14 +20,9 @@ export function SponsorGrid() {
           </h3>
           <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {edition.supporters.map((s) => (
-              <a
+              <div
                 key={s.name}
-                href={linkUrl ?? edition.rsvpUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={`flex h-28 items-center justify-center rounded-lg border border-border p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
-                  s.light ? "bg-white" : "bg-surface/40"
-                }`}
+                className={cardClass(s.light, false)}
               >
                 <img
                   src={s.logo}
@@ -31,7 +31,7 @@ export function SponsorGrid() {
                   decoding="async"
                   className="h-16 w-full object-contain"
                 />
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -46,14 +46,9 @@ export function SponsorGrid() {
                 </h3>
                 <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
                   {t.sponsors?.map((s) => (
-                    <a
+                    <div
                       key={s.name}
-                      href={edition.rsvpUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className={`flex items-center justify-center rounded-lg border border-border transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
-                        s.light ? "bg-white" : "bg-surface/40"
-                      } ${s.large ? "h-24 p-2" : "h-24 p-5"}`}
+                      className={cardClass(s.light, s.large)}
                     >
                       <img
                         src={s.logo}
@@ -62,18 +57,15 @@ export function SponsorGrid() {
                         decoding="async"
                         className={`${s.large ? "h-20 w-full object-contain" : "h-14 w-full object-contain"}`}
                       />
-                    </a>
+                    </div>
                   ))}
                   {Array.from({ length: Math.max(0, t.slots - (t.sponsors?.length ?? 0)) }).map((_, i) => (
-                    <a
+                    <div
                       key={i}
-                      href={edition.rsvpUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
                       className="flex h-24 items-center justify-center rounded-lg border border-dashed border-border bg-background/20 text-xs uppercase tracking-wider text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
                     >
                       Vaga aberta
-                    </a>
+                    </div>
                   ))}
                 </div>
               </div>

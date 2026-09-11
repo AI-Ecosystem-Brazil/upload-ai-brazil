@@ -53,14 +53,16 @@ export function SiteFooter({
           ) : (
             <RsvpButton variant="outline" />
           )}
-          <a
-            href={edition.rsvpUrl}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Comunidade AI Brasil · fale com a organização
-          </a>
+          {edition.rsvpUrl ? (
+            <a
+              href={edition.rsvpUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Comunidade AI Brasil · fale com a organização
+            </a>
+          ) : null}
         </div>
       </div>
     </footer>
