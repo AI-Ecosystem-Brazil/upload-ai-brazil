@@ -50,7 +50,7 @@ const SUPPORT: Person[] = [
   { name: "Gabriel Virissimo", role: "Painelista" },
   { name: "Cilene Danta", role: "Mediadora" },
   { name: "Deize Andrade", role: "Painelista" },
-  { name: "Guta Raeder", role: "Encerramento" },
+  { name: "Guta Raeder", role: "Mestre de Cerimônia" },
   { name: "Tiago Zouk", role: "Palestrante" },
   { name: "Elisangela Rosa", role: "Organização e painelista" },
 ];

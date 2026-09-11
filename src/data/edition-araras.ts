@@ -225,8 +225,8 @@ const PALCO: Session[] = [
     badge: "Encerramento",
     title: "Ecossistema e IA",
     people: [
-      { name: "Guta Raeder", role: "Encerramento" },
-      { name: "Marcio Chleba", role: "Palestrante" },
+      { name: "Guta Raeder", role: "Mestre de Cerimônia" },
+      { name: "Bruno Mello", role: "Palestrante" },
     ],
   },
 ];
