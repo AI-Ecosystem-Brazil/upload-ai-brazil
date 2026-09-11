@@ -512,7 +512,6 @@ export const SP_EDITION: Edition = {
   city: "São Paulo, SP",
   format: "Presencial e online (híbrido)",
   capacity: "300 pessoas",
-  rsvpUrl: undefined,
   downloadUrl: "https://ai.eco.br/spaces/23317728/page",
   agenda: AGENDA,
   speakers: buildSpeakers(AGENDA),
