@@ -4,7 +4,7 @@ import roanFoto from "@/assets/roan.png.asset.json";
 import adrianoFoto from "@/assets/adriano-rufino.png.asset.json";
 import cabeloFoto from "@/assets/alessandro-cabelo.png.asset.json";
 import andreFoto from "@/assets/andre-almeida.png.asset.json";
-import brunoFoto from "@/assets/bruno-mello.png.asset.json";
+import brunoFoto from "@/assets/bruno-mello-2.png.asset.json";
 import carolFoto from "@/assets/carol-luz.png.asset.json";
 import cileneFoto from "@/assets/cilene-danta.png.asset.json";
 import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
