@@ -65,7 +65,7 @@ const PALCO: Session[] = [
     kind: "painel",
     title: "Uso inteligente de dados",
     people: [
-      { name: "Valdir Pandolfe", role: "Painelista confirmado" },
+      { name: "Valdir Pandolfi", role: "Painelista confirmado" },
       { name: "José Azarite", role: "Participação a confirmar" },
       {
         name: "Carolina da Luz",
