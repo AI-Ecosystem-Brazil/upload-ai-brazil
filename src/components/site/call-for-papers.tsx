@@ -84,9 +84,6 @@ export function CallForPapers() {
             {CFP.requirement}
           </p>
           <RsvpButton className="mt-7" variant="outline" label="Quero palestrar" />
-          <p className="mt-6 text-xs uppercase tracking-wider text-muted-foreground">
-            Cadastro obrigatório em {new URL(edition.rsvpUrl).host}
-          </p>
         </div>
       </Reveal>
 
