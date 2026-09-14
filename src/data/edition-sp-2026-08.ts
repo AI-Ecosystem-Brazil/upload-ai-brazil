@@ -351,11 +351,6 @@ const AGENDA: Session[] = [
       "Ser AI-Centric vai muito além de adotar novas tecnologias: é repensar liderança, cultura, processos e decisões colocando a IA no centro da estratégia. Neste painel, o que realmente separa usar IA de operar com IA. Porque IA sem estratégia não transforma — só acelera.",
     people: [
       {
-        name: "Cilene Danta",
-        role: "Painelista",
-        profileUrl: "https://ai.eco.br/members/38862633",
-      },
-      {
         name: "Juliana Lopes",
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/40989380",

@@ -16,6 +16,7 @@ import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoCompsoft from "@/assets/apoio-compsoft.png.asset.json";
 import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
 import logoTimachigu from "@/assets/apoio-timachigu.png.asset.json";
+import logoJrComunicacao from "@/assets/apoio-jr-comunicacao-visual.png.asset.json";
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
@@ -66,7 +67,6 @@ const PALCO: Session[] = [
     title: "Uso inteligente de dados",
     people: [
       { name: "Valdir Pandolfi", role: "Painelista confirmado" },
-      { name: "José Azarite", role: "Participação a confirmar" },
       {
         name: "Carolina da Luz",
         role: "Mediadora",
@@ -103,7 +103,7 @@ const PALCO: Session[] = [
     time: "11h30",
     period: "manha",
     kind: "palestra",
-    title: "Marketing para PMEs",
+    title: "Antes da IA, existe a Inteligencia",
     people: [
       {
         name: "Rodrigo Righetti",
@@ -144,19 +144,16 @@ const PALCO: Session[] = [
   {
     time: "14h00",
     period: "tarde",
-    kind: "palestra",
-    title: "A real da IA no Marketing",
-    people: [{ name: "Bruno Mello", role: "Palestrante" }],
+    kind: "momento",
+    title: "Comunidade AI Brasil",
+    people: [{ name: "Comunidade AI Brasil", role: "Comunidade" }],
   },
   {
     time: "14h30",
     period: "tarde",
     kind: "painel",
     title: "IA e marca pessoal · Engajamento de colaboradores",
-    people: [
-      { name: "Elisangela Rosa", role: "Painelista" },
-      { name: "Deize Andrade", role: "Painelista" },
-    ],
+    people: [{ name: "Elisangela Rosa", role: "Palestrante" }],
   },
   {
     time: "15h00",
@@ -175,18 +172,13 @@ const PALCO: Session[] = [
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/40198222",
       },
-      {
-        name: "Cilene Danta",
-        role: "Painelista",
-        profileUrl: "https://ai.eco.br/members/38862633",
-      },
     ],
   },
   {
     time: "15h30",
     period: "tarde",
     kind: "palestra",
-    title: "Seu melhor vendedor pode ser uma IA",
+    title: "Sua próxima venda pode acontecer dentro de uma IA",
     people: [{ name: "Tiago Zouk", role: "Palestrante" }],
   },
   {
@@ -344,7 +336,7 @@ export const ARARAS_EDITION: Edition = {
     { name: "ANAMID", logo: logoAnamid.url },
     { name: "FHO", logo: logoFho.url, light: true },
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
-    { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
+    { name: "JR Comunicação Visual", logo: logoJrComunicacao.url },
     { name: "SEBRAE", logo: logoSebrae.url, light: true },
   ],
   cfp: {
@@ -369,6 +361,7 @@ export const ARARAS_EDITION: Edition = {
         { name: "Da Minha Vó", logo: logoDaMinhaVo.url, light: true, large: true },
         { name: "Instituto Amigu", logo: logoAmigu.url },
         { name: "Timachigu", logo: logoTimachigu.url, light: true },
+        { name: "I2A2 Brasil", logo: logoI2a2.url, light: true },
       ],
     },
   ],

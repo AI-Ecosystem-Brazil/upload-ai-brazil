@@ -48,11 +48,9 @@ const SUPPORT: Person[] = [
   { name: "Ana Garms", role: "Palestrante" },
   { name: "Carolina da Luz", role: "Mediadora e painelista" },
   { name: "Gabriel Virissimo", role: "Painelista" },
-  { name: "Cilene Danta", role: "Mediadora" },
-  { name: "Deize Andrade", role: "Painelista" },
   { name: "Guta Raeder", role: "Mestre de Cerimônia" },
   { name: "Tiago Zouk", role: "Palestrante" },
-  { name: "Elisangela Rosa", role: "Organização e painelista" },
+  { name: "Elisangela Rosa", role: "Palestrante" },
 ];
 
 function Portrait({ person, tone }: { person: Person; tone: "gold" | "neon" | "quiet" }) {
