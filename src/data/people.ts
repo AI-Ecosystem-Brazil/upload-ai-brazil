@@ -106,6 +106,7 @@ export const PHOTOS: Record<string, string> = {
   "Pietro Mauro": pietroFoto.url,
   "Comunidade AI Brasil": seloAraras.url,
   "Valdir Pandolfi": valdirPandolfiFoto.url,
+  "Bruno Velloso": brunoVellosoFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([
