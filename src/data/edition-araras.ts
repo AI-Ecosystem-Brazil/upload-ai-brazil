@@ -144,9 +144,9 @@ const PALCO: Session[] = [
   {
     time: "14h00",
     period: "tarde",
-    kind: "momento",
-    title: "Comunidade AI Brasil",
-    people: [{ name: "Comunidade AI Brasil", role: "Comunidade" }],
+    kind: "palestra",
+    title: "O Segredo do Lucro Inteligente",
+    people: [{ name: "Bruno Velloso", role: "Líder em Inteligência de Negócio" }],
   },
   {
     time: "14h30",
