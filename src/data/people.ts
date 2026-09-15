@@ -6,7 +6,6 @@ import cabeloFoto from "@/assets/alessandro-cabelo.png.asset.json";
 import andreFoto from "@/assets/andre-almeida.png.asset.json";
 import brunoFoto from "@/assets/bruno-mello-2.png.asset.json";
 import carolFoto from "@/assets/carol-luz.png.asset.json";
-import cileneFoto from "@/assets/cilene-danta.png.asset.json";
 import christianiniFoto from "@/assets/cristiano-christianini.png.asset.json";
 import linuxmenFoto from "@/assets/cristiano-linuxmen.png.asset.json";
 
@@ -42,8 +41,6 @@ import anaBarrosFoto from "@/assets/ana-barros.jpeg.asset.json";
 import elenFoto from "@/assets/elen-melo.png.asset.json";
 import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asset.json";
 import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
-import deizeFoto from "@/assets/deize-andrade.jpg.asset.json";
-import azariteFoto from "@/assets/azarite.jpeg.asset.json";
 import chlebaFoto2 from "@/assets/marcio-chleba-2.png.asset.json";
 import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
 import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
@@ -68,11 +65,9 @@ export const PHOTOS: Record<string, string> = {
   "André Almeida": andreFoto.url,
   "Bruno Mello": brunoFoto.url,
   "Carolina da Luz": carolFoto.url,
-  "Cilene Danta": cileneFoto.url,
   "Cristiano Christianini": christianiniFoto.url,
   Linuxmen: linuxmenFoto.url,
   "Daniel Ramos": danielFoto2.url,
-  "Deize Andrade": deizeFoto.url,
   "Eduardo Neves (Eth0)": eduardoNevesFoto.url,
   "Eduardo Piedade": eduardoPiedadeFoto.url,
   "Elaine Coimbra": elaineFoto.url,
@@ -102,8 +97,6 @@ export const PHOTOS: Record<string, string> = {
   "Tiene Colins": tieneFoto.url,
   "Tiene Collins": tieneFoto.url,
   "Marcio Chleba": chlebaFoto2.url,
-  Azarite: azariteFoto.url,
-  "José Azarite": azariteFoto.url,
   SEBRAE: sebraeLogo.url,
   "Tiago Zouk": tiagoZoukFoto.url,
   "Elisangela Rosa": elisangelaFoto.url,
