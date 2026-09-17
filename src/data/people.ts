@@ -34,7 +34,6 @@ import danielFoto2 from "@/assets/daniel-ramos-2.avif.asset.json";
 import rafaelSoaresFoto from "@/assets/rafael-soares.png.asset.json";
 import marcosOliveiraFoto from "@/assets/marcos-oliveira.png.asset.json";
 import tibiricaFoto from "@/assets/luiz-tibirica.avif.asset.json";
-import tieneFoto from "@/assets/tiene-colins.avif.asset.json";
 
 import pedroFoto from "@/assets/pedro-chiamulera.jpg.asset.json";
 import anaBarrosFoto from "@/assets/ana-barros.jpeg.asset.json";
@@ -51,6 +50,7 @@ import sebraeLogo from "@/assets/apoio-sebrae.jpeg.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
 import valdirPandolfiFoto from "@/assets/valdir-pandolfi.jpeg.asset.json";
 import brunoVellosoFoto from "@/assets/bruno-velloso.jpeg.asset.json";
+import italoFrancaFoto from "@/assets/italo-de-franca.png.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -95,8 +95,6 @@ export const PHOTOS: Record<string, string> = {
   "Marco Riveiros": marcoRiveirosFeaturedFoto.url,
   "Pedro Chiamulera": pedroFoto.url,
   "Luiz Tibiriçá": tibiricaFoto.url,
-  "Tiene Colins": tieneFoto.url,
-  "Tiene Collins": tieneFoto.url,
   "Marcio Chleba": chlebaFoto2.url,
   SEBRAE: sebraeLogo.url,
   "Tiago Zouk": tiagoZoukFoto.url,
@@ -107,6 +105,7 @@ export const PHOTOS: Record<string, string> = {
   "Comunidade AI Brasil": seloAraras.url,
   "Valdir Pandolfi": valdirPandolfiFoto.url,
   "Bruno Velloso": brunoVellosoFoto.url,
+  "Italo de França": italoFrancaFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([

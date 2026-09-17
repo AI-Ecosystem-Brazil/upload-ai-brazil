@@ -49,20 +49,6 @@ const PALCO: Session[] = [
   {
     time: "09h30",
     period: "manha",
-    kind: "palestra",
-    title: "IA para empreendedores",
-    people: [
-      { name: "Tiene Collins", role: "Palestrante" },
-      {
-        name: "André Almeida",
-        role: "Palestrante",
-        profileUrl: "https://ai.eco.br/members/38743151",
-      },
-    ],
-  },
-  {
-    time: "10h00",
-    period: "manha",
     kind: "painel",
     title: "Uso inteligente de dados",
     people: [
@@ -73,6 +59,13 @@ const PALCO: Session[] = [
         profileUrl: "https://ai.eco.br/members/40198222",
       },
     ],
+  },
+  {
+    time: "10h00",
+    period: "manha",
+    kind: "palestra",
+    title: "Palestra · tema a definir",
+    people: [{ name: "Claudeir Ribeiro", role: "Palestrante" }],
   },
   {
     time: "10h30",
@@ -198,6 +191,13 @@ const PALCO: Session[] = [
   {
     time: "17h00",
     period: "tarde",
+    kind: "palestra",
+    title: "VibeWork, como usar IA no dia a dia de trabalho, mesmo que você não seja programador",
+    people: [{ name: "Italo de França", role: "Palestrante" }],
+  },
+  {
+    time: "17h30",
+    period: "tarde",
     kind: "keynote",
     badge: "Keynote Speaker",
     title: "O maior desafio da era da IA",
@@ -210,7 +210,7 @@ const PALCO: Session[] = [
     ],
   },
   {
-    time: "17h30",
+    time: "18h00",
     period: "tarde",
     kind: "momento",
     badge: "Encerramento",
@@ -316,9 +316,9 @@ export const ARARAS_EDITION: Edition = {
   shortName: "Araras · Setembro 2026",
   tagline: "O esquenta do maior evento de IA da América Latina",
   dateISO: "2026-09-23T08:30:00-03:00",
-  endISO: "2026-09-23T17:30:00-03:00",
+  endISO: "2026-09-23T18:00:00-03:00",
   dateLabel: "23 de setembro de 2026 · quarta-feira",
-  timeLabel: "08h30 às 17h30",
+  timeLabel: "08h30 às 18h00",
   venue: "FHO — Araras",
   city: "Araras, SP",
   format: "Presencial",
