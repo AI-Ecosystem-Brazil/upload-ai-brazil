@@ -49,20 +49,6 @@ const PALCO: Session[] = [
   {
     time: "09h30",
     period: "manha",
-    kind: "palestra",
-    title: "IA para empreendedores",
-    people: [
-      { name: "Tiene Collins", role: "Palestrante" },
-      {
-        name: "André Almeida",
-        role: "Palestrante",
-        profileUrl: "https://ai.eco.br/members/38743151",
-      },
-    ],
-  },
-  {
-    time: "10h00",
-    period: "manha",
     kind: "painel",
     title: "Uso inteligente de dados",
     people: [
@@ -73,6 +59,14 @@ const PALCO: Session[] = [
         profileUrl: "https://ai.eco.br/members/40198222",
       },
     ],
+  },
+  {
+    time: "10h00",
+    period: "manha",
+    kind: "palestra",
+    title: "Palestra · tema a definir",
+    tbd: true,
+    people: [{ name: "Claudeir Ribeiro", role: "Palestrante" }],
   },
   {
     time: "10h30",
