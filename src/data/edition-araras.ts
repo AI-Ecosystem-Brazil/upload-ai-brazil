@@ -65,7 +65,6 @@ const PALCO: Session[] = [
     period: "manha",
     kind: "palestra",
     title: "Palestra · tema a definir",
-    tbd: true,
     people: [{ name: "Claudeir Ribeiro", role: "Palestrante" }],
   },
   {
