@@ -50,6 +50,7 @@ import sebraeLogo from "@/assets/apoio-sebrae.jpeg.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
 import valdirPandolfiFoto from "@/assets/valdir-pandolfi.jpeg.asset.json";
 import brunoVellosoFoto from "@/assets/bruno-velloso.jpeg.asset.json";
+import italoFrancaFoto from "@/assets/italo-de-franca.png.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -104,6 +105,7 @@ export const PHOTOS: Record<string, string> = {
   "Comunidade AI Brasil": seloAraras.url,
   "Valdir Pandolfi": valdirPandolfiFoto.url,
   "Bruno Velloso": brunoVellosoFoto.url,
+  "Italo de França": italoFrancaFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([
