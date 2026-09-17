@@ -44,7 +44,6 @@ const SPECIAL: Person[] = [
 ];
 
 const SUPPORT: Person[] = [
-  { name: "Tiene Collins", role: "Palestrante", photoName: "Tiene Colins" },
   { name: "Ana Garms", role: "Palestrante" },
   { name: "Carolina da Luz", role: "Mediadora e painelista" },
   { name: "Gabriel Virissimo", role: "Painelista" },
