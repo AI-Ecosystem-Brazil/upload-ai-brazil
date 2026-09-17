@@ -192,6 +192,13 @@ const PALCO: Session[] = [
   {
     time: "17h00",
     period: "tarde",
+    kind: "palestra",
+    title: "VibeWork, como usar IA no dia a dia de trabalho, mesmo que você não seja programador",
+    people: [{ name: "Italo de França", role: "Palestrante" }],
+  },
+  {
+    time: "17h30",
+    period: "tarde",
     kind: "keynote",
     badge: "Keynote Speaker",
     title: "O maior desafio da era da IA",
@@ -204,7 +211,7 @@ const PALCO: Session[] = [
     ],
   },
   {
-    time: "17h30",
+    time: "18h00",
     period: "tarde",
     kind: "momento",
     badge: "Encerramento",
