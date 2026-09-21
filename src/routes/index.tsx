@@ -56,7 +56,6 @@ const eventJsonLd = {
   },
   organizer: [
     { "@type": "Person", name: "Jairo Segre" },
-    { "@type": "Person", name: "Elisangela Rosa" },
   ],
   offers: {
     "@type": "Offer",

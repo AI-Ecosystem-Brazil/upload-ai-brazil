@@ -45,6 +45,7 @@ const SPECIAL: Person[] = [
     recognition: "Liderança regional",
   },
   { name: "Maurício Conte", role: "Co-produção", recognition: "Realização" },
+  { name: "Gustavo Timachi", role: "Apoio Técnico", recognition: "Liderança regional" },
 ];
 
 const SUPPORT: Person[] = [
@@ -52,7 +53,6 @@ const SUPPORT: Person[] = [
   { name: "Gabriel Viríssimo", role: "Palestrante e painelista" },
   { name: "Guta Raeder", role: "Mestre de Cerimônia" },
   { name: "Tiago Zouk", role: "Palestrante" },
-  { name: "Elisangela Rosa", role: "Palestrante" },
 ];
 
 function Portrait({ person, tone }: { person: Person; tone: "gold" | "neon" | "quiet" }) {

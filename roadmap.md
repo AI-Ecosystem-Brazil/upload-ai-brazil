@@ -9,9 +9,10 @@
 - [x] Restaurar Tiene Collins somente na edição legado.
 - [x] Validar desktop, mobile e conteúdo final.
 
-- [ ] Atualizar logos Da Minha Vó, Grupo Primordium e JHS INFO
-- [ ] Remover Elisângela Rosa da edição Araras
-- [ ] Ajustar horários do auditório e remover aberturas dos laboratórios
-- [ ] Adicionar Gustavo Timachi como Apoio Técnico na Liderança Regional
-- [ ] Remover vagas abertas e centralizar patrocinadores/apoiadores
-- [ ] Validar página Araras em desktop e celular
+- [x] Atualizar logos Da Minha Vó, Grupo Primordium e JHS INFO
+- [x] Remover Elisângela Rosa da edição Araras
+- [x] Ajustar horários do auditório e remover aberturas dos laboratórios
+- [x] Adicionar Gustavo Timachi como Apoio Técnico na Liderança Regional
+- [x] Remover vagas abertas e centralizar patrocinadores/apoiadores
+- [x] Validar página Araras em desktop e celular
+- Novas imagens recebidas e destinadas aos logos Da Minha Vó, Grupo Primordium, JHS INFO e ao retrato de Gustavo Timachi.
