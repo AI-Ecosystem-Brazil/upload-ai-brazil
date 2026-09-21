@@ -16,3 +16,4 @@
 - [x] Remover vagas abertas e centralizar patrocinadores/apoiadores
 - [x] Validar página Araras em desktop e celular
 - Novas imagens recebidas e destinadas aos logos Da Minha Vó, Grupo Primordium, JHS INFO e ao retrato de Gustavo Timachi.
+- [ ] Melhorar o contraste do Grupo Primordium, atualizar JHS INFO e ampliar WAR/FHO
