@@ -15,3 +15,4 @@
 - [ ] Adicionar Gustavo Timachi como Apoio Técnico na Liderança Regional
 - [ ] Remover vagas abertas e centralizar patrocinadores/apoiadores
 - [ ] Validar página Araras em desktop e celular
+- Novas imagens recebidas e destinadas aos logos Da Minha Vó, Grupo Primordium, JHS INFO e ao retrato de Gustavo Timachi.

@@ -18,11 +18,11 @@ export function SponsorGrid() {
           <h3 className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-primary">
             Apoio institucional
           </h3>
-          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
             {edition.supporters.map((s) => (
               <div
                 key={s.name}
-                className={cardClass(s.light, false)}
+                className={`${cardClass(s.light, false)} w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]`}
               >
                 <img
                   src={s.logo}
@@ -44,11 +44,11 @@ export function SponsorGrid() {
                 <h3 className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                   {t.tier}
                 </h3>
-                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                <div className="mt-4 flex flex-wrap justify-center gap-4">
                   {t.sponsors?.map((s) => (
                     <div
                       key={s.name}
-                      className={`${cardClass(s.light, s.large)} ${s.wide ? "col-span-2" : ""}`}
+                      className={`${cardClass(s.light, s.large)} ${s.wide ? "w-full sm:w-[calc(66.666%-0.5rem)] lg:w-[calc(50%-0.5rem)]" : "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"}`}
                     >
                       <img
                         src={s.logo}
@@ -57,19 +57,6 @@ export function SponsorGrid() {
                         decoding="async"
                         className={`${s.large ? "h-20 w-full object-contain" : "h-14 w-full object-contain"}`}
                       />
-                    </div>
-                  ))}
-                  {Array.from({
-                    length: Math.max(
-                      0,
-                      t.slots - (t.sponsors?.reduce((total, sponsor) => total + (sponsor.wide ? 2 : 1), 0) ?? 0),
-                    ),
-                  }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="flex h-24 items-center justify-center rounded-lg border border-dashed border-border bg-background/20 text-xs uppercase tracking-wider text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
-                    >
-                      Vaga aberta
                     </div>
                   ))}
                 </div>

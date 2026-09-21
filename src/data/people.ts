@@ -42,7 +42,6 @@ import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asse
 import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
 import chlebaFoto2 from "@/assets/marcio-chleba-2.png.asset.json";
 import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
-import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
 import gutaFoto from "@/assets/guta-raeder-2.png.asset.json";
 import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 import pietroFoto from "@/assets/pietro-mauro.jpeg.asset.json";
@@ -53,6 +52,7 @@ import brunoVellosoFoto from "@/assets/bruno-velloso.jpeg.asset.json";
 import italoFrancaFoto from "@/assets/italo-de-franca.png.asset.json";
 import claudeirRibeiroFoto from "@/assets/claudeir-ribeiro.png.asset.json";
 import tieneCollinsFoto from "@/assets/tiene-collins.avif.asset.json";
+import gustavoTimachiFoto from "@/assets/gustavo-timachi.jpeg.asset.json";
 
 import type { Session, Speaker } from "@/data/types";
 
@@ -101,7 +101,6 @@ export const PHOTOS: Record<string, string> = {
   "Marcio Chleba": chlebaFoto2.url,
   SEBRAE: sebraeLogo.url,
   "Tiago Zouk": tiagoZoukFoto.url,
-  "Elisangela Rosa": elisangelaFoto.url,
   "Guta Raeder": gutaFoto.url,
   "André Magno": andreMagnoFoto.url,
   "Pietro Mauro": pietroFoto.url,
@@ -111,6 +110,7 @@ export const PHOTOS: Record<string, string> = {
   "Italo de França": italoFrancaFoto.url,
   "Claudeir Ribeiro": claudeirRibeiroFoto.url,
   "Tiene Collins": tieneCollinsFoto.url,
+  "Gustavo Timachi": gustavoTimachiFoto.url,
 };
 
 export const KEYNOTE_SPEAKERS = new Set([

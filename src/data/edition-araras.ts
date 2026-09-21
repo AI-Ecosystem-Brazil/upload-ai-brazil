@@ -8,7 +8,7 @@ import logoAbiacom from "@/assets/apoio-abiacom.png.asset.json";
 import logoAnamid from "@/assets/apoio-anamid.svg.asset.json";
 import logoPrimeInsurance from "@/assets/apoio-prime-insurance-white.png.asset.json";
 import logoAinov from "@/assets/apoio-ainov-dark.jpeg.asset.json";
-import logoDaMinhaVo from "@/assets/apoio-da-minha-vo-2.png.asset.json";
+import logoDaMinhaVo from "@/assets/apoio-da-minha-vo-2026.jpg.asset.json";
 import logoAmigu from "@/assets/apoio-instituto-amigu.jpeg.asset.json";
 import logoSebrae from "@/assets/apoio-sebrae.jpeg.asset.json";
 import logoLoqqy from "@/assets/apoio-loqqy-white.png.asset.json";
@@ -16,12 +16,12 @@ import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoCompsoft from "@/assets/apoio-compsoft.png.asset.json";
 import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
 import logoTimachigu from "@/assets/apoio-timachigu.png.asset.json";
-import logoJrComunicacao from "@/assets/apoio-jr-comunicacao-visual.png.asset.json";
+import logoJhsInfo from "@/assets/apoio-jhs-info.jpg.asset.json";
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
 import logoNeolink from "@/assets/logo-neolink.png.asset.json";
-import logoGrupoPrimordium from "@/assets/logo-grupo-primordium.png.asset.json";
+import logoGrupoPrimordium from "@/assets/logo-grupo-primordium-2026.png.asset.json";
 
 const TBD = (time: string, period: Session["period"], kind: Session["kind"], title: string): Session => ({
   time,
@@ -129,7 +129,7 @@ const PALCO: Session[] = [
     ],
   },
   {
-    time: "13h30",
+    time: "14h00",
     period: "tarde",
     kind: "keynote",
     badge: "Keynote Speaker",
@@ -143,18 +143,11 @@ const PALCO: Session[] = [
     ],
   },
   {
-    time: "14h00",
+    time: "14h30",
     period: "tarde",
     kind: "palestra",
     title: "O Segredo do Lucro Inteligente",
     people: [{ name: "Bruno Velloso", role: "Líder em Inteligência de Negócio" }],
-  },
-  {
-    time: "14h30",
-    period: "tarde",
-    kind: "painel",
-    title: "IA e marca pessoal · Engajamento de colaboradores",
-    people: [{ name: "Elisangela Rosa", role: "Palestrante" }],
   },
   {
     time: "15h00",
@@ -232,13 +225,6 @@ const PALCO: Session[] = [
 
 const LAB_1: Session[] = [
   {
-    time: "09h00",
-    period: "manha",
-    kind: "momento",
-    title: "Abertura",
-    people: [{ name: "Elisangela Rosa", role: "Abertura" }],
-  },
-  {
     time: "09h30",
     period: "manha",
     kind: "handson",
@@ -289,19 +275,6 @@ const LAB_1: Session[] = [
 
 const LAB_2: Session[] = [
   {
-    time: "09h00",
-    period: "manha",
-    kind: "momento",
-    title: "Abertura",
-    people: [
-      {
-        name: "Juliano Kimura",
-        role: "Abertura · Head de Ecossistema da AI Brasil",
-        profileUrl: "https://ai.eco.br/members/21874664",
-      },
-    ],
-  },
-  {
     time: "09h30",
     period: "manha",
     kind: "handson",
@@ -340,13 +313,6 @@ const LAB_2: Session[] = [
         profileUrl: "https://ai.eco.br/members/21874664",
       },
     ],
-  },
-  {
-    time: "17h00",
-    period: "tarde",
-    kind: "momento",
-    title: "Encerramento",
-    people: [{ name: "Elisangela Rosa", role: "Encerramento" }],
   },
 ];
 
@@ -388,7 +354,7 @@ export const ARARAS_EDITION: Edition = {
   venue: "FHO — Araras",
   city: "Araras, SP",
   format: "Presencial",
-  organizer: "Jairo Segre, Elisangela Rosa",
+  organizer: "Jairo Segre",
   rsvpUrl: "https://ai.eco.br/plans/1987849?bundle_token=a787af0f0803c189379298c03fe83acc&utm_source=manual",
   sealImage: seloAraras.url,
   whatsappUrl: "https://wa.me/5519981034103",
@@ -402,7 +368,7 @@ export const ARARAS_EDITION: Edition = {
     { name: "ANAMID", logo: logoAnamid.url },
     { name: "FHO", logo: logoFho.url, light: true },
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
-    { name: "JR Comunicação Visual", logo: logoJrComunicacao.url },
+    { name: "JHS INFO", logo: logoJhsInfo.url, light: true },
     { name: "SEBRAE", logo: logoSebrae.url, light: true },
   ],
   cfp: {
