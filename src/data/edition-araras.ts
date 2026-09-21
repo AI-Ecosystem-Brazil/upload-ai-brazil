@@ -16,7 +16,7 @@ import logoFho from "@/assets/apoio-fho.png.asset.json";
 import logoCompsoft from "@/assets/apoio-compsoft.png.asset.json";
 import logoI2a2 from "@/assets/apoio-i2a2-brasil.png.asset.json";
 import logoTimachigu from "@/assets/apoio-timachigu.png.asset.json";
-import logoJhsInfo from "@/assets/apoio-jhs-info.jpg.asset.json";
+import logoJhsInfo from "@/assets/apoio-jhs-info-2026.jpg.asset.json";
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
@@ -366,7 +366,7 @@ export const ARARAS_EDITION: Edition = {
     { name: "Abradi", logo: logoInstitucional.url },
     { name: "ABIACOM", logo: logoAbiacom.url },
     { name: "ANAMID", logo: logoAnamid.url },
-    { name: "FHO", logo: logoFho.url, light: true },
+    { name: "FHO", logo: logoFho.url, light: true, compact: true },
     { name: "Compsoft", logo: logoCompsoft.url, light: true },
     { name: "JHS INFO", logo: logoJhsInfo.url, light: true },
     { name: "SEBRAE", logo: logoSebrae.url, light: true },
@@ -386,8 +386,8 @@ export const ARARAS_EDITION: Edition = {
       tier: "Prata",
       slots: 5,
       sponsors: [
-        { name: "WAR", logo: logoWar.url, light: true },
-        { name: "Grupo Primordium", logo: logoGrupoPrimordium.url },
+        { name: "WAR", logo: logoWar.url, light: true, compact: true },
+        { name: "Grupo Primordium", logo: logoGrupoPrimordium.url, light: true },
       ],
     },
     {

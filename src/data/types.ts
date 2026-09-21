@@ -49,6 +49,7 @@ export type Supporter = {
   light?: boolean;
   large?: boolean;
   wide?: boolean;
+  compact?: boolean;
 };
 
 export type Cfp = {

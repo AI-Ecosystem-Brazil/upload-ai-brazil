@@ -6,10 +6,10 @@ export function SponsorGrid() {
   const edition = useEdition();
   const linkUrl = edition.status === "past" ? edition.downloadUrl : edition.rsvpUrl;
 
-  const cardClass = (light?: boolean, large?: boolean) =>
+  const cardClass = (light?: boolean, large?: boolean, compact?: boolean) =>
     `flex items-center justify-center rounded-lg border border-border transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/60 focus-visible:border-primary ${
       light ? "bg-white" : "bg-surface/40"
-    } ${large ? "h-24 p-2" : "h-28 p-6"}`;
+    } ${large ? "h-24 p-2" : compact ? "h-28 p-2" : "h-28 p-6"}`;
 
   return (
     <div className="space-y-12">
@@ -22,14 +22,14 @@ export function SponsorGrid() {
             {edition.supporters.map((s) => (
               <div
                 key={s.name}
-                className={`${cardClass(s.light, false)} w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]`}
+                className={`${cardClass(s.light, false, s.compact)} w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]`}
               >
                 <img
                   src={s.logo}
                   alt={`Logotipo ${s.name}`}
                   loading="lazy"
                   decoding="async"
-                  className="h-16 w-full object-contain"
+                  className={`${s.compact ? "h-24" : "h-16"} w-full object-contain`}
                 />
               </div>
             ))}
@@ -48,14 +48,14 @@ export function SponsorGrid() {
                   {t.sponsors?.map((s) => (
                     <div
                       key={s.name}
-                      className={`${cardClass(s.light, s.large)} ${s.wide ? "w-full sm:w-[calc(66.666%-0.5rem)] lg:w-[calc(50%-0.5rem)]" : "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"}`}
+                      className={`${cardClass(s.light, s.large, s.compact)} ${s.wide ? "w-full sm:w-[calc(66.666%-0.5rem)] lg:w-[calc(50%-0.5rem)]" : "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"}`}
                     >
                       <img
                         src={s.logo}
                         alt={`Logotipo ${s.name}`}
                         loading="lazy"
                         decoding="async"
-                        className={`${s.large ? "h-20 w-full object-contain" : "h-14 w-full object-contain"}`}
+                        className={`${s.large ? "h-20" : s.compact ? "h-24" : "h-14"} w-full object-contain`}
                       />
                     </div>
                   ))}
