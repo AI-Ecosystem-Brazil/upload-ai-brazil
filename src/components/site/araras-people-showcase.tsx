@@ -1,11 +1,13 @@
 import { initialsOf, photoOf } from "@/data/people";
 import { Reveal } from "@/components/site/section";
+import claudeirShowcaseFoto from "@/assets/claudeir-ribeiro-palestrantes.jpeg.asset.json";
 
 type Person = {
   name: string;
   role?: string;
   recognition?: string;
   photoName?: string;
+  photo?: string;
 };
 
 const KEYNOTES: Person[] = [
@@ -31,7 +33,7 @@ const SPEAKERS: Person[] = [
   { name: "André Magno", role: "Palestrante" },
   { name: "Bruno Velloso", role: "Palestrante" },
   { name: "Pietro Mauro", role: "Palestrante e facilitador" },
-  { name: "Claudeir Ribeiro", role: "Palestrante" },
+  { name: "Claudeir Ribeiro", role: "Palestrante", photo: claudeirShowcaseFoto.url },
   { name: "Elen Melo", role: "Palestrante convidada" },
   { name: "Ana Barros", role: "Palestrante convidada" },
   { name: "Juliano Kimura", role: "Palestrante e facilitador" },
@@ -56,7 +58,7 @@ const SUPPORT: Person[] = [
 ];
 
 function Portrait({ person, tone }: { person: Person; tone: "gold" | "neon" | "quiet" }) {
-  const photo = photoOf(person.photoName ?? person.name);
+  const photo = person.photo ?? photoOf(person.photoName ?? person.name);
   const frameClass =
     tone === "gold"
       ? "frame-gold"
