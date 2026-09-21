@@ -218,6 +218,7 @@ const AGENDA: Session[] = [
         org: "Instituto Amigu",
         profileUrl: "https://ai.eco.br/members/40122900",
       },
+      { name: "Tiene Collins", role: "Painelista" },
       { name: "Luiz Tibiriçá", role: "Painelista" },
     ],
   },

@@ -28,6 +28,10 @@ const KEYNOTES: Person[] = [
 
 const SPEAKERS: Person[] = [
   { name: "André Almeida", role: "Palestrante e painelista" },
+  { name: "André Magno", role: "Palestrante" },
+  { name: "Bruno Velloso", role: "Palestrante" },
+  { name: "Pietro Mauro", role: "Palestrante e facilitador" },
+  { name: "Claudeir Ribeiro", role: "Palestrante" },
   { name: "Elen Melo", role: "Palestrante convidada" },
   { name: "Ana Barros", role: "Palestrante convidada" },
   { name: "Juliano Kimura", role: "Palestrante e facilitador" },
@@ -44,9 +48,8 @@ const SPECIAL: Person[] = [
 ];
 
 const SUPPORT: Person[] = [
-  { name: "Ana Garms", role: "Palestrante" },
   { name: "Carolina da Luz", role: "Mediadora e painelista" },
-  { name: "Gabriel Virissimo", role: "Painelista" },
+  { name: "Gabriel Viríssimo", role: "Palestrante e painelista" },
   { name: "Guta Raeder", role: "Mestre de Cerimônia" },
   { name: "Tiago Zouk", role: "Palestrante" },
   { name: "Elisangela Rosa", role: "Palestrante" },

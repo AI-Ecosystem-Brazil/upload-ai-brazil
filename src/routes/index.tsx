@@ -15,7 +15,7 @@ import { BackToTop } from "@/components/site/back-to-top";
 
 const TITLE = "Upload AI Brasil Araras 2026 — 23 de setembro, FHO";
 const DESCRIPTION =
-  "Nova edição do Upload AI Brasil: 23 de setembro de 2026, das 08h30 às 17h30, na FHO em Araras/SP. Palco principal, dois laboratórios de IA na prática e RSVP aberto.";
+  "Nova edição do Upload AI Brasil: 23 de setembro de 2026, das 08h30 às 18h00, na FHO em Araras/SP. Palco principal, dois laboratórios de IA na prática e RSVP aberto.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -113,7 +113,7 @@ function Index() {
           <Section
           id="programacao"
           eyebrow="Programação"
-          title="Três trilhas simultâneas, das 08h30 às 17h30"
+          title="Três trilhas simultâneas, das 08h30 às 18h00"
           intro="Palco principal no auditório e dois laboratórios de IA na prática. A grade está em construção: as atividades marcadas como “a definir” serão atualizadas conforme a curadoria confirmar."
             className="bg-surface/20"
           >
