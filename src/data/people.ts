@@ -42,6 +42,7 @@ import marcoRiveirosFeaturedFoto from "@/assets/marco-riveiros-featured.jpg.asse
 import anaGarmsFoto from "@/assets/ana-garms.jpeg.asset.json";
 import chlebaFoto2 from "@/assets/marcio-chleba-2.png.asset.json";
 import tiagoZoukFoto from "@/assets/tiago-zouk.png.asset.json";
+import elisangelaFoto from "@/assets/elisangela-rosa.png.asset.json";
 import gutaFoto from "@/assets/guta-raeder-2.png.asset.json";
 import andreMagnoFoto from "@/assets/andre-magno.jpeg.asset.json";
 import pietroFoto from "@/assets/pietro-mauro.jpeg.asset.json";
@@ -101,6 +102,7 @@ export const PHOTOS: Record<string, string> = {
   "Marcio Chleba": chlebaFoto2.url,
   SEBRAE: sebraeLogo.url,
   "Tiago Zouk": tiagoZoukFoto.url,
+  "Elisangela Rosa": elisangelaFoto.url,
   "Guta Raeder": gutaFoto.url,
   "André Magno": andreMagnoFoto.url,
   "Pietro Mauro": pietroFoto.url,
