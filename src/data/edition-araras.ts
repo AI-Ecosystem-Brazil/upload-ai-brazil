@@ -20,6 +20,8 @@ import logoJrComunicacao from "@/assets/apoio-jr-comunicacao-visual.png.asset.js
 
 import logoWar from "@/assets/patrocinador-war.png.asset.json";
 import seloAraras from "@/assets/selo-araras.jpg.asset.json";
+import logoNeolink from "@/assets/logo-neolink.png.asset.json";
+import logoGrupoPrimordium from "@/assets/logo-grupo-primordium.png.asset.json";
 
 const TBD = (time: string, period: Session["period"], kind: Session["kind"], title: string): Session => ({
   time,
@@ -64,21 +66,27 @@ const PALCO: Session[] = [
     time: "10h00",
     period: "manha",
     kind: "palestra",
-    title: "Palestra · tema a definir",
+    title: 'Seja produtivo: "Use a IA a seu favor"',
     people: [{ name: "Claudeir Ribeiro", role: "Palestrante" }],
   },
   {
     time: "10h30",
     period: "manha",
     kind: "palestra",
-    title: "Uso responsável de IA",
-    people: [{ name: "Ana Garms", role: "Palestrante" }],
+    title: "Antes da IA, existe a Inteligencia",
+    people: [
+      {
+        name: "Rodrigo Righetti",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/38382453",
+      },
+    ],
   },
   {
     time: "11h00",
     period: "manha",
     kind: "painel",
-    title: "Cybersegurança aplicada à IA",
+    title: "A sua empresa é a bola da vez!",
     people: [
       {
         name: "André Almeida",
@@ -96,12 +104,12 @@ const PALCO: Session[] = [
     time: "11h30",
     period: "manha",
     kind: "palestra",
-    title: "Antes da IA, existe a Inteligencia",
+    title: "Quem Ainda Sabe Pensar?",
     people: [
       {
-        name: "Rodrigo Righetti",
-        role: "Keynote Speaker",
-        profileUrl: "https://ai.eco.br/members/38382453",
+        name: "Gabriel Viríssimo",
+        role: "Palestrante",
+        profileUrl: "https://ai.eco.br/members/39700330",
       },
     ],
   },
@@ -125,7 +133,7 @@ const PALCO: Session[] = [
     period: "tarde",
     kind: "keynote",
     badge: "Keynote Speaker",
-    title: "Inteligência Artificial deve ser um privilégio de todos, nascida para exponenciar",
+    title: "De volta ao Jogo: 50+ Inteligência Artificial na prática",
     people: [
       {
         name: "Marco Riveiros",
@@ -155,7 +163,7 @@ const PALCO: Session[] = [
     title: "Mitos e verdades sobre IA · Perguntas e respostas",
     people: [
       {
-        name: "Gabriel Virissimo",
+        name: "Gabriel Viríssimo",
         role: "Painelista",
         profileUrl: "https://ai.eco.br/members/39700330",
       },
@@ -223,11 +231,36 @@ const PALCO: Session[] = [
 ];
 
 const LAB_1: Session[] = [
-  TBD("09h00", "manha", "momento", "Abertura · a definir"),
-  TBD("09h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
-  TBD("10h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
-  TBD("10h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
-  TBD("11h00", "manha", "handson", "Laboratório 1 · atividade a definir"),
+  {
+    time: "09h00",
+    period: "manha",
+    kind: "momento",
+    title: "Abertura",
+    people: [{ name: "Elisangela Rosa", role: "Abertura" }],
+  },
+  {
+    time: "09h30",
+    period: "manha",
+    kind: "handson",
+    title: "Atividade mão na massa",
+    people: [
+      {
+        name: "Gabriel Viríssimo",
+        role: "Facilitador",
+        profileUrl: "https://ai.eco.br/members/39700330",
+      },
+    ],
+  },
+  {
+    time: "10h30",
+    period: "manha",
+    kind: "handson",
+    title: "Atividade mão na massa",
+    people: [
+      { name: "Ana Barros", role: "Facilitadora" },
+      { name: "Elen Melo", role: "Facilitadora" },
+    ],
+  },
   TBD("11h30", "manha", "handson", "Laboratório 1 · atividade a definir"),
   { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
   {
@@ -249,12 +282,38 @@ const LAB_1: Session[] = [
     time: "15h30",
     period: "tarde",
     kind: "handson",
-    title: "Laboratório aberto",
-    people: [{ name: "Participante a confirmar", role: "Facilitador" }],
+    title: "Atividade prática · tema a definir",
+    people: [{ name: "Pietro Mauro", role: "Facilitador" }],
   },
 ];
 
 const LAB_2: Session[] = [
+  {
+    time: "09h00",
+    period: "manha",
+    kind: "momento",
+    title: "Abertura",
+    people: [
+      {
+        name: "Juliano Kimura",
+        role: "Abertura · Head de Ecossistema da AI Brasil",
+        profileUrl: "https://ai.eco.br/members/21874664",
+      },
+    ],
+  },
+  {
+    time: "09h30",
+    period: "manha",
+    kind: "handson",
+    title: "De volta ao jogo: 50+ Inteligência Artificial na prática",
+    people: [
+      {
+        name: "Marco Riveiros",
+        role: "Facilitador",
+        profileUrl: "https://ai.eco.br/members/40122900",
+      },
+    ],
+  },
   {
     time: "10h00",
     period: "manha",
@@ -270,7 +329,7 @@ const LAB_2: Session[] = [
   },
   { time: "12h00", period: "tarde", kind: "intervalo", title: "Almoço" },
   {
-    time: "14h30",
+    time: "14h00",
     period: "tarde",
     kind: "handson",
     title: "101%: Criando uma empresa do zero com IA na prática",
@@ -281,6 +340,13 @@ const LAB_2: Session[] = [
         profileUrl: "https://ai.eco.br/members/21874664",
       },
     ],
+  },
+  {
+    time: "17h00",
+    period: "tarde",
+    kind: "momento",
+    title: "Encerramento",
+    people: [{ name: "Elisangela Rosa", role: "Encerramento" }],
   },
 ];
 
@@ -345,11 +411,18 @@ export const ARARAS_EDITION: Edition = {
     formats: [],
   },
   sponsorTiers: [
-    { tier: "Ouro", slots: 4 },
+    {
+      tier: "Ouro",
+      slots: 4,
+      sponsors: [{ name: "NEOLINK", logo: logoNeolink.url, light: true, wide: true }],
+    },
     {
       tier: "Prata",
       slots: 5,
-      sponsors: [{ name: "WAR", logo: logoWar.url, light: true }],
+      sponsors: [
+        { name: "WAR", logo: logoWar.url, light: true },
+        { name: "Grupo Primordium", logo: logoGrupoPrimordium.url },
+      ],
     },
     {
       tier: "Apoio",

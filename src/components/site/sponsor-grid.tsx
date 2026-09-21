@@ -48,7 +48,7 @@ export function SponsorGrid() {
                   {t.sponsors?.map((s) => (
                     <div
                       key={s.name}
-                      className={cardClass(s.light, s.large)}
+                      className={`${cardClass(s.light, s.large)} ${s.wide ? "col-span-2" : ""}`}
                     >
                       <img
                         src={s.logo}
@@ -59,7 +59,12 @@ export function SponsorGrid() {
                       />
                     </div>
                   ))}
-                  {Array.from({ length: Math.max(0, t.slots - (t.sponsors?.length ?? 0)) }).map((_, i) => (
+                  {Array.from({
+                    length: Math.max(
+                      0,
+                      t.slots - (t.sponsors?.reduce((total, sponsor) => total + (sponsor.wide ? 2 : 1), 0) ?? 0),
+                    ),
+                  }).map((_, i) => (
                     <div
                       key={i}
                       className="flex h-24 items-center justify-center rounded-lg border border-dashed border-border bg-background/20 text-xs uppercase tracking-wider text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
