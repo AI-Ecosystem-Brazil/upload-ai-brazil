@@ -56,6 +56,11 @@ const PALCO: Session[] = [
     people: [
       { name: "Valdir Pandolfi", role: "Painelista confirmado" },
       {
+        name: "André Almeida",
+        role: "Painelista",
+        profileUrl: "https://ai.eco.br/members/38743151",
+      },
+      {
         name: "Carolina da Luz",
         role: "Mediadora",
         profileUrl: "https://ai.eco.br/members/40198222",
